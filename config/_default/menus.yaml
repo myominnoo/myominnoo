@@ -5,16 +5,16 @@
 
 main:
   - name: Publications
-    url: '#featured'
+    url: publication/
     weight: 10
-  - name: mStats
-    url:
+  - name: R
+    url: r/
     weight: 20
   - name: epiData
     url:
     weight: 30
   - name: Posts
-    url: '#posts'
+    url: /post/
     weight: 40
   - name: Projects
     url: '#projects'

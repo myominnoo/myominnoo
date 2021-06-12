@@ -287,15 +287,6 @@
     <loc>https://mmoo.netlify.app/post/writing-technical-content/</loc>
     <lastmod>2019-07-12T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://mmoo.netlify.app/publication-type/3/</loc>
-    <lastmod>2019-04-07T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://mmoo.netlify.app/publication/preprint/</loc>
-    <lastmod>2019-04-07T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://mmoo.netlify.app/tag/source-themes/</loc>
-    <lastmod>2019-04-07T00:00:00+00:00</lastmod>
-  </url><url>
     <loc>https://mmoo.netlify.app/post/jupyter/</loc>
     <lastmod>2019-09-05T00:00:00+00:00</lastmod>
   </url><url>
@@ -698,18 +689,6 @@
     <loc>https://mmoo.netlify.app/author/vivek-gupta/</loc>
     <lastmod>2021-06-13T01:25:58+07:00</lastmod>
   </url><url>
-    <loc>https://mmoo.netlify.app/publication/journal-article/</loc>
-    <lastmod>2015-09-01T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://mmoo.netlify.app/author/robert-ford/</loc>
-    <lastmod>2015-09-01T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://mmoo.netlify.app/publication-type/1/</loc>
-    <lastmod>2013-07-01T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://mmoo.netlify.app/publication/conference-paper/</loc>
-    <lastmod>2013-07-01T00:00:00+00:00</lastmod>
-  </url><url>
     <loc>https://mmoo.netlify.app/admin/</loc>
   </url><url>
     <loc>https://mmoo.netlify.app/tag/communicable-disease-control/organization-admin/</loc>
@@ -721,6 +700,8 @@
     <loc>https://mmoo.netlify.app/tag/myanmar/epidemiology/</loc>
   </url><url>
     <loc>https://mmoo.netlify.app/tag/pandemics/prevention-control/</loc>
+  </url><url>
+    <loc>https://mmoo.netlify.app/r/</loc>
   </url><url>
     <loc>https://mmoo.netlify.app/tag/viral/epidemiology/prevention-contr/</loc>
   </url><url>

@@ -48,12 +48,11 @@ contact_links:
     link: 'skype:myoetc'
 
 # Site header
-
 main_menu:
   enable: true
   align: l
   show_logo: true
-  show_language: false
+  show_language: true
   show_day_night: true
   show_search: true
   highlight_active_link: true
@@ -99,7 +98,7 @@ copyright_license:
   share_alike: true
   allow_commercial: false
   notice: 'This work is licensed under {license}'
-abstract_length: 135
+abstract_length: 300
 plugins_js: []
 avatar:
   gravatar: false

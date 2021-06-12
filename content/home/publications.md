@@ -1,13 +1,13 @@
 ---
 # An instance of the Pages widget.
 # Documentation: https://wowchemy.com/docs/page-builder/
-widget: pages
+widget: blank
 
 # This file represents a page section.
-headless: true
+headless: false
 
 # Activate this widget? true/false
-active: true
+active: false
 
 # Order that this section appears on the page.
 weight: 90
@@ -19,17 +19,17 @@ content:
   # Page type to display. E.g. post, talk, publication...
   page_type: publication
   # Choose how much pages you would like to display (0 = all pages)
-  count: 5
+  count: 2
   # Choose how many pages you would like to offset by
   offset: 0
   # Page order: descending (desc) or ascending (asc) date.
   order: desc
   # Filter on criteria
   filters:
-    tag: ''
+    author: ''
     category: ''
     publication_type: ''
-    author: ''
+    tag: ''
     exclude_featured: true
 design:
   # Choose a view for the listings:
@@ -37,7 +37,7 @@ design:
   #   2 = Compact
   #   3 = Card
   #   4 = Citation (publication only)
-  view: 4
+  view: 3
 ---
 
 {{% callout note %}}
