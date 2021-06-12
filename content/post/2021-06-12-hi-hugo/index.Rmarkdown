@@ -1,30 +1,18 @@
 ---
 title: Hi Hugo
-author: ''
+author: myominnoo
 date: '2021-06-12'
-slug: []
+slug: hi-hugo
 categories: []
 tags: []
-lastmod: '2021-06-12T14:05:16+07:00'
-keywords: []
-description: ''
-comment: no
-toc: no
-autoCollapseToc: no
-postMetaInFooter: no
-hiddenFromHomePage: no
-contentCopyright: no
-reward: no
-mathjax: no
-mathjaxEnableSingleDollar: no
-mathjaxEnableAutoNumber: no
-hideHeaderAndFooter: no
-flowchartDiagrams:
-  enable: no
-  options: ''
-sequenceDiagrams:
-  enable: no
-  options: ''
+subtitle: ''
+summary: ''
+authors: []
+lastmod: '2021-06-12T15:34:59+07:00'
+featured: no
+image:
+  caption: ''
+  focal_point: ''
+  preview_only: no
+projects: []
 ---
-
-<!--more-->
