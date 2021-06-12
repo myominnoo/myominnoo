@@ -1,5 +1,5 @@
 ---
-date: "2021-01-24"
+date: "2021-06-13"
 linkTitle: mStats
 summary: A R package for epidemiological data analysis
 title: "\U0001F396 mStats"
