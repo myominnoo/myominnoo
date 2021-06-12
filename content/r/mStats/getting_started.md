@@ -5,12 +5,13 @@ type: book
 weight: 20
 ---
 
-<a href='https://github.com/myominnoo/mStats'><img src='man/figures/logo.png' align="right" height="120" /></a>
+# <img src="man/figures/logo.png" align="right" alt="" width="120" />
 
 <!-- badges: start -->
 
 [![Lifecycle:
 maturing](man/figures/lifecycle-maturing.svg)](https://www.tidyverse.org/lifecycle/#maturing)
+
 <!-- badges: end -->
 
 mStats is a open-source R package to facilitate data analysis with R in
