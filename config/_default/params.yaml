@@ -7,53 +7,45 @@
 
 theme: minimal
 day_night: true
-font: ''
+font: 'Native'
 font_size: L
 
 # SEO
 
 site_type: Person
-local_business_type: ''
-org_name: ''
-description: ''
-twitter: ''
+local_business_type: 'health'
+org_name: 'Myo Minn Oo'
+description: 'Epidemiologist'
+twitter: 'drmyominnoo'
 
 # Contact (edit or remove options as required)
 
-email: test@example.org
-phone: 888 888 88 88
+email: 'dr.myominnoo@gmail.com'
+phone: (66) 061 240 5207
 address:
-  street: 450 Serra Mall
-  city: Stanford
-  region: CA
-  postcode: '94305'
-  country: United States
-  country_code: US
-coordinates:
-  latitude: '37.4275'
-  longitude: '-122.1697'
-directions: Enter Building 1 and take the stairs to Office 200 on Floor 2
-office_hours:
-  - 'Monday 10:00 to 13:00'
-  - 'Wednesday 09:00 to 10:00'
-appointment_url: 'https://calendly.com'
+  street: 15 Kanchanajavich Road
+  city: Hat Yai
+  region: Songkla
+  postcode: '90110'
+  country: Thailand
+  country_code: TH
+# coordinates:
+#   latitude: '37.4275'
+#   longitude: '-122.1697'
+# directions: Enter Building 1 and take the stairs to Office 200 on Floor 2
+# office_hours:
+#   - 'Monday 10:00 to 13:00'
+#   - 'Wednesday 09:00 to 10:00'
+# appointment_url: 'https://calendly.com'
 contact_links:
-  - icon: twitter
+  - icon: facebook
     icon_pack: fab
-    name: DM Me
-    link: 'https://twitter.com/Twitter'
+    name: Let's have a chat!
+    link: 'https://facebook.com/myominnoo'
   - icon: skype
     icon_pack: fab
     name: Skype Me
-    link: 'skype:echo123?call'
-  - icon: keybase
-    icon_pack: fab
-    name: Chat on Keybase
-    link: 'https://keybase.io/'
-  - icon: comments
-    icon_pack: fas
-    name: Discuss on Forum
-    link: 'https://discourse.gohugo.io'
+    link: 'skype:myoetc'
 
 # Site header
 
@@ -102,7 +94,7 @@ section_pager: false
 docs_section_pager: true
 sharing: true
 copyright_license:
-  enable: false
+  enable: true
   allow_derivatives: false
   share_alike: true
   allow_commercial: false
@@ -138,10 +130,10 @@ comments:
 search:
   provider: wowchemy
   algolia:
-    app_id: ''
-    api_key: ''
-    index_name: ''
-    show_logo: false
+    app_id: '29OD7VGBD9'
+    api_key: 'a51d80744b499379194ac5a404a81233'
+    index_name: 'myominnoo'
+    show_logo: true
 map:
   provider: mapnik
   api_key: ''
@@ -157,4 +149,4 @@ cms:
   local_backend: false
 icon:
   pack:
-    ai: false
+    ai: true

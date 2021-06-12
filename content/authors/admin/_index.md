@@ -1,52 +1,51 @@
 ---
-bio: My research interests include distributed robotics, mobile computing and programmable
-  matter.
+bio: My research interests include infectious diseases in developing countries, epidemiological methods, health system research and global health.
 education:
   courses:
-  - course: PhD in Artificial Intelligence
-    institution: Stanford University
-    year: 2012
-  - course: MEng in Artificial Intelligence
-    institution: Massachusetts Institute of Technology
-    year: 2009
-  - course: BSc in Artificial Intelligence
-    institution: Massachusetts Institute of Technology
-    year: 2008
-email: ""
-highlight_name: false
+  - course: PhD in Epidemiology
+    institution: Prince of Songkla University
+    year: 2021
+  - course: MBBS
+    institution: University of Medicine, Mandalay
+    year: 2013
+email: "dr.myominnoo@gmail.com"
+highlight_name: true
 interests:
-- Artificial Intelligence
-- Computational Linguistics
-- Information Retrieval
+- Infectious diseases in developing countries
+- Epidemiological methods 
+- Health system research 
+- Global health
 organizations:
-- name: Stanford University
-  url: https://www.stanford.edu/
-role: Professor of Artificial Intelligence
+- name: Prince of Songkla University
+  url: 
+role: Doctoral Student
 social:
 - icon: envelope
   icon_pack: fas
   link: /#contact
 - display:
     header: true
-  icon: twitter
-  icon_pack: fab
-  label: Follow me on Twitter
-  link: https://twitter.com/GeorgeCushen
-- icon: graduation-cap
-  icon_pack: fas
-  link: https://scholar.google.co.uk/citations?user=sIwtMXoAAAAJ
-- icon: github
-  icon_pack: fab
-  link: https://github.com/gcushen
+- icon: researchgate
+  icon_pack: ai
+  link: https://www.researchgate.net/profile/Myo-Minn-Oo
+- icon: google-scholar
+  icon_pack: ai
+  link: https://scholar.google.com/citations?user=IWzz0rUAAAAJ&hl=en
 - icon: linkedin
   icon_pack: fab
-  link: https://www.linkedin.com/
+  link: https://www.linkedin.com/myominnoo
+- icon: github
+  icon_pack: fab
+  link: https://github.com/myominnoo
+- icon: orcid
+  icon_pack: ai
+  link: https://orcid.org/0000-0003-4089-016X
 superuser: true
-title: Nelson Bighetti
+title: Myo Minn Oo
 ---
 
-Nelson Bighetti is a professor of artificial intelligence at the Stanford AI Lab. His research interests include distributed robotics, mobile computing and programmable matter. He leads the Robotic Neurobiology group, which develops self-reconfiguring robots, systems of self-organizing robots, and mobile sensor networks.
+I am Myo, an epidemiologist and data scientist. My research interests include infectious diseases in developing countries, epidemiological methods, health system research and global health. I also have a strong interest in generation and application of real world data to bring evidence-based interventions and changes that can improve people's health. 
 
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed neque elit, tristique placerat feugiat ac, facilisis vitae arcu. Proin eget egestas augue. Praesent ut sem nec arcu pellentesque aliquet. Duis dapibus diam vel metus tempus vulputate.
+In addition, I am the developer of R package **mStats** as well as the author of the guide book for EpiData software. I also love to explore and learn new techs like this website. I am currently staying and studying in Thailand.  
 
-{{< icon name="download" pack="fas" >}} Download my {{< staticref "uploads/demo_resume.pdf" "newtab" >}}resumé{{< /staticref >}}.
+{{< icon name="download" pack="fas" >}} Download my {{< staticref "uploads/resume.pdf" "newtab" >}}resumé{{< /staticref >}}.
