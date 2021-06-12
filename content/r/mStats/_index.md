@@ -2,11 +2,11 @@
 date: "2021-06-13"
 linkTitle: mStats
 summary: An open-source R package.
-title: "\U0001F396 mStats"
+title: mStats
 type: book
 ---
 
-# <img src='man/figures/logo.png' align="right" width="120" />
+# mStats <img src="man/figures/logo.png" align="right" alt="" width="120" />
 
 <!-- badges: start -->
 
