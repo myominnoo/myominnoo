@@ -1,13 +1,12 @@
 ---
-date: "2021-06-13"
+date: "2021-01-24"
 linkTitle: mStats
-summary: A R package for epidemiological data analysis
-title: "\U0001F396 mStats"
+summary: An open-source R package.
+title: "\U0001F4CA mStats"
 type: book
 ---
 
-
-# <img src="man/figures/logo.png" align="right" alt="" width="120" />
+# mStats <img src="man/figures/logo.png" align="right" alt="" width="120" />
 
 <!-- badges: start -->
 
