@@ -23,7 +23,7 @@ content:
   form:
     provider: formspree
     formspree:  
-      id: 'f/xnqlvpzy'
+      id: xnqlvpzy
     netlify:
       # Enable CAPTCHA challenge to reduce spam?
       captcha: true
