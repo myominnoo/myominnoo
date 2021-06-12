@@ -2,7 +2,7 @@
 date: "2021-01-24"
 linkTitle: mStats
 summary: A R package for epidemiological data analysis
-title: "\U0001F4CA Learn R"
+title: "\U0001F4CA mStats"
 type: book
 ---
 
