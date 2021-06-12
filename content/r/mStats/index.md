@@ -1,50 +1,59 @@
 ---
 date: "2021-06-13"
 linkTitle: Data Science
-summary: An example of using Wowchemy's Book layout for publishing online courses.
-title: "\U0001F4CA Learn Data Science"
+summary: An open-source R package for epidemiological data analysis.
+title: "\U0001F4CA mStats"
 type: book
-output: md_document
+output: github_document
+editor_options: 
+  markdown: 
+    wrap: 72
 ---
 
 
 
-<a href='https://github.com/myominnoo/mStats'><img src="figures/logo.png" align="right" alt="" width="120" /></a)
+<img src="man/figures/logo.png" align="right" width="120"/>
 
 <!-- badges: start -->
 
-[![Lifecycle: maturing](figures/lifecycle-maturing.svg)](https://www.tidyverse.org/lifecycle/#maturing)
+[![Lifecycle:
+maturing](man/figures/lifecycle-maturing.svg)](https://www.tidyverse.org/lifecycle/#maturing)
 
 <!-- badges: end -->
 
-mStats is a open-source R package to facilitate data analysis with R in health research. It comprises of three major sets of functions:
+mStats is a open-source R package to facilitate data analysis with R in
+health research. It comprises of three major sets of functions:
 
-  * `data management` 
-  * `statistical analysis` 
-  * `calculation of epidemiological measures`   
+-   `data management`
+-   `statistical analysis`
+-   `calculation of epidemiological measures`
 
-These functions are in turn supported by another set of helper functions on the backend, 
-which allows statistical calculation, displaying well-formatted output and transferring 
-final outputs to process further.
-  
-In a nutshell, mStats is designed to make data analysis quick and easy to create the final report for health research project. You can see it in action to [Get Started](https://myominnoo.github.io/mStats/).
+These functions are in turn supported by another set of helper functions
+on the backend, which allows statistical calculation, displaying
+well-formatted output and transferring final outputs to process further.
+
+In a nutshell, mStats is designed to make data analysis quick and easy
+to create the final report for health research project. You can see it
+in action to [Get Started](https://myominnoo.github.io/mStats/).
 
 ## Installation
 
-You can install the released version of mStats from [CRAN](https://CRAN.R-project.org) with:
+You can install the released version of mStats from
+[CRAN](https://CRAN.R-project.org) with:
 
-``` r
+``` {.r}
 install.packages("mStats")
 ```
 
-### Development version 
+### Development version
 
-If you want to use the development version of the bookdown package, you can install the package from GitHub via the {remotes package}(https://remotes.r-lib.org/):
+If you want to use the development version of the bookdown package, you
+can install the package from GitHub via the {remotes
+package}(<https://remotes.r-lib.org/>):
 
-``` r
+``` {.r}
 remotes::install_github("myominnoo/mStats")
 ```
-
 
 ## Cheat Sheet
 
@@ -52,14 +61,21 @@ remotes::install_github("myominnoo/mStats")
 
 ## Masking
 
-The `mStats`package contains two functions (`append`, `replace`) that have the same names (doing different operation) with base R packages (`stats` and `base`). Loading the `mStats` masks the functions from base R. It means that when you use `append` function, you are using the function from `mStats`. To avoid this: 
+The `mStats`package contains two functions (`append`, `replace`) that
+have the same names (doing different operation) with base R packages
+(`stats` and `base`). Loading the `mStats` masks the functions from base
+R. It means that when you use `append` function, you are using the
+function from `mStats`. To avoid this:
 
-* use the syntax `package::function()`, for example `base::append()` or `mStats::append()`.
-* remove `mStats` from the session using `detach(package:mStats)`.
+-   use the syntax `package::function()`, for example `base::append()`
+    or `mStats::append()`.
+-   remove `mStats` from the session using `detach(package:mStats)`.
 
 ## Usage
 
-The easiest way to get started with mStats is to follow the guide [here](https://myominnoo.github.io/mStats/). Below is a quick demonstration of what mStats can do. 
+The easiest way to get started with mStats is to follow the guide
+[here](https://myominnoo.github.io/mStats/). Below is a quick
+demonstration of what mStats can do.
 
 
 ```r
@@ -110,16 +126,16 @@ codebook(iris)
 #>  + -- ------------ + --------------- ------- --- -- ----- +
 ```
 
-
 ## Getting help
 
 If you encounter a clear bug, please file an issue with a minimal
 reproducible example on
 [GitHub](https://github.com/myominnoo/mStats/issues). For questions and
-other discussion, please directly email me [dr.myominnoo@gmail.com](mailto::dr.myominnoo@gmail.com) or use the [mStats mailing list](https://groups.google.com/g/mstats).
+other discussion, please directly email me
+[dr.myominnoo\@gmail.com](mailto::dr.myominnoo@gmail.com) or use the
+[mStats mailing list](https://groups.google.com/g/mstats).
 
-
------
+------------------------------------------------------------------------
 
 Please note that this project is looking for contributors. By
 participating in this project, you agree to abide by its terms with
