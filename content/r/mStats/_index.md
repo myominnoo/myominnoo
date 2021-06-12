@@ -1,12 +1,12 @@
 ---
-date: "2021-01-24"
+date: "2021-06-13"
 linkTitle: mStats
 summary: An open-source R package.
 title: "\U0001F396 mStats"
 type: book
 ---
 
-<a href='https://mmoo.netlify.app/r/mStats'><img src='../man/figures/logo.png' align="right" width="120" /></a>
+<a href='https://mmoo.netlify.app/r/mStats'><img src='man/figures/logo.png' align="right" width="120" /></a>
 
 <!-- badges: start -->
 
