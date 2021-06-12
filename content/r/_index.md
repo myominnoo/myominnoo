@@ -2,9 +2,8 @@
 header:
   caption: ""
   image: ""
-title: Courses
+title: R Packages
 type: page
 view: 2
 ---
 
-I teach the following courses:
