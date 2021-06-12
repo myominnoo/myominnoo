@@ -2,8 +2,9 @@
 date: "2021-06-13"
 linkTitle: mStats
 summary: An open-source R package for epidemiological data analysis.
-title: "\U0001F4CA mStats"
+title: "\U0001F4CA Learn R with mStats"
 type: book
+output: md_document
 ---
 
 

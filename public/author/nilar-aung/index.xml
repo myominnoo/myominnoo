@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Nilar Aung | Myo Minn Oo</title>
+    <link>https://mmoo.netlify.app/author/nilar-aung/</link>
+      <atom:link href="https://mmoo.netlify.app/author/nilar-aung/index.xml" rel="self" type="application/rss+xml" />
+    <description>Nilar Aung</description>
+    <generator>Wowchemy (https://wowchemy.com)</generator><language>en-us</language><copyright>© {2021} Myo Minn Oo</copyright><lastBuildDate>Sun, 01 Jan 2017 00:00:00 +0000</lastBuildDate>
+    <image>
+      <url>https://mmoo.netlify.app/media/icon_hua2ec155b4296a9c9791d015323e16eb5_11927_512x512_fill_lanczos_center_2.png</url>
+      <title>Nilar Aung</title>
+      <link>https://mmoo.netlify.app/author/nilar-aung/</link>
+    </image>
+    
+    <item>
+      <title>Low mother-to-child HIV transmission rate but high loss-to-follow-up among mothers and babies in Mandalay, Myanmar; a cohort study</title>
+      <link>https://mmoo.netlify.app/publication/kyaw-2017-b/</link>
+      <pubDate>Sun, 01 Jan 2017 00:00:00 +0000</pubDate>
+      <guid>https://mmoo.netlify.app/publication/kyaw-2017-b/</guid>
+      <description></description>
+    </item>
+    
+  </channel>
+</rss>

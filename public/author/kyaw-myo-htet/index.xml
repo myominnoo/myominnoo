@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Kyaw Myo Htet | Myo Minn Oo</title>
+    <link>https://mmoo.netlify.app/author/kyaw-myo-htet/</link>
+      <atom:link href="https://mmoo.netlify.app/author/kyaw-myo-htet/index.xml" rel="self" type="application/rss+xml" />
+    <description>Kyaw Myo Htet</description>
+    <generator>Wowchemy (https://wowchemy.com)</generator><language>en-us</language><copyright>© {2021} Myo Minn Oo</copyright><lastBuildDate>Tue, 01 Jan 2019 00:00:00 +0000</lastBuildDate>
+    <image>
+      <url>https://mmoo.netlify.app/media/icon_hua2ec155b4296a9c9791d015323e16eb5_11927_512x512_fill_lanczos_center_2.png</url>
+      <title>Kyaw Myo Htet</title>
+      <link>https://mmoo.netlify.app/author/kyaw-myo-htet/</link>
+    </image>
+    
+    <item>
+      <title>Early Success With Retention in Care Among People Living With HIV at Decentralized ART Satellite Sites in Yangon, Myanmar, 2015–2016</title>
+      <link>https://mmoo.netlify.app/publication/htet-2019/</link>
+      <pubDate>Tue, 01 Jan 2019 00:00:00 +0000</pubDate>
+      <guid>https://mmoo.netlify.app/publication/htet-2019/</guid>
+      <description></description>
+    </item>
+    
+  </channel>
+</rss>

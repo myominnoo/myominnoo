@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Sonam Gyamtsho | Myo Minn Oo</title>
+    <link>https://mmoo.netlify.app/author/sonam-gyamtsho/</link>
+      <atom:link href="https://mmoo.netlify.app/author/sonam-gyamtsho/index.xml" rel="self" type="application/rss+xml" />
+    <description>Sonam Gyamtsho</description>
+    <generator>Wowchemy (https://wowchemy.com)</generator><language>en-us</language><copyright>© {2021} Myo Minn Oo</copyright><lastBuildDate>Tue, 01 Jan 2019 00:00:00 +0000</lastBuildDate>
+    <image>
+      <url>https://mmoo.netlify.app/media/icon_hua2ec155b4296a9c9791d015323e16eb5_11927_512x512_fill_lanczos_center_2.png</url>
+      <title>Sonam Gyamtsho</title>
+      <link>https://mmoo.netlify.app/author/sonam-gyamtsho/</link>
+    </image>
+    
+    <item>
+      <title>“If we miss this chance, it&#39;s futile later on”–late antenatal booking and its determinants in Bhutan: a mixed-methods study</title>
+      <link>https://mmoo.netlify.app/publication/dorji-2019/</link>
+      <pubDate>Tue, 01 Jan 2019 00:00:00 +0000</pubDate>
+      <guid>https://mmoo.netlify.app/publication/dorji-2019/</guid>
+      <description></description>
+    </item>
+    
+  </channel>
+</rss>
