@@ -5,7 +5,8 @@ theme: "starter-hugo-academic"
 # This file is formatted using YAML syntax - learn more at https://learnxinyminutes.com/docs/yaml/
 
 title: Myo Minn Oo
-baseurl: 'https://mmoo.netlify.app/' 
+baseurl: ''
+relativeURLs: 'TRUE'
 copyright: '© {2021} Myo Minn Oo'
 
 
