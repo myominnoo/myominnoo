@@ -9,7 +9,7 @@ weight: 20
 ## mStats
 
 
-<a href='https://mmoo.netlify.app/r/mStats'><img src='../man/figures/logo.png' align="right" height="120" /></a>
+<a href='https://mmoo.netlify.app/r/mStats'><img src='../man/figures/logo.png' align="right" width="120" /></a>
 
 <!-- badges: start -->
 
