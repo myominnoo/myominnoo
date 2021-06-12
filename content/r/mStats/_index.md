@@ -6,7 +6,7 @@ title: "\U0001F4CA mStats"
 type: book
 ---
 
-# mStats <img src="man/figures/logo.png" align="right" alt="" width="120" />
+# <img src="man/figures/logo.png" align="right" alt="" width="120" />
 
 <!-- badges: start -->
 
