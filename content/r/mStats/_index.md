@@ -4,7 +4,6 @@ linkTitle: mStats
 summary: An open-source R package for epidemiological data analysis.
 title: "\U0001F4CA mStats"
 type: book
-output: github_document
 ---
 
 
