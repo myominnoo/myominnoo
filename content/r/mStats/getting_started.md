@@ -6,13 +6,10 @@ weight: 20
 ---
 
 
-
-{{< figure src="man/figures/logo.png" align="right" alt="" width="120" >}}
-
-***
+## mStats
 
 
-<img src="../man/figures/logo.png" align="right" alt="" width="120" />
+<a href='https://mmoo.netlify.app/r/mStats'><img src='../man/figures/logo.png' align="right" height="120" /></a>
 
 <!-- badges: start -->
 

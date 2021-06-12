@@ -6,7 +6,7 @@ title: "\U0001F4CA mStats"
 type: book
 ---
 
-# <img src="man/figures/logo.png" align="right" alt="" width="120" />
+# <a href='https://mmoo.netlify.app/r/mStats'><img src='../man/figures/logo.png' align="right" height="120" /></a>
 
 <!-- badges: start -->
 
