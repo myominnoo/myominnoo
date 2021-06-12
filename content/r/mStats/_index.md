@@ -1,23 +1,19 @@
 ---
 date: "2021-06-13"
-linkTitle: Data Science
+linkTitle: mStats
 summary: An open-source R package for epidemiological data analysis.
 title: "\U0001F4CA mStats"
 type: book
 output: github_document
-editor_options: 
-  markdown: 
-    wrap: 72
 ---
 
 
 
-<img src="man/figures/logo.png" align="right" width="120"/>
+<img src="./man/figures/logo.png" align="right" width="120"/>
 
 <!-- badges: start -->
 
-[![Lifecycle:
-maturing](man/figures/lifecycle-maturing.svg)](https://www.tidyverse.org/lifecycle/#maturing)
+[![Lifecycle:maturing](man/figures/lifecycle-maturing.svg)](https://www.tidyverse.org/lifecycle/#maturing)
 
 <!-- badges: end -->
 
