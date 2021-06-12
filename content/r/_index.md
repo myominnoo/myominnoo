@@ -2,7 +2,7 @@
 header:
   caption: ""
   image: ""
-title: R Packages
+title: Courses
 type: page
 view: 2
 ---

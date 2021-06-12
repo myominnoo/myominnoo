@@ -5,10 +5,19 @@
     <loc>https://mmoo.netlify.app/courses/example/python/</loc>
     <lastmod>2021-01-01T00:00:00+00:00</lastmod>
   </url><url>
+    <loc>https://mmoo.netlify.app/r/example/python/</loc>
+    <lastmod>2021-01-01T00:00:00+00:00</lastmod>
+  </url><url>
     <loc>https://mmoo.netlify.app/courses/example/visualization/</loc>
     <lastmod>2021-01-01T00:00:00+00:00</lastmod>
   </url><url>
+    <loc>https://mmoo.netlify.app/r/example/visualization/</loc>
+    <lastmod>2021-01-01T00:00:00+00:00</lastmod>
+  </url><url>
     <loc>https://mmoo.netlify.app/courses/example/stats/</loc>
+    <lastmod>2021-01-01T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://mmoo.netlify.app/r/example/stats/</loc>
     <lastmod>2021-01-01T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://mmoo.netlify.app/talk/example-talk/</loc>
@@ -56,7 +65,13 @@
     <loc>https://mmoo.netlify.app/courses/</loc>
     <lastmod>2021-01-24T00:00:00+00:00</lastmod>
   </url><url>
+    <loc>https://mmoo.netlify.app/r/</loc>
+    <lastmod>2021-01-24T00:00:00+00:00</lastmod>
+  </url><url>
     <loc>https://mmoo.netlify.app/courses/example/</loc>
+    <lastmod>2021-01-24T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://mmoo.netlify.app/r/example/</loc>
     <lastmod>2021-01-24T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://mmoo.netlify.app/publication/oo-2021/</loc>
@@ -700,8 +715,6 @@
     <loc>https://mmoo.netlify.app/tag/myanmar/epidemiology/</loc>
   </url><url>
     <loc>https://mmoo.netlify.app/tag/pandemics/prevention-control/</loc>
-  </url><url>
-    <loc>https://mmoo.netlify.app/r/</loc>
   </url><url>
     <loc>https://mmoo.netlify.app/tag/viral/epidemiology/prevention-contr/</loc>
   </url><url>
