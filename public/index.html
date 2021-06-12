@@ -286,6 +286,45 @@
 
 
 
+
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-145822099-1"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+
+  function gtag() {
+      dataLayer.push(arguments);
+  }
+
+  function trackOutboundLink(url, target) {
+    gtag('event', 'click', {
+         'event_category': 'outbound',
+         'event_label': url,
+         'transport_type': 'beacon',
+         'event_callback': function () {
+           if (target !== '_blank') {
+             document.location = url;
+           }
+         }
+    });
+    console.debug("Outbound link clicked: " + url);
+  }
+
+  function onClickCallback(event) {
+    if ((event.target.tagName !== 'A') || (event.target.host === window.location.host)) {
+      return;
+    }
+    trackOutboundLink(event.target, event.target.getAttribute('target'));  
+  }
+
+  gtag('js', new Date());
+  gtag('config', 'UA-145822099-1', {});
+  gtag('set', {'cookie_flags': 'SameSite=None;Secure'});
+
+  
+  document.addEventListener('click', onClickCallback, false);
+</script>
+
+
   
 
   
@@ -1188,11 +1227,14 @@
   <span class="article-metadata li-cite-author">
     
 
-  <span class="author-highlighted">
-      <a href="/author/myo-minn-oo/">Myo Minn Oo</a></span>
+  <span >
+      <a href="/author/myo-minn-oo/">Myo Minn Oo</a></span>, <span >
+      <a href="/author/nilar-aye-tun/">Nilar Aye Tun</a></span>, <span >
+      <a href="/author/xu-lin/">Xu Lin</a></span>, <span >
+      <a href="/author/don-eliseo-lucero-prisno-iii/">Don Eliseo Lucero-Prisno III</a></span>
   </span>
-  (2019).
-  <a href="/publication/preprint/">An example preprint / working paper</a>.
+  (2021).
+  <a href="/publication/oo/">Cite as: Oo MM, Tun AT, Lin X, Lucero-Prisno III DE. COVID-19 in Myanmar: Spread, actions and opportunities for peace and stability. J Glob Health 2020; 10: 020374 COVID-19 in Myanmar: Spread, actions and opportunities for peace and stability</a>.
   
   <p>
 
@@ -1204,95 +1246,28 @@
 
 
   
-    
-  
 
 
 
-<a class="btn btn-outline-primary btn-page-header btn-sm" href="http://arxiv.org/pdf/1512.04133v1" target="_blank" rel="noopener">
-  PDF
+
+
+<a href="#" class="btn btn-outline-primary btn-page-header btn-sm js-cite-modal"
+        data-filename="/publication/oo/cite.bib">
+  Cite
 </a>
 
 
 
 
-  
-  
-    
-  
-<a class="btn btn-outline-primary btn-page-header btn-sm" href="/#" target="_blank" rel="noopener">
-  Code
-</a>
-
-
-  
-  
-    
-  
-<a class="btn btn-outline-primary btn-page-header btn-sm" href="/#" target="_blank" rel="noopener">
-  Dataset
-</a>
 
 
 
-  
-  <a class="btn btn-outline-primary btn-page-header btn-sm" href="/project/internal-project/">
-    Project
-  </a>
-  
 
 
 
-  
-  
-    
-  
-<a class="btn btn-outline-primary btn-page-header btn-sm" href="/#" target="_blank" rel="noopener">
-  Poster
-</a>
-
-
-  
-  <a class="btn btn-outline-primary btn-page-header btn-sm" href="/slides/example/" target="_blank">
-    Slides
-  </a>
-  
-
-
-  
-  
-    
-  
-<a class="btn btn-outline-primary btn-page-header btn-sm" href="/#" target="_blank" rel="noopener">
-  Video
-</a>
-
-
-  
-  
-    
-  
-<a class="btn btn-outline-primary btn-page-header btn-sm" href="/#" target="_blank" rel="noopener">
-  Source Document
-</a>
 
 
 
-  
-  
-  
-    
-  
-  
-  
-  
-  
-    
-  
-  <a class="btn btn-outline-primary btn-page-header btn-sm" href="http://example.org" target="_blank" rel="noopener">
-    
-    Custom Link
-  </a>
 
 </p>
 
@@ -1314,13 +1289,16 @@
   <span class="article-metadata li-cite-author">
     
 
-  <span class="author-highlighted">
-      <a href="/author/myo-minn-oo/">Myo Minn Oo</a></span><i class="author-notes fas fa-info-circle" data-toggle="tooltip" title="Equal contribution"></i>, <span >
-      <a href="/author/robert-ford/">Robert Ford</a></span><i class="author-notes fas fa-info-circle" data-toggle="tooltip" title="Equal contribution"></i>
+  <span >
+      <a href="/author/myo-minn-oo/">Myo Minn Oo</a></span>, <span >
+      <a href="/author/naris-boonathapat/">Naris Boonathapat</a></span>, <span >
+      <a href="/author/htet-ko-ko-aung/">Htet Ko Ko Aung</a></span>, <span >
+      <a href="/author/petchawan-pungrassami/">Petchawan Pungrassami</a></span>, <span >
+      <a href="/author/tippawan-liabsuetrakul/">Tippawan Liabsuetrakul</a></span>
   </span>
-  (2015).
-  <a href="/publication/journal-article/">An example journal article</a>.
-  <em>Journal of Source Themes, 1</em>(1).
+  (2021).
+  <a href="/publication/oo-2021/">Changes in health-related quality of life and the associated factors among Myanmar migrants with tuberculosis: a cohort study</a>.
+  <em>BMC Infectious Diseases</em>.
   
   <p>
 
@@ -1337,14 +1315,14 @@
 
 
 
-<a class="btn btn-outline-primary btn-page-header btn-sm" href="http://arxiv.org/pdf/1512.04133v1" target="_blank" rel="noopener">
+<a class="btn btn-outline-primary btn-page-header btn-sm" href="https://doi.org/10.1186/s12879-021-06070-2" target="_blank" rel="noopener">
   PDF
 </a>
 
 
 
 <a href="#" class="btn btn-outline-primary btn-page-header btn-sm js-cite-modal"
-        data-filename="/publication/journal-article/cite.bib">
+        data-filename="/publication/oo-2021/cite.bib">
   Cite
 </a>
 
@@ -1355,11 +1333,80 @@
 
 
 
+
+
+
+
+
+<a class="btn btn-outline-primary btn-page-header btn-sm" href="https://doi.org/10.1186/s12879-021-06070-2" target="_blank" rel="noopener">
+  DOI
+</a>
+
+
+</p>
+
   
-  <a class="btn btn-outline-primary btn-page-header btn-sm" href="/slides/example/" target="_blank">
-    Slides
-  </a>
   
+</div>
+
+    
+  
+    
+      
+
+<div class="pub-list-item" style="margin-bottom: 1rem">
+  <i class="far fa-file-alt pub-icon" aria-hidden="true"></i>
+
+  
+  
+
+  <span class="article-metadata li-cite-author">
+    
+
+  <span >
+      <a href="/author/ning-feng/">Ning Feng</a></span>, <span >
+      <a href="/author/jeffrey-karl-edwards/">Jeffrey Karl Edwards</a></span>, <span >
+      <a href="/author/philip-odhiambo-owiti/">Philip Odhiambo Owiti</a></span>, <span >
+      <a href="/author/guo-min-zhang/">Guo-Min Zhang</a></span>, <span >
+      <a href="/author/zulma-vanessa-rueda-vallejo/">Zulma Vanessa Rueda Vallejo</a></span>, <span >
+      <a href="/author/katrina-hann/">Katrina Hann</a></span>, <span >
+      <a href="/author/shui-sen-zhou/">Shui-Sen Zhou</a></span>, <span >
+      <a href="/author/myo-minn-oo/">Myo Minn Oo</a></span>, <span >
+      <a href="/author/elizabeth-marie-geoffroy/">Elizabeth Marie Geoffroy</a></span>, <span >
+      <a href="/author/chao-ma/">Chao Ma</a></span>
+  </span>
+  (2021).
+  <a href="/publication/feng-2021/">Operational research capacity building through the Structured Operational Research Training Initiative (SORT-IT) in China: implementation, outcomes and challenges</a>.
+  <em>Infectious diseases of poverty</em>.
+  
+  <p>
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+<a href="#" class="btn btn-outline-primary btn-page-header btn-sm js-cite-modal"
+        data-filename="/publication/feng-2021/cite.bib">
+  Cite
+</a>
+
+
+
+
+
+
+
+
+
 
 
 
@@ -1373,9 +1420,182 @@
 
     
   
+    
+      
+
+<div class="pub-list-item" style="margin-bottom: 1rem">
+  <i class="far fa-file-alt pub-icon" aria-hidden="true"></i>
 
   
   
+
+  <span class="article-metadata li-cite-author">
+    
+
+  <span >
+      <a href="/author/myo-minn-oo/">Myo Minn Oo</a></span>, <span >
+      <a href="/author/nilar-aye-tun/">Nilar Aye Tun</a></span>, <span >
+      <a href="/author/xu-lin/">Xu Lin</a></span>, <span >
+      <a href="/author/don-eliseo-lucero-prisno-3rd/">Don Eliseo Lucero-Prisno  3rd</a></span>
+  </span>
+  (2020).
+  <a href="/publication/oo-2020-a/">COVID-19 in Myanmar: Spread, actions and opportunities for peace and stability</a>.
+  <em>Journal of global health</em>.
+  
+  <p>
+
+
+
+
+
+
+
+
+  
+    
+  
+
+
+
+<a class="btn btn-outline-primary btn-page-header btn-sm" href="https://pubmed.ncbi.nlm.nih.gov/33110565%20https://www.ncbi.nlm.nih.gov/pmc/articles/PMC7568915/" target="_blank" rel="noopener">
+  PDF
+</a>
+
+
+
+<a href="#" class="btn btn-outline-primary btn-page-header btn-sm js-cite-modal"
+        data-filename="/publication/oo-2020-a/cite.bib">
+  Cite
+</a>
+
+
+
+
+
+
+
+
+
+
+
+
+
+<a class="btn btn-outline-primary btn-page-header btn-sm" href="https://doi.org/10.7189/jogh.10.020374" target="_blank" rel="noopener">
+  DOI
+</a>
+
+
+</p>
+
+  
+  
+</div>
+
+    
+  
+    
+      
+
+<div class="pub-list-item" style="margin-bottom: 1rem">
+  <i class="far fa-file-alt pub-icon" aria-hidden="true"></i>
+
+  
+  
+
+  <span class="article-metadata li-cite-author">
+    
+
+  <span >
+      <a href="/author/myo-minn-oo/">Myo Minn Oo</a></span>, <span >
+      <a href="/author/nattaporn-tassanakijpanich/">Nattaporn Tassanakijpanich</a></span>, <span >
+      <a href="/author/moe-hnin-phyu/">Moe Hnin Phyu</a></span>, <span >
+      <a href="/author/nanda-safira/">Nanda Safira</a></span>, <span >
+      <a href="/author/shashi-kandel/">Shashi Kandel</a></span>, <span >
+      <a href="/author/kemmapon-chumchuen/">Kemmapon Chumchuen</a></span>, <span >
+      <a href="/author/li-mei-zhang/">Li Mei Zhang</a></span>, <span >
+      <a href="/author/hnin-aye-kyu/">Hnin Aye Kyu</a></span>, <span >
+      <a href="/author/porraporn-sriwannawit/">Porraporn Sriwannawit</a></span>, <span >
+      <a href="/author/bintinee-bilmumad/">Bintinee Bilmumad</a></span>, <span >
+      <a href="/author/li-cao/">Li Cao</a></span>, <span >
+      <a href="/author/yingwu-guo/">Yingwu Guo</a></span>, <span >
+      <a href="/author/jarawee-sukmanee/">Jarawee Sukmanee</a></span>, <span >
+      <a href="/author/vu-manh-cuong/">Vu Manh Cuong</a></span>, <span >
+      <a href="/author/virasakdi-chongsuvivatwong/">Virasakdi Chongsuvivatwong</a></span>, <span >
+      <a href="/author/edward-b-mcneil/">Edward B McNeil</a></span>
+  </span>
+  (2020).
+  <a href="/publication/oo-2020/">Coverage of tuberculosis and diabetes mellitus screening among household contacts of tuberculosis patients: a household-based cross-sectional survey from Southern Thailand</a>.
+  <em>BMC Public Health</em>.
+  
+  <p>
+
+
+
+
+
+
+
+
+  
+    
+  
+
+
+
+<a class="btn btn-outline-primary btn-page-header btn-sm" href="https://doi.org/10.1186/s12889-020-09090-w" target="_blank" rel="noopener">
+  PDF
+</a>
+
+
+
+<a href="#" class="btn btn-outline-primary btn-page-header btn-sm js-cite-modal"
+        data-filename="/publication/oo-2020/cite.bib">
+  Cite
+</a>
+
+
+
+
+
+
+
+
+
+
+
+
+
+<a class="btn btn-outline-primary btn-page-header btn-sm" href="https://doi.org/10.1186/s12889-020-09090-w" target="_blank" rel="noopener">
+  DOI
+</a>
+
+
+</p>
+
+  
+  
+</div>
+
+    
+  
+
+  
+  
+  
+
+    
+    
+      
+    
+
+    
+
+    <div class="see-all">
+      <a href="/publication/">
+        See all publications
+        <i class="fas fa-angle-right"></i>
+      </a>
+    </div>
   
 
 </div>

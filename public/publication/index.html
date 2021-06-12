@@ -252,6 +252,45 @@
 
 
 
+
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-145822099-1"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+
+  function gtag() {
+      dataLayer.push(arguments);
+  }
+
+  function trackOutboundLink(url, target) {
+    gtag('event', 'click', {
+         'event_category': 'outbound',
+         'event_label': url,
+         'transport_type': 'beacon',
+         'event_callback': function () {
+           if (target !== '_blank') {
+             document.location = url;
+           }
+         }
+    });
+    console.debug("Outbound link clicked: " + url);
+  }
+
+  function onClickCallback(event) {
+    if ((event.target.tagName !== 'A') || (event.target.host === window.location.host)) {
+      return;
+    }
+    trackOutboundLink(event.target, event.target.getAttribute('target'));  
+  }
+
+  gtag('js', new Date());
+  gtag('config', 'UA-145822099-1', {});
+  gtag('set', {'cookie_flags': 'SameSite=None;Secure'});
+
+  
+  document.addEventListener('click', onClickCallback, false);
+</script>
+
+
   
 
   
@@ -302,7 +341,7 @@
     <meta property="twitter:image" content="https://mmoo.netlify.app/media/icon_hua2ec155b4296a9c9791d015323e16eb5_11927_512x512_fill_lanczos_center_2.png" /><meta property="og:locale" content="en-us" />
   
     
-      <meta property="og:updated_time" content="2019-04-07T00:00:00&#43;00:00" />
+      <meta property="og:updated_time" content="2021-06-12T18:25:58&#43;00:00" />
     
   
 
@@ -755,6 +794,102 @@
         
         
       
+        
+        
+      
+        
+        
+      
+        
+        
+      
+        
+        
+      
+        
+        
+      
+        
+        
+      
+        
+        
+      
+        
+        
+      
+        
+        
+      
+        
+        
+      
+        
+        
+      
+        
+        
+      
+        
+        
+      
+        
+        
+      
+        
+        
+      
+        
+        
+      
+        
+        
+      
+        
+        
+      
+        
+        
+      
+        
+        
+      
+        
+        
+      
+        
+        
+      
+        
+        
+      
+        
+        
+      
+        
+        
+      
+        
+        
+      
+        
+        
+      
+        
+        
+      
+        
+        
+      
+        
+        
+      
+        
+        
+      
+        
+        
+      
 
       <div class="form-row mb-4">
         <div class="col-auto">
@@ -786,8 +921,28 @@
             
             
             
+            <option value=".year-2021">
+              2021
+            </option>
+            
+            <option value=".year-2020">
+              2020
+            </option>
+            
             <option value=".year-2019">
               2019
+            </option>
+            
+            <option value=".year-2018">
+              2018
+            </option>
+            
+            <option value=".year-2017">
+              2017
+            </option>
+            
+            <option value=".year-2016">
+              2016
             </option>
             
             <option value=".year-2015">
@@ -804,6 +959,635 @@
       </div>
 
       <div id="container-publications">
+        
+
+        
+          
+        
+
+        <div class="grid-sizer col-lg-12 isotope-item pubtype-2 year-2021">
+          
+            
+
+<div class="pub-list-item" style="margin-bottom: 1rem">
+  <i class="far fa-file-alt pub-icon" aria-hidden="true"></i>
+
+  
+  
+
+  <span class="article-metadata li-cite-author">
+    
+
+  <span >
+      <a href="/author/myo-minn-oo/">Myo Minn Oo</a></span>, <span >
+      <a href="/author/nilar-aye-tun/">Nilar Aye Tun</a></span>, <span >
+      <a href="/author/xu-lin/">Xu Lin</a></span>, <span >
+      <a href="/author/don-eliseo-lucero-prisno-iii/">Don Eliseo Lucero-Prisno III</a></span>
+  </span>
+  (2021).
+  <a href="/publication/oo/">Cite as: Oo MM, Tun AT, Lin X, Lucero-Prisno III DE. COVID-19 in Myanmar: Spread, actions and opportunities for peace and stability. J Glob Health 2020; 10: 020374 COVID-19 in Myanmar: Spread, actions and opportunities for peace and stability</a>.
+  
+  <p>
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+<a href="#" class="btn btn-outline-primary btn-page-header btn-sm js-cite-modal"
+        data-filename="/publication/oo/cite.bib">
+  Cite
+</a>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</p>
+
+  
+  
+</div>
+
+          
+        </div>
+
+        
+
+        
+          
+        
+
+        <div class="grid-sizer col-lg-12 isotope-item pubtype-2 year-2021">
+          
+            
+
+<div class="pub-list-item" style="margin-bottom: 1rem">
+  <i class="far fa-file-alt pub-icon" aria-hidden="true"></i>
+
+  
+  
+
+  <span class="article-metadata li-cite-author">
+    
+
+  <span >
+      <a href="/author/ning-feng/">Ning Feng</a></span>, <span >
+      <a href="/author/jeffrey-karl-edwards/">Jeffrey Karl Edwards</a></span>, <span >
+      <a href="/author/philip-odhiambo-owiti/">Philip Odhiambo Owiti</a></span>, <span >
+      <a href="/author/guo-min-zhang/">Guo-Min Zhang</a></span>, <span >
+      <a href="/author/zulma-vanessa-rueda-vallejo/">Zulma Vanessa Rueda Vallejo</a></span>, <span >
+      <a href="/author/katrina-hann/">Katrina Hann</a></span>, <span >
+      <a href="/author/shui-sen-zhou/">Shui-Sen Zhou</a></span>, <span >
+      <a href="/author/myo-minn-oo/">Myo Minn Oo</a></span>, <span >
+      <a href="/author/elizabeth-marie-geoffroy/">Elizabeth Marie Geoffroy</a></span>, <span >
+      <a href="/author/chao-ma/">Chao Ma</a></span>
+  </span>
+  (2021).
+  <a href="/publication/feng-2021/">Operational research capacity building through the Structured Operational Research Training Initiative (SORT-IT) in China: implementation, outcomes and challenges</a>.
+  <em>Infectious diseases of poverty</em>.
+  
+  <p>
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+<a href="#" class="btn btn-outline-primary btn-page-header btn-sm js-cite-modal"
+        data-filename="/publication/feng-2021/cite.bib">
+  Cite
+</a>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</p>
+
+  
+  
+</div>
+
+          
+        </div>
+
+        
+
+        
+          
+        
+
+        <div class="grid-sizer col-lg-12 isotope-item pubtype-2 year-2021">
+          
+            
+
+<div class="pub-list-item" style="margin-bottom: 1rem">
+  <i class="far fa-file-alt pub-icon" aria-hidden="true"></i>
+
+  
+  
+
+  <span class="article-metadata li-cite-author">
+    
+
+  <span >
+      <a href="/author/myo-minn-oo/">Myo Minn Oo</a></span>, <span >
+      <a href="/author/naris-boonathapat/">Naris Boonathapat</a></span>, <span >
+      <a href="/author/htet-ko-ko-aung/">Htet Ko Ko Aung</a></span>, <span >
+      <a href="/author/petchawan-pungrassami/">Petchawan Pungrassami</a></span>, <span >
+      <a href="/author/tippawan-liabsuetrakul/">Tippawan Liabsuetrakul</a></span>
+  </span>
+  (2021).
+  <a href="/publication/oo-2021/">Changes in health-related quality of life and the associated factors among Myanmar migrants with tuberculosis: a cohort study</a>.
+  <em>BMC Infectious Diseases</em>.
+  
+  <p>
+
+
+
+
+
+
+
+
+  
+    
+  
+
+
+
+<a class="btn btn-outline-primary btn-page-header btn-sm" href="https://doi.org/10.1186/s12879-021-06070-2" target="_blank" rel="noopener">
+  PDF
+</a>
+
+
+
+<a href="#" class="btn btn-outline-primary btn-page-header btn-sm js-cite-modal"
+        data-filename="/publication/oo-2021/cite.bib">
+  Cite
+</a>
+
+
+
+
+
+
+
+
+
+
+
+
+
+<a class="btn btn-outline-primary btn-page-header btn-sm" href="https://doi.org/10.1186/s12879-021-06070-2" target="_blank" rel="noopener">
+  DOI
+</a>
+
+
+</p>
+
+  
+  
+</div>
+
+          
+        </div>
+
+        
+
+        
+          
+        
+
+        <div class="grid-sizer col-lg-12 isotope-item pubtype-2 year-2020">
+          
+            
+
+<div class="pub-list-item" style="margin-bottom: 1rem">
+  <i class="far fa-file-alt pub-icon" aria-hidden="true"></i>
+
+  
+  
+
+  <span class="article-metadata li-cite-author">
+    
+
+  <span >
+      <a href="/author/myo-minn-oo/">Myo Minn Oo</a></span>, <span >
+      <a href="/author/nilar-aye-tun/">Nilar Aye Tun</a></span>, <span >
+      <a href="/author/xu-lin/">Xu Lin</a></span>, <span >
+      <a href="/author/don-eliseo-lucero-prisno-3rd/">Don Eliseo Lucero-Prisno  3rd</a></span>
+  </span>
+  (2020).
+  <a href="/publication/oo-2020-a/">COVID-19 in Myanmar: Spread, actions and opportunities for peace and stability</a>.
+  <em>Journal of global health</em>.
+  
+  <p>
+
+
+
+
+
+
+
+
+  
+    
+  
+
+
+
+<a class="btn btn-outline-primary btn-page-header btn-sm" href="https://pubmed.ncbi.nlm.nih.gov/33110565%20https://www.ncbi.nlm.nih.gov/pmc/articles/PMC7568915/" target="_blank" rel="noopener">
+  PDF
+</a>
+
+
+
+<a href="#" class="btn btn-outline-primary btn-page-header btn-sm js-cite-modal"
+        data-filename="/publication/oo-2020-a/cite.bib">
+  Cite
+</a>
+
+
+
+
+
+
+
+
+
+
+
+
+
+<a class="btn btn-outline-primary btn-page-header btn-sm" href="https://doi.org/10.7189/jogh.10.020374" target="_blank" rel="noopener">
+  DOI
+</a>
+
+
+</p>
+
+  
+  
+</div>
+
+          
+        </div>
+
+        
+
+        
+          
+        
+
+        <div class="grid-sizer col-lg-12 isotope-item pubtype-2 year-2020">
+          
+            
+
+<div class="pub-list-item" style="margin-bottom: 1rem">
+  <i class="far fa-file-alt pub-icon" aria-hidden="true"></i>
+
+  
+  
+
+  <span class="article-metadata li-cite-author">
+    
+
+  <span >
+      <a href="/author/kyi-thar-min/">Kyi Thar Min</a></span>, <span >
+      <a href="/author/thae-maung-maung/">Thae Maung Maung</a></span>, <span >
+      <a href="/author/myo-minn-oo/">Myo Minn Oo</a></span>, <span >
+      <a href="/author/tin-oo/">Tin Oo</a></span>, <span >
+      <a href="/author/zaw-lin/">Zaw Lin</a></span>, <span >
+      <a href="/author/aung-thi/">Aung Thi</a></span>, <span >
+      <a href="/author/jaya-prasad-tripathy/">Jaya Prasad Tripathy</a></span>
+  </span>
+  (2020).
+  <a href="/publication/min-2020/">Utilization of insecticide-treated bed nets and care-seeking for fever and its associated socio-demographic and geographical factors among under-five children in different regions: evidence from the Myanmar Demographic and Health Survey, 2015–2016</a>.
+  <em>Malaria Journal</em>.
+  
+  <p>
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+<a href="#" class="btn btn-outline-primary btn-page-header btn-sm js-cite-modal"
+        data-filename="/publication/min-2020/cite.bib">
+  Cite
+</a>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</p>
+
+  
+  
+</div>
+
+          
+        </div>
+
+        
+
+        
+          
+        
+
+        <div class="grid-sizer col-lg-12 isotope-item pubtype-2 year-2020">
+          
+            
+
+<div class="pub-list-item" style="margin-bottom: 1rem">
+  <i class="far fa-file-alt pub-icon" aria-hidden="true"></i>
+
+  
+  
+
+  <span class="article-metadata li-cite-author">
+    
+
+  <span >
+      <a href="/author/nang-thu-thu-kyaw/">Nang Thu Thu Kyaw</a></span>, <span >
+      <a href="/author/aung-sithu/">Aung Sithu</a></span>, <span >
+      <a href="/author/srinath-satyanarayana/">Srinath Satyanarayana</a></span>, <span >
+      <a href="/author/ajay-kumar/">Ajay Kumar</a></span>, <span >
+      <a href="/author/saw-thein/">Saw Thein</a></span>, <span >
+      <a href="/author/aye-myat-thi/">Aye Myat Thi</a></span>, <span >
+      <a href="/author/pyae-phyo-wai/">Pyae Phyo Wai</a></span>, <span >
+      <a href="/author/yan-naing-lin/">Yan Naing Lin</a></span>, <span >
+      <a href="/author/khine-wut-yee-kyaw/">Khine Wut Yee Kyaw</a></span>, <span >
+      <a href="/author/moe-myint-theingi-tun/">Moe Myint Theingi Tun</a></span>
+  </span>
+  (2020).
+  <a href="/publication/kyaw-2020/">Outcomes of Community-Based Systematic Screening of Household Contacts of Patients with Multidrug-Resistant Tuberculosis in Myanmar</a>.
+  <em>Tropical Medicine and Infectious Disease</em>.
+  
+  <p>
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+<a href="#" class="btn btn-outline-primary btn-page-header btn-sm js-cite-modal"
+        data-filename="/publication/kyaw-2020/cite.bib">
+  Cite
+</a>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</p>
+
+  
+  
+</div>
+
+          
+        </div>
+
+        
+
+        
+          
+        
+
+        <div class="grid-sizer col-lg-12 isotope-item pubtype-2 year-2020">
+          
+            
+
+<div class="pub-list-item" style="margin-bottom: 1rem">
+  <i class="far fa-file-alt pub-icon" aria-hidden="true"></i>
+
+  
+  
+
+  <span class="article-metadata li-cite-author">
+    
+
+  <span >
+      <a href="/author/lwin-lwin-aye/">Lwin Lwin Aye</a></span>, <span >
+      <a href="/author/jaya-prasad-tripathy/">Jaya Prasad Tripathy</a></span>, <span >
+      <a href="/author/thae-maung-maung/">Thae Maung Maung</a></span>, <span >
+      <a href="/author/myo-minn-oo/">Myo Minn Oo</a></span>, <span >
+      <a href="/author/mya-lay-nwe/">Mya Lay Nwe</a></span>, <span >
+      <a href="/author/hlaing-moh-moh-thu/">Hlaing Moh Moh Thu</a></span>, <span >
+      <a href="/author/ko-ko/">Ko Ko</a></span>, <span >
+      <a href="/author/kyaw-kan-kaung/">Kyaw Kan Kaung</a></span>
+  </span>
+  (2020).
+  <a href="/publication/aye-2020/">Experiences from the pilot implementation of the Package of Essential Non-communicable Disease Interventions (PEN) in Myanmar, 2017-18: A mixed methods study</a>.
+  <em>PloS one</em>.
+  
+  <p>
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+<a href="#" class="btn btn-outline-primary btn-page-header btn-sm js-cite-modal"
+        data-filename="/publication/aye-2020/cite.bib">
+  Cite
+</a>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</p>
+
+  
+  
+</div>
+
+          
+        </div>
+
+        
+
+        
+          
+        
+
+        <div class="grid-sizer col-lg-12 isotope-item pubtype-2 year-2020">
+          
+            
+
+<div class="pub-list-item" style="margin-bottom: 1rem">
+  <i class="far fa-file-alt pub-icon" aria-hidden="true"></i>
+
+  
+  
+
+  <span class="article-metadata li-cite-author">
+    
+
+  <span >
+      <a href="/author/myo-minn-oo/">Myo Minn Oo</a></span>, <span >
+      <a href="/author/nattaporn-tassanakijpanich/">Nattaporn Tassanakijpanich</a></span>, <span >
+      <a href="/author/moe-hnin-phyu/">Moe Hnin Phyu</a></span>, <span >
+      <a href="/author/nanda-safira/">Nanda Safira</a></span>, <span >
+      <a href="/author/shashi-kandel/">Shashi Kandel</a></span>, <span >
+      <a href="/author/kemmapon-chumchuen/">Kemmapon Chumchuen</a></span>, <span >
+      <a href="/author/li-mei-zhang/">Li Mei Zhang</a></span>, <span >
+      <a href="/author/hnin-aye-kyu/">Hnin Aye Kyu</a></span>, <span >
+      <a href="/author/porraporn-sriwannawit/">Porraporn Sriwannawit</a></span>, <span >
+      <a href="/author/bintinee-bilmumad/">Bintinee Bilmumad</a></span>, <span >
+      <a href="/author/li-cao/">Li Cao</a></span>, <span >
+      <a href="/author/yingwu-guo/">Yingwu Guo</a></span>, <span >
+      <a href="/author/jarawee-sukmanee/">Jarawee Sukmanee</a></span>, <span >
+      <a href="/author/vu-manh-cuong/">Vu Manh Cuong</a></span>, <span >
+      <a href="/author/virasakdi-chongsuvivatwong/">Virasakdi Chongsuvivatwong</a></span>, <span >
+      <a href="/author/edward-b-mcneil/">Edward B McNeil</a></span>
+  </span>
+  (2020).
+  <a href="/publication/oo-2020/">Coverage of tuberculosis and diabetes mellitus screening among household contacts of tuberculosis patients: a household-based cross-sectional survey from Southern Thailand</a>.
+  <em>BMC Public Health</em>.
+  
+  <p>
+
+
+
+
+
+
+
+
+  
+    
+  
+
+
+
+<a class="btn btn-outline-primary btn-page-header btn-sm" href="https://doi.org/10.1186/s12889-020-09090-w" target="_blank" rel="noopener">
+  PDF
+</a>
+
+
+
+<a href="#" class="btn btn-outline-primary btn-page-header btn-sm js-cite-modal"
+        data-filename="/publication/oo-2020/cite.bib">
+  Cite
+</a>
+
+
+
+
+
+
+
+
+
+
+
+
+
+<a class="btn btn-outline-primary btn-page-header btn-sm" href="https://doi.org/10.1186/s12889-020-09090-w" target="_blank" rel="noopener">
+  DOI
+</a>
+
+
+</p>
+
+  
+  
+</div>
+
+          
+        </div>
+
         
 
         
@@ -928,6 +1712,1836 @@
     
     Custom Link
   </a>
+
+</p>
+
+  
+  
+</div>
+
+          
+        </div>
+
+        
+
+        
+          
+        
+
+        <div class="grid-sizer col-lg-12 isotope-item pubtype-2 year-2019">
+          
+            
+
+<div class="pub-list-item" style="margin-bottom: 1rem">
+  <i class="far fa-file-alt pub-icon" aria-hidden="true"></i>
+
+  
+  
+
+  <span class="article-metadata li-cite-author">
+    
+
+  <span >
+      <a href="/author/thinley-dorji/">Thinley Dorji</a></span>, <span >
+      <a href="/author/mrinalini-das/">Mrinalini Das</a></span>, <span >
+      <a href="/author/rafael-van-den-bergh/">Rafael Van den Bergh</a></span>, <span >
+      <a href="/author/myo-minn-oo/">Myo Minn Oo</a></span>, <span >
+      <a href="/author/sonam-gyamtsho/">Sonam Gyamtsho</a></span>, <span >
+      <a href="/author/karma-tenzin/">Karma Tenzin</a></span>, <span >
+      <a href="/author/tashi-tshomo/">Tashi Tshomo</a></span>, <span >
+      <a href="/author/sonam-ugen/">Sonam Ugen</a></span>
+  </span>
+  (2019).
+  <a href="/publication/dorji-2019/">“If we miss this chance, it&#39;s futile later on”–late antenatal booking and its determinants in Bhutan: a mixed-methods study</a>.
+  <em>BMC pregnancy and childbirth</em>.
+  
+  <p>
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+<a href="#" class="btn btn-outline-primary btn-page-header btn-sm js-cite-modal"
+        data-filename="/publication/dorji-2019/cite.bib">
+  Cite
+</a>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</p>
+
+  
+  
+</div>
+
+          
+        </div>
+
+        
+
+        
+          
+        
+
+        <div class="grid-sizer col-lg-12 isotope-item pubtype-2 year-2019">
+          
+            
+
+<div class="pub-list-item" style="margin-bottom: 1rem">
+  <i class="far fa-file-alt pub-icon" aria-hidden="true"></i>
+
+  
+  
+
+  <span class="article-metadata li-cite-author">
+    
+
+  <span >
+      <a href="/author/ko-ko-htwe/">Ko Ko Htwe</a></span>, <span >
+      <a href="/author/nang-thu-thu-kyaw/">Nang Thu Thu Kyaw</a></span>, <span >
+      <a href="/author/ajay-m-v-kumar/">Ajay M V Kumar</a></span>, <span >
+      <a href="/author/khine-wut-yee-kyaw/">Khine Wut Yee Kyaw</a></span>, <span >
+      <a href="/author/myo-minn-oo/">Myo Minn Oo</a></span>, <span >
+      <a href="/author/thandar-thwin/">Thandar Thwin</a></span>, <span >
+      <a href="/author/saw-saw/">Saw Saw</a></span>, <span >
+      <a href="/author/si-thu-aung/">Si Thu Aung</a></span>
+  </span>
+  (2019).
+  <a href="/publication/htwe-2019/">Pre-treatment loss to follow-up and treatment delay among bacteriologically-confirmed tuberculosis patients diagnosed in Mandalay Region, Myanmar</a>.
+  <em>Tropical medicine and health</em>.
+  
+  <p>
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+<a href="#" class="btn btn-outline-primary btn-page-header btn-sm js-cite-modal"
+        data-filename="/publication/htwe-2019/cite.bib">
+  Cite
+</a>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</p>
+
+  
+  
+</div>
+
+          
+        </div>
+
+        
+
+        
+          
+        
+
+        <div class="grid-sizer col-lg-12 isotope-item pubtype-2 year-2019">
+          
+            
+
+<div class="pub-list-item" style="margin-bottom: 1rem">
+  <i class="far fa-file-alt pub-icon" aria-hidden="true"></i>
+
+  
+  
+
+  <span class="article-metadata li-cite-author">
+    
+
+  <span >
+      <a href="/author/ting-wang/">Ting Wang</a></span>, <span >
+      <a href="/author/shui-sen-zhou/">Shui-Sen Zhou</a></span>, <span >
+      <a href="/author/jun-feng/">Jun Feng</a></span>, <span >
+      <a href="/author/myo-minn-oo/">Myo Minn Oo</a></span>, <span >
+      <a href="/author/jing-chen/">Jing Chen</a></span>, <span >
+      <a href="/author/chang-fu-yan/">Chang-Fu Yan</a></span>, <span >
+      <a href="/author/yi-zhang/">Yi Zhang</a></span>, <span >
+      <a href="/author/ping-tie/">Ping Tie</a></span>
+  </span>
+  (2019).
+  <a href="/publication/wang-2019/">Monitoring and evaluation of intervals from onset of fever to diagnosis before “1-3-7” approach in malaria elimination: a retrospective study in Shanxi Province, China from 2013 to 2018</a>.
+  <em>Malaria journal</em>.
+  
+  <p>
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+<a href="#" class="btn btn-outline-primary btn-page-header btn-sm js-cite-modal"
+        data-filename="/publication/wang-2019/cite.bib">
+  Cite
+</a>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</p>
+
+  
+  
+</div>
+
+          
+        </div>
+
+        
+
+        
+          
+        
+
+        <div class="grid-sizer col-lg-12 isotope-item pubtype-2 year-2019">
+          
+            
+
+<div class="pub-list-item" style="margin-bottom: 1rem">
+  <i class="far fa-file-alt pub-icon" aria-hidden="true"></i>
+
+  
+  
+
+  <span class="article-metadata li-cite-author">
+    
+
+  <span >
+      <a href="/author/n-t-t-kyaw/">N T T Kyaw</a></span>, <span >
+      <a href="/author/a-m-v-kumar/">A M V Kumar</a></span>, <span >
+      <a href="/author/k-w-y-kyaw/">K W Y Kyaw</a></span>, <span >
+      <a href="/author/s-satyanarayana/">S Satyanarayana</a></span>, <span >
+      <a href="/author/m-j-magee/">M J Magee</a></span>, <span >
+      <a href="/author/a-c-min/">A C Min</a></span>, <span >
+      <a href="/author/j-moe/">J Moe</a></span>, <span >
+      <a href="/author/z-z-aung/">Z Z Aung</a></span>, <span >
+      <a href="/author/t-k-aung/">T K Aung</a></span>, <span >
+      <a href="/author/m-m-oo/">M M Oo</a></span>
+  </span>
+  (2019).
+  <a href="/publication/kyaw-2019-a/">IPT in people living with HIV in Myanmar: a five-fold decrease in incidence of TB disease and all-cause mortality</a>.
+  <em>The International Journal of Tuberculosis and Lung Disease</em>.
+  
+  <p>
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+<a href="#" class="btn btn-outline-primary btn-page-header btn-sm js-cite-modal"
+        data-filename="/publication/kyaw-2019-a/cite.bib">
+  Cite
+</a>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</p>
+
+  
+  
+</div>
+
+          
+        </div>
+
+        
+
+        
+          
+        
+
+        <div class="grid-sizer col-lg-12 isotope-item pubtype-2 year-2019">
+          
+            
+
+<div class="pub-list-item" style="margin-bottom: 1rem">
+  <i class="far fa-file-alt pub-icon" aria-hidden="true"></i>
+
+  
+  
+
+  <span class="article-metadata li-cite-author">
+    
+
+  <span >
+      <a href="/author/karma-tenzin/">Karma Tenzin</a></span>, <span >
+      <a href="/author/thinley-dorji/">Thinley Dorji</a></span>, <span >
+      <a href="/author/tshering-choeda/">Tshering Choeda</a></span>, <span >
+      <a href="/author/phuntsho-wangdi/">Phuntsho Wangdi</a></span>, <span >
+      <a href="/author/myo-minn-oo/">Myo Minn Oo</a></span>, <span >
+      <a href="/author/jaya-prasad-tripathy/">Jaya Prasad Tripathy</a></span>, <span >
+      <a href="/author/tashi-tenzin/">Tashi Tenzin</a></span>, <span >
+      <a href="/author/tashi-tobgay/">Tashi Tobgay</a></span>
+  </span>
+  (2019).
+  <a href="/publication/tenzin-2019/">Internet Addiction among Secondary School Adolescents: A Mixed Methods Study.</a>.
+  <em>Journal of the Nepal Medical Association</em>.
+  
+  <p>
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+<a href="#" class="btn btn-outline-primary btn-page-header btn-sm js-cite-modal"
+        data-filename="/publication/tenzin-2019/cite.bib">
+  Cite
+</a>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</p>
+
+  
+  
+</div>
+
+          
+        </div>
+
+        
+
+        
+          
+        
+
+        <div class="grid-sizer col-lg-12 isotope-item pubtype-2 year-2019">
+          
+            
+
+<div class="pub-list-item" style="margin-bottom: 1rem">
+  <i class="far fa-file-alt pub-icon" aria-hidden="true"></i>
+
+  
+  
+
+  <span class="article-metadata li-cite-author">
+    
+
+  <span >
+      <a href="/author/khine-wut-yee-kyaw/">Khine Wut Yee Kyaw</a></span>, <span >
+      <a href="/author/aye-aye-mon/">Aye Aye Mon</a></span>, <span >
+      <a href="/author/khaing-hnin-phyo/">Khaing Hnin Phyo</a></span>, <span >
+      <a href="/author/nang-thu-thu-kyaw/">Nang Thu Thu Kyaw</a></span>, <span >
+      <a href="/author/ajay-m-v-kumar/">Ajay M V Kumar</a></span>, <span >
+      <a href="/author/than-than-lwin/">Than Than Lwin</a></span>, <span >
+      <a href="/author/zaw-zaw-aung/">Zaw Zaw Aung</a></span>, <span >
+      <a href="/author/thet-ko-aung/">Thet Ko Aung</a></span>, <span >
+      <a href="/author/myo-minn-oo/">Myo Minn Oo</a></span>, <span >
+      <a href="/author/thurain-htun/">Thurain Htun</a></span>
+  </span>
+  (2019).
+  <a href="/publication/kyaw-2019/">Initiation of antiretroviral therapy or antiretroviral prophylaxis in pregnant women living with HIV registered in five townships of Mandalay, Myanmar: A cross sectional study</a>.
+  <em>BMC Pregnancy and Childbirth</em>.
+  
+  <p>
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+<a href="#" class="btn btn-outline-primary btn-page-header btn-sm js-cite-modal"
+        data-filename="/publication/kyaw-2019/cite.bib">
+  Cite
+</a>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</p>
+
+  
+  
+</div>
+
+          
+        </div>
+
+        
+
+        
+          
+        
+
+        <div class="grid-sizer col-lg-12 isotope-item pubtype-2 year-2019">
+          
+            
+
+<div class="pub-list-item" style="margin-bottom: 1rem">
+  <i class="far fa-file-alt pub-icon" aria-hidden="true"></i>
+
+  
+  
+
+  <span class="article-metadata li-cite-author">
+    
+
+  <span >
+      <a href="/author/k-h-phyo/">K H Phyo</a></span>, <span >
+      <a href="/author/m-m-oo/">M M Oo</a></span>, <span >
+      <a href="/author/a-d-harries/">A D Harries</a></span>, <span >
+      <a href="/author/s-saw/">S Saw</a></span>, <span >
+      <a href="/author/t-k-aung/">T K Aung</a></span>, <span >
+      <a href="/author/j-moe/">J Moe</a></span>, <span >
+      <a href="/author/s-s-thuya/">S S Thuya</a></span>, <span >
+      <a href="/author/y-y-mon/">Y Y Mon</a></span>, <span >
+      <a href="/author/a-c-min/">A C Min</a></span>, <span >
+      <a href="/author/n-n-naing/">N N Naing</a></span>
+  </span>
+  (2019).
+  <a href="/publication/phyo-2019/">High prevalence and incidence of tuberculosis in people living with the HIV in Mandalay, Myanmar, 2011–2017</a>.
+  <em>The International Journal of Tuberculosis and Lung Disease</em>.
+  
+  <p>
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+<a href="#" class="btn btn-outline-primary btn-page-header btn-sm js-cite-modal"
+        data-filename="/publication/phyo-2019/cite.bib">
+  Cite
+</a>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</p>
+
+  
+  
+</div>
+
+          
+        </div>
+
+        
+
+        
+          
+        
+
+        <div class="grid-sizer col-lg-12 isotope-item pubtype-2 year-2019">
+          
+            
+
+<div class="pub-list-item" style="margin-bottom: 1rem">
+  <i class="far fa-file-alt pub-icon" aria-hidden="true"></i>
+
+  
+  
+
+  <span class="article-metadata li-cite-author">
+    
+
+  <span >
+      <a href="/author/kyaw-myo-htet/">Kyaw Myo Htet</a></span>, <span >
+      <a href="/author/kyaw-thu-soe/">Kyaw Thu Soe</a></span>, <span >
+      <a href="/author/myo-minn-oo/">Myo Minn Oo</a></span>, <span >
+      <a href="/author/san-hone/">San Hone</a></span>, <span >
+      <a href="/author/suman-s-majumdar/">Suman S Majumdar</a></span>, <span >
+      <a href="/author/htun-nyunt-oo/">Htun Nyunt Oo</a></span>
+  </span>
+  (2019).
+  <a href="/publication/htet-2019/">Early Success With Retention in Care Among People Living With HIV at Decentralized ART Satellite Sites in Yangon, Myanmar, 2015–2016</a>.
+  <em>Frontiers in public health</em>.
+  
+  <p>
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+<a href="#" class="btn btn-outline-primary btn-page-header btn-sm js-cite-modal"
+        data-filename="/publication/htet-2019/cite.bib">
+  Cite
+</a>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</p>
+
+  
+  
+</div>
+
+          
+        </div>
+
+        
+
+        
+          
+        
+
+        <div class="grid-sizer col-lg-12 isotope-item pubtype-2 year-2018">
+          
+            
+
+<div class="pub-list-item" style="margin-bottom: 1rem">
+  <i class="far fa-file-alt pub-icon" aria-hidden="true"></i>
+
+  
+  
+
+  <span class="article-metadata li-cite-author">
+    
+
+  <span >
+      <a href="/author/khine-wut-yee-kyaw/">Khine Wut Yee Kyaw</a></span>, <span >
+      <a href="/author/srinath-satyanarayana/">Srinath Satyanarayana</a></span>, <span >
+      <a href="/author/khaing-hnin-phyo/">Khaing Hnin Phyo</a></span>, <span >
+      <a href="/author/nang-thu-thu-kyaw/">Nang Thu Thu Kyaw</a></span>, <span >
+      <a href="/author/aye-aye-mon/">Aye Aye Mon</a></span>, <span >
+      <a href="/author/than-than-lwin/">Than Than Lwin</a></span>, <span >
+      <a href="/author/thet-ko-aung/">Thet Ko Aung</a></span>, <span >
+      <a href="/author/myo-minn-oo/">Myo Minn Oo</a></span>, <span >
+      <a href="/author/zaw-zaw-aung/">Zaw Zaw Aung</a></span>, <span >
+      <a href="/author/thurain-htun/">Thurain Htun</a></span>
+  </span>
+  (2018).
+  <a href="/publication/kyaw-2018/">Uptake of antiretroviral therapy in HIV-positive women ever enrolled into ‘prevention of mother to child transmission&#39;programme, Mandalay, Myanmar—a cohort study</a>.
+  <em>BMC pregnancy and childbirth</em>.
+  
+  <p>
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+<a href="#" class="btn btn-outline-primary btn-page-header btn-sm js-cite-modal"
+        data-filename="/publication/kyaw-2018/cite.bib">
+  Cite
+</a>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</p>
+
+  
+  
+</div>
+
+          
+        </div>
+
+        
+
+        
+          
+        
+
+        <div class="grid-sizer col-lg-12 isotope-item pubtype-2 year-2018">
+          
+            
+
+<div class="pub-list-item" style="margin-bottom: 1rem">
+  <i class="far fa-file-alt pub-icon" aria-hidden="true"></i>
+
+  
+  
+
+  <span class="article-metadata li-cite-author">
+    
+
+  <span >
+      <a href="/author/e-e-win/">E E Win</a></span>, <span >
+      <a href="/author/a-m-v-kumar/">A M V Kumar</a></span>, <span >
+      <a href="/author/n-t-t-kyaw/">N T T Kyaw</a></span>, <span >
+      <a href="/author/n-n-aye/">N N Aye</a></span>, <span >
+      <a href="/author/k-m-hteik/">K M Hteik</a></span>, <span >
+      <a href="/author/s-saw/">S Saw</a></span>, <span >
+      <a href="/author/m-m-oo/">M M Oo</a></span>, <span >
+      <a href="/author/k-w-y-kyaw/">K W Y Kyaw</a></span>, <span >
+      <a href="/author/s-t-aung/">S T Aung</a></span>, <span >
+      <a href="/author/t-l-tun/">T L Tun</a></span>
+  </span>
+  (2018).
+  <a href="/publication/win-2018/">How many sputum samples should be examined during follow-up of tuberculosis patients in Myanmar: two or one?</a>.
+  <em>Public health action</em>.
+  
+  <p>
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+<a href="#" class="btn btn-outline-primary btn-page-header btn-sm js-cite-modal"
+        data-filename="/publication/win-2018/cite.bib">
+  Cite
+</a>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</p>
+
+  
+  
+</div>
+
+          
+        </div>
+
+        
+
+        
+          
+        
+
+        <div class="grid-sizer col-lg-12 isotope-item pubtype-2 year-2018">
+          
+            
+
+<div class="pub-list-item" style="margin-bottom: 1rem">
+  <i class="far fa-file-alt pub-icon" aria-hidden="true"></i>
+
+  
+  
+
+  <span class="article-metadata li-cite-author">
+    
+
+  <span >
+      <a href="/author/n-s-aye/">N S Aye</a></span>, <span >
+      <a href="/author/m-m-oo/">M M Oo</a></span>, <span >
+      <a href="/author/a-d-harries/">A D Harries</a></span>, <span >
+      <a href="/author/m-m-mon/">M M Mon</a></span>, <span >
+      <a href="/author/s-hone/">S Hone</a></span>, <span >
+      <a href="/author/h-n-oo/">H N Oo</a></span>, <span >
+      <a href="/author/n-m-a-wan/">N M A Wan</a></span>
+  </span>
+  (2018).
+  <a href="/publication/aye-2018/">HIV, HBV and HCV in people who inject drugs and are placed on methadone maintenance therapy, Yangon, Myanmar</a>.
+  <em>Public health action</em>.
+  
+  <p>
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+<a href="#" class="btn btn-outline-primary btn-page-header btn-sm js-cite-modal"
+        data-filename="/publication/aye-2018/cite.bib">
+  Cite
+</a>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</p>
+
+  
+  
+</div>
+
+          
+        </div>
+
+        
+
+        
+          
+        
+
+        <div class="grid-sizer col-lg-12 isotope-item pubtype-2 year-2018">
+          
+            
+
+<div class="pub-list-item" style="margin-bottom: 1rem">
+  <i class="far fa-file-alt pub-icon" aria-hidden="true"></i>
+
+  
+  
+
+  <span class="article-metadata li-cite-author">
+    
+
+  <span >
+      <a href="/author/sandar-aye/">Sandar Aye</a></span>, <span >
+      <a href="/author/suman-s-majumdar/">Suman S Majumdar</a></span>, <span >
+      <a href="/author/myo-minn-oo/">Myo Minn Oo</a></span>, <span >
+      <a href="/author/jaya-prasad-tripathy/">Jaya Prasad Tripathy</a></span>, <span >
+      <a href="/author/s-satyanarayana/">S Satyanarayana</a></span>, <span >
+      <a href="/author/nang-thu-thu-kyaw/">Nang Thu Thu Kyaw</a></span>, <span >
+      <a href="/author/khine-wut-yee-kyaw/">Khine Wut Yee Kyaw</a></span>, <span >
+      <a href="/author/nay-lynn-oo/">Nay Lynn Oo</a></span>, <span >
+      <a href="/author/saw-thein/">Saw Thein</a></span>, <span >
+      <a href="/author/myat-kyaw-thu/">Myat Kyaw Thu</a></span>
+  </span>
+  (2018).
+  <a href="/publication/aye-2018-a/">Evaluation of a tuberculosis active case finding project in peri-urban areas, Myanmar: 2014-2016</a>.
+  <em>International Journal of Infectious Diseases</em>.
+  
+  <p>
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+<a href="#" class="btn btn-outline-primary btn-page-header btn-sm js-cite-modal"
+        data-filename="/publication/aye-2018-a/cite.bib">
+  Cite
+</a>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</p>
+
+  
+  
+</div>
+
+          
+        </div>
+
+        
+
+        
+          
+        
+
+        <div class="grid-sizer col-lg-12 isotope-item pubtype-2 year-2018">
+          
+            
+
+<div class="pub-list-item" style="margin-bottom: 1rem">
+  <i class="far fa-file-alt pub-icon" aria-hidden="true"></i>
+
+  
+  
+
+  <span class="article-metadata li-cite-author">
+    
+
+  <span >
+      <a href="/author/prajjwal-pyakurel/">Prajjwal Pyakurel</a></span>, <span >
+      <a href="/author/jaya-prasad-tripathy/">Jaya Prasad Tripathy</a></span>, <span >
+      <a href="/author/myo-minn-oo/">Myo Minn Oo</a></span>, <span >
+      <a href="/author/bijay-acharya/">Bijay Acharya</a></span>, <span >
+      <a href="/author/ujjwal-pyakurel/">Ujjwal Pyakurel</a></span>, <span >
+      <a href="/author/suman-bahadur-singh/">Suman Bahadur Singh</a></span>, <span >
+      <a href="/author/laxmi-subedi/">Laxmi Subedi</a></span>, <span >
+      <a href="/author/kamlesh-prasad-yadav/">Kamlesh Prasad Yadav</a></span>, <span >
+      <a href="/author/mukesh-poudel/">Mukesh Poudel</a></span>, <span >
+      <a href="/author/dipesh-raj-pandey/">Dipesh Raj Pandey</a></span>
+  </span>
+  (2018).
+  <a href="/publication/pyakurel-2018/">Catastrophic health expenditure among industrial workers in a large-scale industry in Nepal, 2017: a cross-sectional study</a>.
+  <em>BMJ open</em>.
+  
+  <p>
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+<a href="#" class="btn btn-outline-primary btn-page-header btn-sm js-cite-modal"
+        data-filename="/publication/pyakurel-2018/cite.bib">
+  Cite
+</a>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</p>
+
+  
+  
+</div>
+
+          
+        </div>
+
+        
+
+        
+          
+        
+
+        <div class="grid-sizer col-lg-12 isotope-item pubtype-2 year-2018">
+          
+            
+
+<div class="pub-list-item" style="margin-bottom: 1rem">
+  <i class="far fa-file-alt pub-icon" aria-hidden="true"></i>
+
+  
+  
+
+  <span class="article-metadata li-cite-author">
+    
+
+  <span >
+      <a href="/author/aung-chan-minn/">Aung Chan Minn</a></span>, <span >
+      <a href="/author/nang-thu-thu-kyaw/">Nang Thu Thu Kyaw</a></span>, <span >
+      <a href="/author/thet-ko-aung/">Thet Ko Aung</a></span>, <span >
+      <a href="/author/ohn-mar-mon/">Ohn Mar Mon</a></span>, <span >
+      <a href="/author/thurain-htun/">Thurain Htun</a></span>, <span >
+      <a href="/author/myo-minn-oo/">Myo Minn Oo</a></span>, <span >
+      <a href="/author/july-moe/">July Moe</a></span>, <span >
+      <a href="/author/aye-aye-mon/">Aye Aye Mon</a></span>, <span >
+      <a href="/author/srinath-satyanarayana/">Srinath Satyanarayana</a></span>, <span >
+      <a href="/author/htun-nyunt-oo/">Htun Nyunt Oo</a></span>
+  </span>
+  (2018).
+  <a href="/publication/minn-2018/">Attrition among HIV positive children enrolled under integrated HIV care programme in Myanmar: 12 years cohort analysis</a>.
+  <em>Global health action</em>.
+  
+  <p>
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+<a href="#" class="btn btn-outline-primary btn-page-header btn-sm js-cite-modal"
+        data-filename="/publication/minn-2018/cite.bib">
+  Cite
+</a>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</p>
+
+  
+  
+</div>
+
+          
+        </div>
+
+        
+
+        
+          
+        
+
+        <div class="grid-sizer col-lg-12 isotope-item pubtype-2 year-2018">
+          
+            
+
+<div class="pub-list-item" style="margin-bottom: 1rem">
+  <i class="far fa-file-alt pub-icon" aria-hidden="true"></i>
+
+  
+  
+
+  <span class="article-metadata li-cite-author">
+    
+
+  <span >
+      <a href="/author/zaw-zaw-aung/">Zaw Zaw Aung</a></span>, <span >
+      <a href="/author/myo-minn-oo/">Myo Minn Oo</a></span>, <span >
+      <a href="/author/jaya-prasad-tripathy/">Jaya Prasad Tripathy</a></span>, <span >
+      <a href="/author/nang-thu-thu-kyaw/">Nang Thu Thu Kyaw</a></span>, <span >
+      <a href="/author/san-hone/">San Hone</a></span>, <span >
+      <a href="/author/htun-nyunt-oo/">Htun Nyunt Oo</a></span>, <span >
+      <a href="/author/suman-s-majumdar/">Suman S Majumdar</a></span>
+  </span>
+  (2018).
+  <a href="/publication/aung-2018/">Are death and loss to follow-up still high in people living with HIV on ART after national scale-up and earlier treatment initiation? A large cohort study in government hospital-based setting, Myanmar: 2013-2016</a>.
+  <em>PloS one</em>.
+  
+  <p>
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+<a href="#" class="btn btn-outline-primary btn-page-header btn-sm js-cite-modal"
+        data-filename="/publication/aung-2018/cite.bib">
+  Cite
+</a>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</p>
+
+  
+  
+</div>
+
+          
+        </div>
+
+        
+
+        
+          
+        
+
+        <div class="grid-sizer col-lg-12 isotope-item pubtype-2 year-2017">
+          
+            
+
+<div class="pub-list-item" style="margin-bottom: 1rem">
+  <i class="far fa-file-alt pub-icon" aria-hidden="true"></i>
+
+  
+  
+
+  <span class="article-metadata li-cite-author">
+    
+
+  <span >
+      <a href="/author/pyae-phyo-wai/">Pyae Phyo Wai</a></span>, <span >
+      <a href="/author/hemant-deepak-shewade/">Hemant Deepak Shewade</a></span>, <span >
+      <a href="/author/nang-thu-thu-kyaw/">Nang Thu Thu Kyaw</a></span>, <span >
+      <a href="/author/khine-wut-yee-kyaw/">Khine Wut Yee Kyaw</a></span>, <span >
+      <a href="/author/saw-thein/">Saw Thein</a></span>, <span >
+      <a href="/author/aung-si-thu/">Aung Si Thu</a></span>, <span >
+      <a href="/author/myo-minn-oo/">Myo Minn Oo</a></span>, <span >
+      <a href="/author/pyae-sone-htwe/">Pyae Sone Htwe</a></span>, <span >
+      <a href="/author/moe-myint-theingi-tun/">Moe Myint Theingi Tun</a></span>, <span >
+      <a href="/author/htet-myet-win-maung/">Htet Myet Win Maung</a></span>
+  </span>
+  (2017).
+  <a href="/publication/wai-2017/">Patients with MDR-TB on domiciliary care in programmatic settings in Myanmar: Effect of a support package on preventing early deaths</a>.
+  <em>PloS one</em>.
+  
+  <p>
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+<a href="#" class="btn btn-outline-primary btn-page-header btn-sm js-cite-modal"
+        data-filename="/publication/wai-2017/cite.bib">
+  Cite
+</a>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</p>
+
+  
+  
+</div>
+
+          
+        </div>
+
+        
+
+        
+          
+        
+
+        <div class="grid-sizer col-lg-12 isotope-item pubtype-2 year-2017">
+          
+            
+
+<div class="pub-list-item" style="margin-bottom: 1rem">
+  <i class="far fa-file-alt pub-icon" aria-hidden="true"></i>
+
+  
+  
+
+  <span class="article-metadata li-cite-author">
+    
+
+  <span >
+      <a href="/author/khine-wut-yee-kyaw/">Khine Wut Yee Kyaw</a></span>, <span >
+      <a href="/author/myo-minn-oo/">Myo Minn Oo</a></span>, <span >
+      <a href="/author/nang-thu-thu-kyaw/">Nang Thu Thu Kyaw</a></span>, <span >
+      <a href="/author/khaing-hnin-phyo/">Khaing Hnin Phyo</a></span>, <span >
+      <a href="/author/thet-ko-aung/">Thet Ko Aung</a></span>, <span >
+      <a href="/author/theingi-mya/">Theingi Mya</a></span>, <span >
+      <a href="/author/nilar-aung/">Nilar Aung</a></span>, <span >
+      <a href="/author/htun-nyunt-oo/">Htun Nyunt Oo</a></span>, <span >
+      <a href="/author/petros-isaakidis/">Petros Isaakidis</a></span>
+  </span>
+  (2017).
+  <a href="/publication/kyaw-2017-b/">Low mother-to-child HIV transmission rate but high loss-to-follow-up among mothers and babies in Mandalay, Myanmar; a cohort study</a>.
+  <em>PloS one</em>.
+  
+  <p>
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+<a href="#" class="btn btn-outline-primary btn-page-header btn-sm js-cite-modal"
+        data-filename="/publication/kyaw-2017-b/cite.bib">
+  Cite
+</a>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</p>
+
+  
+  
+</div>
+
+          
+        </div>
+
+        
+
+        
+          
+        
+
+        <div class="grid-sizer col-lg-12 isotope-item pubtype-2 year-2017">
+          
+            
+
+<div class="pub-list-item" style="margin-bottom: 1rem">
+  <i class="far fa-file-alt pub-icon" aria-hidden="true"></i>
+
+  
+  
+
+  <span class="article-metadata li-cite-author">
+    
+
+  <span >
+      <a href="/author/nang-thu-thu-kyaw/">Nang Thu Thu Kyaw</a></span>, <span >
+      <a href="/author/ajay-m-v-kumar/">Ajay M V Kumar</a></span>, <span >
+      <a href="/author/myo-minn-oo/">Myo Minn Oo</a></span>, <span >
+      <a href="/author/htun-nyunt-oo/">Htun Nyunt Oo</a></span>, <span >
+      <a href="/author/khine-wut-yee-kyaw/">Khine Wut Yee Kyaw</a></span>, <span >
+      <a href="/author/soe-thiha/">Soe Thiha</a></span>, <span >
+      <a href="/author/thet-ko-aung/">Thet Ko Aung</a></span>, <span >
+      <a href="/author/than-win/">Than Win</a></span>, <span >
+      <a href="/author/yin-yin-mon/">Yin Yin Mon</a></span>, <span >
+      <a href="/author/anthony-d-harries/">Anthony D Harries</a></span>
+  </span>
+  (2017).
+  <a href="/publication/kyaw-2017-a/">Long-term outcomes of second-line antiretroviral treatment in an adult and adolescent cohort in Myanmar</a>.
+  <em>Global health action</em>.
+  
+  <p>
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+<a href="#" class="btn btn-outline-primary btn-page-header btn-sm js-cite-modal"
+        data-filename="/publication/kyaw-2017-a/cite.bib">
+  Cite
+</a>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</p>
+
+  
+  
+</div>
+
+          
+        </div>
+
+        
+
+        
+          
+        
+
+        <div class="grid-sizer col-lg-12 isotope-item pubtype-2 year-2017">
+          
+            
+
+<div class="pub-list-item" style="margin-bottom: 1rem">
+  <i class="far fa-file-alt pub-icon" aria-hidden="true"></i>
+
+  
+  
+
+  <span class="article-metadata li-cite-author">
+    
+
+  <span >
+      <a href="/author/nang-thu-thu-kyaw/">Nang Thu Thu Kyaw</a></span>, <span >
+      <a href="/author/anthony-d-harries/">Anthony D Harries</a></span>, <span >
+      <a href="/author/ajay-m-v-kumar/">Ajay M V Kumar</a></span>, <span >
+      <a href="/author/myo-minn-oo/">Myo Minn Oo</a></span>, <span >
+      <a href="/author/khine-wut-yee-kyaw/">Khine Wut Yee Kyaw</a></span>, <span >
+      <a href="/author/than-win/">Than Win</a></span>, <span >
+      <a href="/author/thet-ko-aung/">Thet Ko Aung</a></span>, <span >
+      <a href="/author/aung-chan-min/">Aung Chan Min</a></span>, <span >
+      <a href="/author/htun-nyunt-oo/">Htun Nyunt Oo</a></span>
+  </span>
+  (2017).
+  <a href="/publication/kyaw-2017/">High rate of virological failure and low rate of switching to second-line treatment among adolescents and adults living with HIV on first-line ART in Myanmar, 2005-2015</a>.
+  <em>PloS one</em>.
+  
+  <p>
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+<a href="#" class="btn btn-outline-primary btn-page-header btn-sm js-cite-modal"
+        data-filename="/publication/kyaw-2017/cite.bib">
+  Cite
+</a>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</p>
+
+  
+  
+</div>
+
+          
+        </div>
+
+        
+
+        
+          
+        
+
+        <div class="grid-sizer col-lg-12 isotope-item pubtype-2 year-2017">
+          
+            
+
+<div class="pub-list-item" style="margin-bottom: 1rem">
+  <i class="far fa-file-alt pub-icon" aria-hidden="true"></i>
+
+  
+  
+
+  <span class="article-metadata li-cite-author">
+    
+
+  <span >
+      <a href="/author/soe-thiha/">Soe Thiha</a></span>, <span >
+      <a href="/author/hemant-deepak-shewade/">Hemant Deepak Shewade</a></span>, <span >
+      <a href="/author/sairu-philip/">Sairu Philip</a></span>, <span >
+      <a href="/author/thet-ko-aung/">Thet Ko Aung</a></span>, <span >
+      <a href="/author/nang-thu-thu-kyaw/">Nang Thu Thu Kyaw</a></span>, <span >
+      <a href="/author/myo-minn-oo/">Myo Minn Oo</a></span>, <span >
+      <a href="/author/khine-wut-yee-kyaw/">Khine Wut Yee Kyaw</a></span>, <span >
+      <a href="/author/may-wint-war/">May Wint War</a></span>, <span >
+      <a href="/author/htun-nyunt-oo/">Htun Nyunt Oo</a></span>
+  </span>
+  (2017).
+  <a href="/publication/thiha-2017-a/">Factors associated with long turnaround time for early infant diagnosis of HIV in Myanmar</a>.
+  <em>Global health action</em>.
+  
+  <p>
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+<a href="#" class="btn btn-outline-primary btn-page-header btn-sm js-cite-modal"
+        data-filename="/publication/thiha-2017-a/cite.bib">
+  Cite
+</a>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</p>
+
+  
+  
+</div>
+
+          
+        </div>
+
+        
+
+        
+          
+        
+
+        <div class="grid-sizer col-lg-12 isotope-item pubtype-2 year-2017">
+          
+            
+
+<div class="pub-list-item" style="margin-bottom: 1rem">
+  <i class="far fa-file-alt pub-icon" aria-hidden="true"></i>
+
+  
+  
+
+  <span class="article-metadata li-cite-author">
+    
+
+  <span >
+      <a href="/author/soe-thiha/">Soe Thiha</a></span>, <span >
+      <a href="/author/hemant-deepak-shewade/">Hemant Deepak Shewade</a></span>, <span >
+      <a href="/author/sairu-philip/">Sairu Philip</a></span>, <span >
+      <a href="/author/thet-ko-aung/">Thet Ko Aung</a></span>, <span >
+      <a href="/author/nang-thu-thu-kyaw/">Nang Thu Thu Kyaw</a></span>, <span >
+      <a href="/author/myo-minn-oo/">Myo Minn Oo</a></span>, <span >
+      <a href="/author/khine-wut-yee-kyaw/">Khine Wut Yee Kyaw</a></span>, <span >
+      <a href="/author/may-wint-war/">May Wint War</a></span>, <span >
+      <a href="/author/htun-nyunt-oo/">Htun Nyunt Oo</a></span>
+  </span>
+  (2017).
+  <a href="/publication/thiha-2017/">Early infant diagnosis of HIV in Myanmar: call for innovative interventions to improve uptake and reduce turnaround time</a>.
+  <em>Global health action</em>.
+  
+  <p>
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+<a href="#" class="btn btn-outline-primary btn-page-header btn-sm js-cite-modal"
+        data-filename="/publication/thiha-2017/cite.bib">
+  Cite
+</a>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</p>
+
+  
+  
+</div>
+
+          
+        </div>
+
+        
+
+        
+          
+        
+
+        <div class="grid-sizer col-lg-12 isotope-item pubtype-2 year-2017">
+          
+            
+
+<div class="pub-list-item" style="margin-bottom: 1rem">
+  <i class="far fa-file-alt pub-icon" aria-hidden="true"></i>
+
+  
+  
+
+  <span class="article-metadata li-cite-author">
+    
+
+  <span >
+      <a href="/author/dorji-pelzom/">Dorji Pelzom</a></span>, <span >
+      <a href="/author/petros-isaakidis/">Petros Isaakidis</a></span>, <span >
+      <a href="/author/myo-minn-oo/">Myo Minn Oo</a></span>, <span >
+      <a href="/author/mongal-singh-gurung/">Mongal Singh Gurung</a></span>, <span >
+      <a href="/author/pemba-yangchen/">Pemba Yangchen</a></span>
+  </span>
+  (2017).
+  <a href="/publication/pelzom-2017/">Alarming prevalence and clustering of modifiable noncommunicable disease risk factors among adults in Bhutan: a nationwide cross-sectional community survey</a>.
+  <em>BMC Public Health</em>.
+  
+  <p>
+
+
+
+
+
+
+
+
+  
+    
+  
+
+
+
+<a class="btn btn-outline-primary btn-page-header btn-sm" href="https://doi.org/10.1186/s12889-017-4989-x" target="_blank" rel="noopener">
+  PDF
+</a>
+
+
+
+<a href="#" class="btn btn-outline-primary btn-page-header btn-sm js-cite-modal"
+        data-filename="/publication/pelzom-2017/cite.bib">
+  Cite
+</a>
+
+
+
+
+
+
+
+
+
+
+
+
+
+<a class="btn btn-outline-primary btn-page-header btn-sm" href="https://doi.org/10.1186/s12889-017-4989-x" target="_blank" rel="noopener">
+  DOI
+</a>
+
+
+</p>
+
+  
+  
+</div>
+
+          
+        </div>
+
+        
+
+        
+          
+        
+
+        <div class="grid-sizer col-lg-12 isotope-item pubtype-2 year-2016">
+          
+            
+
+<div class="pub-list-item" style="margin-bottom: 1rem">
+  <i class="far fa-file-alt pub-icon" aria-hidden="true"></i>
+
+  
+  
+
+  <span class="article-metadata li-cite-author">
+    
+
+  <span >
+      <a href="/author/a-m-thi/">A M Thi</a></span>, <span >
+      <a href="/author/h-d-shewade/">H D Shewade</a></span>, <span >
+      <a href="/author/n-t-t-kyaw/">N T T Kyaw</a></span>, <span >
+      <a href="/author/m-m-oo/">M M Oo</a></span>, <span >
+      <a href="/author/t-k-aung/">T K Aung</a></span>, <span >
+      <a href="/author/s-t-aung/">S T Aung</a></span>, <span >
+      <a href="/author/h-n-oo/">H N Oo</a></span>, <span >
+      <a href="/author/t-win/">T Win</a></span>, <span >
+      <a href="/author/a-d-harries/">A D Harries</a></span>
+  </span>
+  (2016).
+  <a href="/publication/thi-2016/">Timing of antiretroviral therapy and TB treatment outcomes in patients with TB-HIV in Myanmar</a>.
+  <em>Public Health Action International Union Against Tuberculosis PHA Nay Pyi Taw</em>.
+  
+  <p>
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+<a href="#" class="btn btn-outline-primary btn-page-header btn-sm js-cite-modal"
+        data-filename="/publication/thi-2016/cite.bib">
+  Cite
+</a>
+
+
+
+
+
+
+
+
+
+
+
+
+
+<a class="btn btn-outline-primary btn-page-header btn-sm" href="https://doi.org/10.5588/pha.16.0009" target="_blank" rel="noopener">
+  DOI
+</a>
+
+
+</p>
+
+  
+  
+</div>
+
+          
+        </div>
+
+        
+
+        
+          
+        
+
+        <div class="grid-sizer col-lg-12 isotope-item pubtype-2 year-2016">
+          
+            
+
+<div class="pub-list-item" style="margin-bottom: 1rem">
+  <i class="far fa-file-alt pub-icon" aria-hidden="true"></i>
+
+  
+  
+
+  <span class="article-metadata li-cite-author">
+    
+
+  <span >
+      <a href="/author/myo-minn-oo/">Myo Minn Oo</a></span>, <span >
+      <a href="/author/vivek-gupta/">Vivek Gupta</a></span>, <span >
+      <a href="/author/thet-ko-aung/">Thet Ko Aung</a></span>, <span >
+      <a href="/author/nang-thu-thu-kyaw/">Nang Thu Thu Kyaw</a></span>, <span >
+      <a href="/author/htun-nyunt-oo/">Htun Nyunt Oo</a></span>, <span >
+      <a href="/author/ajay-m-v-kumar/">Ajay M V Kumar</a></span>
+  </span>
+  (2016).
+  <a href="/publication/minn-oo-2016/">Alarming attrition rates among HIV-infected individuals in pre-antiretroviral therapy care in Myanmar, 2011–2014</a>.
+  <em>Global health action</em>.
+  
+  <p>
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+<a href="#" class="btn btn-outline-primary btn-page-header btn-sm js-cite-modal"
+        data-filename="/publication/minn-oo-2016/cite.bib">
+  Cite
+</a>
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 </p>
 

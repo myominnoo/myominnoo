@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Porraporn Sriwannawit | Myo Minn Oo</title>
+    <link>https://mmoo.netlify.app/author/porraporn-sriwannawit/</link>
+      <atom:link href="https://mmoo.netlify.app/author/porraporn-sriwannawit/index.xml" rel="self" type="application/rss+xml" />
+    <description>Porraporn Sriwannawit</description>
+    <generator>Wowchemy (https://wowchemy.com)</generator><language>en-us</language><copyright>© {2021} Myo Minn Oo</copyright><lastBuildDate>Wed, 01 Jan 2020 00:00:00 +0000</lastBuildDate>
+    <image>
+      <url>https://mmoo.netlify.app/media/icon_hua2ec155b4296a9c9791d015323e16eb5_11927_512x512_fill_lanczos_center_2.png</url>
+      <title>Porraporn Sriwannawit</title>
+      <link>https://mmoo.netlify.app/author/porraporn-sriwannawit/</link>
+    </image>
+    
+    <item>
+      <title>Coverage of tuberculosis and diabetes mellitus screening among household contacts of tuberculosis patients: a household-based cross-sectional survey from Southern Thailand</title>
+      <link>https://mmoo.netlify.app/publication/oo-2020/</link>
+      <pubDate>Wed, 01 Jan 2020 00:00:00 +0000</pubDate>
+      <guid>https://mmoo.netlify.app/publication/oo-2020/</guid>
+      <description></description>
+    </item>
+    
+  </channel>
+</rss>
