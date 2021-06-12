@@ -1,19 +1,19 @@
 ---
 date: "2021-06-13"
-linkTitle: mStats
-summary: A open-source R package for epidemiological data analysis
-title: "\U0001F4E6 mStats"
+linkTitle: Data Science
+summary: An example of using Wowchemy's Book layout for publishing online courses.
+title: "\U0001F4CA Learn Data Science"
 type: book
 output: md_document
 ---
 
 
 
-<a href='https://mmoo.netlify.app'><img src='man/figures/logo.png' align="right" alt="" height="20" /></a> 
+<a href='https://github.com/myominnoo/mStats'><img src="figures/logo.png" align="right" alt="" width="120" /></a)
 
 <!-- badges: start -->
 
-[![Lifecycle: maturing](man/figures/lifecycle-maturing.svg)](https://www.tidyverse.org/lifecycle/#maturing)
+[![Lifecycle: maturing](figures/lifecycle-maturing.svg)](https://www.tidyverse.org/lifecycle/#maturing)
 
 <!-- badges: end -->
 
@@ -64,6 +64,8 @@ The easiest way to get started with mStats is to follow the guide [here](https:/
 
 ```r
 library(mStats)
+
+
 ## Describe dataset after data import
 codebook(iris)
 #> 	      Codebook
@@ -80,6 +82,8 @@ codebook(iris)
 #>  |  4  Petal.Width |       numeric 150  0   0.0 |
 #>  |  5      Species |        factor 150  0   0.0 |
 #>  + -- ------------ + ----- ------- --- -- ----- +
+
+
 ## Label variables and dataset
 iris <- label(iris, "Edgar Anderson's Iris Data")
 #>   (`iris` labeled as `Edgar Anderson's Iris Data`)
