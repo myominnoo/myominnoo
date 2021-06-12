@@ -2,12 +2,12 @@
 date: "2021-01-24"
 linkTitle: mStats
 summary: A R package for epidemiological data analysis
-title: "\U0001F4CA mStats"
+title: "\U0001F396 mStats"
 type: book
 ---
 
 
-# mStats <img src="man/figures/logo.png" align="right" alt="" width="120" />
+# <img src="man/figures/logo.png" align="right" alt="" width="120" />
 
 <!-- badges: start -->
 
