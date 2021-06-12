@@ -1,8 +1,8 @@
 ---
 date: "2021-01-24"
-linkTitle: Data Science
-summary: An example of using Wowchemy's Book layout for publishing online courses.
-title: "\U0001F4CA Learn Data Science"
+linkTitle: mStats
+summary: A R package for epidemiological data analysis
+title: "\U0001F4CA Learn R"
 type: book
 ---
 
