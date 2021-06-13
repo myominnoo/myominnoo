@@ -3,7 +3,7 @@ date: "2021-06-13"
 title: R Basics
 author: "Myo Minn Oo"
 type: book
-weight: 40
+weight: 30
 ---
 
 # Introduction
