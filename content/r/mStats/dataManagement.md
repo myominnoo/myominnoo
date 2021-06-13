@@ -3,10 +3,9 @@ date: "2021-06-13"
 highlight: true
 title: Data Management
 type: book
-weight: 40
+weight: 50
 ---
 
-# Data Management
 
 ------------------------------------------------------------------------
 
