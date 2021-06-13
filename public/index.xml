@@ -143,36 +143,6 @@ implemented.&lt;/p&gt;
     </item>
     
     <item>
-      <title>Data Management</title>
-      <link>https://mmoo.netlify.app/r/mstats/datamanagement/</link>
-      <pubDate>Sun, 13 Jun 2021 00:00:00 +0000</pubDate>
-      <guid>https://mmoo.netlify.app/r/mstats/datamanagement/</guid>
-      <description>&lt;p&gt;Learn how to visualize data with Plotly.&lt;/p&gt;
-&lt;p&gt;
-  &lt;i class=&#34;fas fa-clock  pr-1 fa-fw&#34;&gt;&lt;/i&gt; 1-2 hours per week, for 8 weeks&lt;/p&gt;
-&lt;h2 id=&#34;learn&#34;&gt;Learn&lt;/h2&gt;
-
-&lt;div style=&#34;position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;&#34;&gt;
-  &lt;iframe src=&#34;https://www.youtube.com/embed/hSPmj7mK6ng&#34; style=&#34;position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;&#34; allowfullscreen title=&#34;YouTube Video&#34;&gt;&lt;/iframe&gt;
-&lt;/div&gt;
-
-&lt;h2 id=&#34;quiz&#34;&gt;Quiz&lt;/h2&gt;
-&lt;details class=&#34;spoiler &#34;  id=&#34;spoiler-2&#34;&gt;
-  &lt;summary&gt;When is a heatmap useful?&lt;/summary&gt;
-  &lt;p&gt;Lorem ipsum dolor sit amet, consectetur adipiscing elit.&lt;/p&gt;
-&lt;/details&gt;
-&lt;details class=&#34;spoiler &#34;  id=&#34;spoiler-3&#34;&gt;
-  &lt;summary&gt;Write Plotly code to render a bar chart&lt;/summary&gt;
-  &lt;p&gt;&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;import plotly.express as px
-data_canada = px.data.gapminder().query(&amp;quot;country == &#39;Canada&#39;&amp;quot;)
-fig = px.bar(data_canada, x=&#39;year&#39;, y=&#39;pop&#39;)
-fig.show()
-&lt;/code&gt;&lt;/pre&gt;
-&lt;/p&gt;
-&lt;/details&gt;</description>
-    </item>
-    
-    <item>
       <title>R Basics</title>
       <link>https://mmoo.netlify.app/r/mstats/rbasics/</link>
       <pubDate>Sun, 13 Jun 2021 00:00:00 +0000</pubDate>
@@ -602,6 +572,409 @@ The variance of the distribution is $\sigma^{2}$.
     </item>
     
     <item>
+      <title>Data Management - Basic</title>
+      <link>https://mmoo.netlify.app/r/mstats/datamanagement/</link>
+      <pubDate>Sun, 13 Jun 2021 00:00:00 +0000</pubDate>
+      <guid>https://mmoo.netlify.app/r/mstats/datamanagement/</guid>
+      <description>&lt;hr&gt;
+&lt;p&gt;This chapter covers methods in R to prepare data for further analysis.
+At the end of this chapter, we will get a tidy data on which we can run
+further analyses. So what is a tidy data?&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;Tidy data is a standard way of mapping the meaning of a dataset to its structure. A dataset is messy or tidy depending on how rows, columns, and tables are matched up with observations, variables, and types. In tidy data:
+
+1. Each variable forms a column.
+2. Each observation forms a row.
+3. Each type of observational unit forms a table.
+
+- Hadley Wickham, R for Data Science
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;If you are familiar with spreadsheet data, you already understand some
+of the data concepts. Like any spreadsheets, R also handles such a
+fairly similar data structure, which has rows and columns. Hence, they
+are called two-dimensional data.&lt;/p&gt;
+&lt;p&gt;The first step in doing so is getting your data into R. So let’s get
+started.&lt;/p&gt;
+&lt;h2 id=&#34;inputting-data-into-r&#34;&gt;Inputting data into R&lt;/h2&gt;
+&lt;hr&gt;
+&lt;p&gt;Here are commonly used data formats in medical research:&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;Comma-separated value &lt;code&gt;CSV&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;Excel’s &lt;code&gt;xls&lt;/code&gt; or &lt;code&gt;xlsx&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;STATA’s &lt;code&gt;dta&lt;/code&gt;&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h3 id=&#34;csv&#34;&gt;&lt;code&gt;CSV&lt;/code&gt;&lt;/h3&gt;
+&lt;hr&gt;
+&lt;p&gt;Base R has a built-in function to import &lt;code&gt;CSV&lt;/code&gt; file. You can read the
+help page by running this command &lt;code&gt;?write.csv&lt;/code&gt;. To run a function, you
+just put the link with quotes into the brackets of the function
+&lt;code&gt;write.csv&lt;/code&gt;.&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;## Here is original post from UCLA
+## https://stats.idre.ucla.edu/r/faq/how-to-input-data-into-r/
+df.csv &amp;lt;- read.csv(&amp;quot;https://stats.idre.ucla.edu/wp-content/uploads/2016/02/test-1.csv&amp;quot;)
+
+## check the dataset (show the first 10 rows)
+head(df.csv)
+#&amp;gt;    make   model mpg weight price
+#&amp;gt; 1   amc concord  22   2930  4099
+#&amp;gt; 2   amc   oacer  17   3350  4749
+#&amp;gt; 3   amc  spirit  22   2640  3799
+#&amp;gt; 4 buick century  20   3250  4816
+#&amp;gt; 5 buick electra  15   4080  7827
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;We imported the dataset from the internet and printed the first 10 lines
+using &lt;code&gt;head&lt;/code&gt;. As you can see we have five columns: &lt;code&gt;make&lt;/code&gt;, &lt;code&gt;model&lt;/code&gt;,
+&lt;code&gt;mpg&lt;/code&gt;, &lt;code&gt;weight&lt;/code&gt;, &lt;code&gt;price&lt;/code&gt;. You can print out the last 10 rows using
+&lt;code&gt;tail&lt;/code&gt; function.&lt;/p&gt;
+&lt;p&gt;The comma in &lt;code&gt;CSV&lt;/code&gt; is called delimiter because it separates the values
+into respective columns. So you can call it as the separator. Other
+common delimiters are space and semi-colon. Here are their examples.&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;## Here is original post from UCLA
+## https://stats.idre.ucla.edu/r/faq/how-to-input-data-into-r/
+## We add &#39;header = TRUE&#39; to indicate the first row as names of columns: 
+## You can call this header or names of variables.
+df.space &amp;lt;- read.table(&amp;quot;https://stats.idre.ucla.edu/wp-content/uploads/2016/02/test.txt&amp;quot;, header = TRUE)
+
+## Check the dataset (show the first 10 rows)
+head(df.space)
+#&amp;gt;    make   model mpg weight price
+#&amp;gt; 1   AMC Concord  22   2930  4099
+#&amp;gt; 2   AMC   Pacer  17   3350  4749
+#&amp;gt; 3   AMC  Spirit  22   2640  3799
+#&amp;gt; 4 Buick Century  20   3250  4816
+#&amp;gt; 5 Buick Electra  15   4080  7827
+
+## Here is original post from UCLA
+## https://stats.idre.ucla.edu/r/faq/how-to-input-data-into-r/
+## To indicate semi-colon, we add another input &#39;sep = &amp;quot;;&amp;quot;&#39;
+df.semi &amp;lt;- read.table(&amp;quot;https://stats.idre.ucla.edu/wp-content/uploads/2016/02/testsemicolon.txt&amp;quot;, 
+                       header = TRUE, sep = &amp;quot;;&amp;quot;)
+
+## Check the dataset (show the first 10 rows)
+head(df.semi)
+#&amp;gt;    make   model mpg weight price
+#&amp;gt; 1   AMC Concord  22   2930  4099
+#&amp;gt; 2   AMC   Pacer  17   3350  4749
+#&amp;gt; 3   AMC  Spirit  22   2640  3799
+#&amp;gt; 4 Buick Century  20   3250  4816
+#&amp;gt; 5 Buick Electra  15   4080  7827
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h3 id=&#34;xls-or-xlsx&#34;&gt;&lt;code&gt;xls&lt;/code&gt; or &lt;code&gt;xlsx&lt;/code&gt;&lt;/h3&gt;
+&lt;hr&gt;
+&lt;p&gt;To read Excel files, we install another package &lt;code&gt;readxl&lt;/code&gt;.&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;install.packages(&amp;quot;readxl&amp;quot;)
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;Let us use an excel dataset from World Bank (accessed on August 31,
+2020). Download it
+&lt;a href=&#34;https://myominnoo.github.io/mStats/data/world_bank_life_exp.xls&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;here&lt;/a&gt;.&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;library(readxl)
+df.xls &amp;lt;- read_excel(&amp;quot;./data/world_bank_life_exp.xls&amp;quot;)
+head(df.xls)
+#&amp;gt; # A tibble: 6 x 64
+#&amp;gt;   `Country Name` `Country Code` `Indicator Name`  `Indicator Code` `1960` `1961`
+#&amp;gt;   &amp;lt;chr&amp;gt;          &amp;lt;chr&amp;gt;          &amp;lt;chr&amp;gt;             &amp;lt;chr&amp;gt;             &amp;lt;dbl&amp;gt;  &amp;lt;dbl&amp;gt;
+#&amp;gt; 1 Aruba          ABW            Life expectancy ~ SP.DYN.LE00.IN     65.7   66.1
+#&amp;gt; 2 Afghanistan    AFG            Life expectancy ~ SP.DYN.LE00.IN     32.4   33.0
+#&amp;gt; 3 Angola         AGO            Life expectancy ~ SP.DYN.LE00.IN     37.5   37.8
+#&amp;gt; 4 Albania        ALB            Life expectancy ~ SP.DYN.LE00.IN     62.3   63.3
+#&amp;gt; 5 Andorra        AND            Life expectancy ~ SP.DYN.LE00.IN     NA     NA  
+#&amp;gt; # ... with 1 more row, and 58 more variables: 1962 &amp;lt;dbl&amp;gt;, 1963 &amp;lt;dbl&amp;gt;,
+#&amp;gt; #   1964 &amp;lt;dbl&amp;gt;, 1965 &amp;lt;dbl&amp;gt;, 1966 &amp;lt;dbl&amp;gt;, 1967 &amp;lt;dbl&amp;gt;, 1968 &amp;lt;dbl&amp;gt;, 1969 &amp;lt;dbl&amp;gt;,
+#&amp;gt; #   1970 &amp;lt;dbl&amp;gt;, 1971 &amp;lt;dbl&amp;gt;, 1972 &amp;lt;dbl&amp;gt;, 1973 &amp;lt;dbl&amp;gt;, 1974 &amp;lt;dbl&amp;gt;, 1975 &amp;lt;dbl&amp;gt;,
+#&amp;gt; #   1976 &amp;lt;dbl&amp;gt;, 1977 &amp;lt;dbl&amp;gt;, 1978 &amp;lt;dbl&amp;gt;, 1979 &amp;lt;dbl&amp;gt;, 1980 &amp;lt;dbl&amp;gt;, 1981 &amp;lt;dbl&amp;gt;,
+#&amp;gt; #   1982 &amp;lt;dbl&amp;gt;, 1983 &amp;lt;dbl&amp;gt;, 1984 &amp;lt;dbl&amp;gt;, 1985 &amp;lt;dbl&amp;gt;, 1986 &amp;lt;dbl&amp;gt;, 1987 &amp;lt;dbl&amp;gt;,
+#&amp;gt; #   1988 &amp;lt;dbl&amp;gt;, 1989 &amp;lt;dbl&amp;gt;, 1990 &amp;lt;dbl&amp;gt;, 1991 &amp;lt;dbl&amp;gt;, 1992 &amp;lt;dbl&amp;gt;, 1993 &amp;lt;dbl&amp;gt;,
+#&amp;gt; #   1994 &amp;lt;dbl&amp;gt;, 1995 &amp;lt;dbl&amp;gt;, 1996 &amp;lt;dbl&amp;gt;, 1997 &amp;lt;dbl&amp;gt;, 1998 &amp;lt;dbl&amp;gt;, 1999 &amp;lt;dbl&amp;gt;,
+#&amp;gt; #   2000 &amp;lt;dbl&amp;gt;, 2001 &amp;lt;dbl&amp;gt;, 2002 &amp;lt;dbl&amp;gt;, 2003 &amp;lt;dbl&amp;gt;, 2004 &amp;lt;dbl&amp;gt;, 2005 &amp;lt;dbl&amp;gt;,
+#&amp;gt; #   2006 &amp;lt;dbl&amp;gt;, 2007 &amp;lt;dbl&amp;gt;, 2008 &amp;lt;dbl&amp;gt;, 2009 &amp;lt;dbl&amp;gt;, 2010 &amp;lt;dbl&amp;gt;, 2011 &amp;lt;dbl&amp;gt;,
+#&amp;gt; #   2012 &amp;lt;dbl&amp;gt;, 2013 &amp;lt;dbl&amp;gt;, 2014 &amp;lt;dbl&amp;gt;, 2015 &amp;lt;dbl&amp;gt;, 2016 &amp;lt;dbl&amp;gt;, 2017 &amp;lt;dbl&amp;gt;,
+#&amp;gt; #   2018 &amp;lt;dbl&amp;gt;, 2019 &amp;lt;lgl&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;Note that you can specify this file location on your computer. You may
+also notice that the output from &lt;code&gt;head&lt;/code&gt; function is a bit different this
+time. But don’t be afraid. It’s nothing wrong but shows a variant of the
+dataset in R.&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;Alternatively, you can create a folder named `data` in the same directory where your R script file is stored. For this to work, first close `RStudio` if it is opened. Double-click on the R Script to open it in RStudio. You will notice that the directory changes where your R script is stored.
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;If you download it from World Bank web API, you will notice that the
+first two rows describe data sources and indicators. This time, we will
+import the raw file with two invalid rows. Download the raw file
+&lt;a href=&#34;https://myominnoo.github.io/mStats/data/world_bank_life_exp_raw.xls&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;here&lt;/a&gt;.
+Check the file in a spreadsheet program like Excel before inputting it
+into R.&lt;/p&gt;
+&lt;p&gt;In the example below, we will skip these two rows when we read the excel
+file. We can set this by specifying &lt;code&gt;skip = 2&lt;/code&gt;.&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;df.xls &amp;lt;- read_excel(&amp;quot;./data/world_bank_life_exp_raw.xls&amp;quot;, skip = 2)
+head(df.xls)
+#&amp;gt; # A tibble: 6 x 64
+#&amp;gt;   `Country Name` `Country Code` `Indicator Name`  `Indicator Code` `1960` `1961`
+#&amp;gt;   &amp;lt;chr&amp;gt;          &amp;lt;chr&amp;gt;          &amp;lt;chr&amp;gt;             &amp;lt;chr&amp;gt;             &amp;lt;dbl&amp;gt;  &amp;lt;dbl&amp;gt;
+#&amp;gt; 1 Aruba          ABW            Life expectancy ~ SP.DYN.LE00.IN     65.7   66.1
+#&amp;gt; 2 Afghanistan    AFG            Life expectancy ~ SP.DYN.LE00.IN     32.4   33.0
+#&amp;gt; 3 Angola         AGO            Life expectancy ~ SP.DYN.LE00.IN     37.5   37.8
+#&amp;gt; 4 Albania        ALB            Life expectancy ~ SP.DYN.LE00.IN     62.3   63.3
+#&amp;gt; 5 Andorra        AND            Life expectancy ~ SP.DYN.LE00.IN     NA     NA  
+#&amp;gt; # ... with 1 more row, and 58 more variables: 1962 &amp;lt;dbl&amp;gt;, 1963 &amp;lt;dbl&amp;gt;,
+#&amp;gt; #   1964 &amp;lt;dbl&amp;gt;, 1965 &amp;lt;dbl&amp;gt;, 1966 &amp;lt;dbl&amp;gt;, 1967 &amp;lt;dbl&amp;gt;, 1968 &amp;lt;dbl&amp;gt;, 1969 &amp;lt;dbl&amp;gt;,
+#&amp;gt; #   1970 &amp;lt;dbl&amp;gt;, 1971 &amp;lt;dbl&amp;gt;, 1972 &amp;lt;dbl&amp;gt;, 1973 &amp;lt;dbl&amp;gt;, 1974 &amp;lt;dbl&amp;gt;, 1975 &amp;lt;dbl&amp;gt;,
+#&amp;gt; #   1976 &amp;lt;dbl&amp;gt;, 1977 &amp;lt;dbl&amp;gt;, 1978 &amp;lt;dbl&amp;gt;, 1979 &amp;lt;dbl&amp;gt;, 1980 &amp;lt;dbl&amp;gt;, 1981 &amp;lt;dbl&amp;gt;,
+#&amp;gt; #   1982 &amp;lt;dbl&amp;gt;, 1983 &amp;lt;dbl&amp;gt;, 1984 &amp;lt;dbl&amp;gt;, 1985 &amp;lt;dbl&amp;gt;, 1986 &amp;lt;dbl&amp;gt;, 1987 &amp;lt;dbl&amp;gt;,
+#&amp;gt; #   1988 &amp;lt;dbl&amp;gt;, 1989 &amp;lt;dbl&amp;gt;, 1990 &amp;lt;dbl&amp;gt;, 1991 &amp;lt;dbl&amp;gt;, 1992 &amp;lt;dbl&amp;gt;, 1993 &amp;lt;dbl&amp;gt;,
+#&amp;gt; #   1994 &amp;lt;dbl&amp;gt;, 1995 &amp;lt;dbl&amp;gt;, 1996 &amp;lt;dbl&amp;gt;, 1997 &amp;lt;dbl&amp;gt;, 1998 &amp;lt;dbl&amp;gt;, 1999 &amp;lt;dbl&amp;gt;,
+#&amp;gt; #   2000 &amp;lt;dbl&amp;gt;, 2001 &amp;lt;dbl&amp;gt;, 2002 &amp;lt;dbl&amp;gt;, 2003 &amp;lt;dbl&amp;gt;, 2004 &amp;lt;dbl&amp;gt;, 2005 &amp;lt;dbl&amp;gt;,
+#&amp;gt; #   2006 &amp;lt;dbl&amp;gt;, 2007 &amp;lt;dbl&amp;gt;, 2008 &amp;lt;dbl&amp;gt;, 2009 &amp;lt;dbl&amp;gt;, 2010 &amp;lt;dbl&amp;gt;, 2011 &amp;lt;dbl&amp;gt;,
+#&amp;gt; #   2012 &amp;lt;dbl&amp;gt;, 2013 &amp;lt;dbl&amp;gt;, 2014 &amp;lt;dbl&amp;gt;, 2015 &amp;lt;dbl&amp;gt;, 2016 &amp;lt;dbl&amp;gt;, 2017 &amp;lt;dbl&amp;gt;,
+#&amp;gt; #   2018 &amp;lt;dbl&amp;gt;, 2019 &amp;lt;lgl&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h3 id=&#34;dta&#34;&gt;&lt;code&gt;dta&lt;/code&gt;&lt;/h3&gt;
+&lt;hr&gt;
+&lt;p&gt;Reading &lt;code&gt;.dta&lt;/code&gt; is fairly easy. There are two great packages to read this
+data format: &lt;code&gt;haven&lt;/code&gt; and &lt;code&gt;foreign&lt;/code&gt;. In this book, I will demonstrate it
+using &lt;code&gt;haven&lt;/code&gt;. Also, check the &lt;code&gt;foreign&lt;/code&gt; package.&lt;/p&gt;
+&lt;p&gt;First, install the package. If you already installed &lt;code&gt;tidyverse&lt;/code&gt;, you
+don’t need to install it again.&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;install.packages(&amp;quot;haven&amp;quot;)
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;The function we will use is &lt;code&gt;read_dta&lt;/code&gt;. Here is an example.&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;library(haven)
+df.dta &amp;lt;- read_dta(&amp;quot;https://stats.idre.ucla.edu/stat/data/test.dta&amp;quot;)
+head(df.dta)
+#&amp;gt; # A tibble: 5 x 5
+#&amp;gt;   make  model     mpg weight price
+#&amp;gt;   &amp;lt;chr&amp;gt; &amp;lt;chr&amp;gt;   &amp;lt;dbl&amp;gt;  &amp;lt;dbl&amp;gt; &amp;lt;dbl&amp;gt;
+#&amp;gt; 1 AMC   Concord    22   2930  4099
+#&amp;gt; 2 AMC   Pacer      17   3350  4749
+#&amp;gt; 3 AMC   Spirit     22   2640  3799
+#&amp;gt; 4 Buick Century    20   3250  4816
+#&amp;gt; 5 Buick Electra    15   4080  7827
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;Check the version of &lt;code&gt;STATA&lt;/code&gt; used to export &lt;code&gt;.dta&lt;/code&gt;. Sometimes, older
+versions do not work well.&lt;/p&gt;
+&lt;h3 id=&#34;exercises&#34;&gt;Exercises&lt;/h3&gt;
+&lt;hr&gt;
+&lt;p&gt;Try importing the following dataset into R. First, use the link to input
+from online. Then also download the dataset and import it from your
+computer.&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;Downs Syndrome data from STATA:
+&lt;a href=&#34;http://www.stata-press.com/data/r16/downs.dta&#34;&gt;http://www.stata-press.com/data/r16/downs.dta&lt;/a&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Diet data from STATA:
+&lt;a href=&#34;https://www.stata-press.com/data/r16/diet.dta&#34;&gt;https://www.stata-press.com/data/r16/diet.dta&lt;/a&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Low Birth Weight data from STATA:
+&lt;a href=&#34;http://www.stata-press.com/data/r16/lbw.dta&#34;&gt;http://www.stata-press.com/data/r16/lbw.dta&lt;/a&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Try importing World Bank datasets in different format.
+&lt;a href=&#34;https://data.worldbank.org/&#34;&gt;https://data.worldbank.org/&lt;/a&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;viewing-the-dataset&#34;&gt;Viewing the dataset&lt;/h2&gt;
+&lt;hr&gt;
+&lt;p&gt;We load the first dataset used in this book[1].&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;pt &amp;lt;- haven::read_dta(&amp;quot;https://stats.idre.ucla.edu/stat/data/patient_pt1_stata_dm.dta&amp;quot;)
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h3 id=&#34;view&#34;&gt;&lt;code&gt;View&lt;/code&gt;&lt;/h3&gt;
+&lt;hr&gt;
+&lt;p&gt;The dataset can be viewed in a spreadsheet-style window by using &lt;code&gt;View&lt;/code&gt;
+function or clicking on the dataset in the &lt;code&gt;Environment&lt;/code&gt; window. It is
+always a good thing to eye-ball your data before you start anything.&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;View(pt)
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;img src=&#34;./img/View_pt.png&#34; alt=&#34;Spreadsheet-style window in RStudio&#34;&gt;&lt;/p&gt;
+&lt;h3 id=&#34;codebook&#34;&gt;&lt;code&gt;codebook&lt;/code&gt;&lt;/h3&gt;
+&lt;hr&gt;
+&lt;p&gt;Before you do any type of analysis, you need to understand your data.
+First, let us take a look at the codebook of &lt;code&gt;pt&lt;/code&gt; dataset. The
+&lt;code&gt;codebook&lt;/code&gt; function provides the following list of information on the
+dataset and variables.&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;Number of variables (&lt;code&gt;No&lt;/code&gt;)&lt;/li&gt;
+&lt;li&gt;Name of variables (&lt;code&gt;Variable&lt;/code&gt;)&lt;/li&gt;
+&lt;li&gt;Their descriptions (&lt;code&gt;Label&lt;/code&gt;)&lt;/li&gt;
+&lt;li&gt;Data types (&lt;code&gt;Type&lt;/code&gt;)&lt;/li&gt;
+&lt;li&gt;Number of valid observations (&lt;code&gt;Obs_Num&lt;/code&gt;)&lt;/li&gt;
+&lt;li&gt;Number of missing observations (&lt;code&gt;&amp;lt;NA&amp;gt;&lt;/code&gt;)&lt;/li&gt;
+&lt;li&gt;Percentage of missing observations (&lt;code&gt;&amp;lt;NA&amp;gt;(%)&lt;/code&gt;)&lt;/li&gt;
+&lt;li&gt;Label of dataset&lt;/li&gt;
+&lt;/ol&gt;
+&lt;!-- --&gt;
+&lt;pre&gt;&lt;code&gt;library(mStats)
+codebook(pt)
+#&amp;gt;        Codebook
+#&amp;gt;    Dataset&#39;s Name : `pt`
+#&amp;gt;   Dataset&#39;s Label : 
+#&amp;gt;       Vars : 25
+#&amp;gt;        Obs : 120
+#&amp;gt;  + -- ------------ + ------------ --------- --- -- ----- +
+#&amp;gt;  | No     Variable |        Label      Type Obs NA NA(%) |
+#&amp;gt;  + -- ------------ + ------------ --------- --- -- ----- +
+#&amp;gt;  |  1     hospital |              character 120  0   0.0 |
+#&amp;gt;  |  2       hospid |          HID   numeric 120  0   0.0 |
+#&amp;gt;  |  3        docid |              character 120  0   0.0 |
+#&amp;gt;  |  4     dis_date |                   Date 120  0   0.0 |
+#&amp;gt;  |  5    tumorsize |                numeric 120  0   0.0 |
+#&amp;gt;  |  6          co2 |                numeric 120  0   0.0 |
+#&amp;gt;  |  7         pain |                numeric 120  0   0.0 |
+#&amp;gt;  |  8        wound |                numeric 120  0   0.0 |
+#&amp;gt;  |  9     mobility |                numeric 120  0   0.0 |
+#&amp;gt;  | 10      ntumors |                numeric 120  0   0.0 |
+#&amp;gt;  | 11    nmorphine |                numeric 120  0   0.0 |
+#&amp;gt;  | 12    remission |                numeric 120  0   0.0 |
+#&amp;gt;  | 13 lungcapacity |                numeric 120  0   0.0 |
+#&amp;gt;  | 14          age |          Age   numeric 120  0   0.0 |
+#&amp;gt;  | 15      married |      Married   numeric 120  0   0.0 |
+#&amp;gt;  | 16     familyhx |     FamilyHx character 120  0   0.0 |
+#&amp;gt;  | 17    smokinghx |    SmokingHx character 120  0   0.0 |
+#&amp;gt;  | 18          sex |          Sex character 120  0   0.0 |
+#&amp;gt;  | 19  cancerstage |  CancerStage character 120  0   0.0 |
+#&amp;gt;  | 20 lengthofstay | LengthofStay   numeric 120  0   0.0 |
+#&amp;gt;  | 21          wbc |          WBC character 120  0   0.0 |
+#&amp;gt;  | 22          rbc |          RBC   numeric 120  0   0.0 |
+#&amp;gt;  | 23          bmi |          BMI   numeric 120  0   0.0 |
+#&amp;gt;  | 24        test1 |          IL6   numeric 120  0   0.0 |
+#&amp;gt;  | 25        test2 |          CRP   numeric 120  0   0.0 |
+#&amp;gt;  + -- ------------ + ------------ --------- --- -- ----- +
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;The &lt;code&gt;pt&lt;/code&gt; dataset has 25 variables and 120 observations. But no missing
+values are reported. Twelve variables do not have labels. The dataset
+also does not have a label. There are three different data types
+reported here: &lt;code&gt;character&lt;/code&gt;, &lt;code&gt;numeric&lt;/code&gt;, and &lt;code&gt;Date&lt;/code&gt;. Right now, knowing
+this much is still very helpful for further data management.&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;Recall data types in statistics. 
+
+1. Characters are generally categorical variables and numbers often represent categorical data. For example, `sex` variable with `male` or `female` is of character type and that with 1 and 2 are of numeric type. 
+
+2. Dates can be treated as numbers, meaning that we can do arithmetic calculations on them.
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h2 id=&#34;labels&#34;&gt;Labels&lt;/h2&gt;
+&lt;hr&gt;
+&lt;p&gt;Labels can be used to provide additional information about variables or
+dataset to the users. Value labels are not important in R though it can
+be done using certain packages such as &lt;code&gt;forcats&lt;/code&gt;.&lt;/p&gt;
+&lt;h3 id=&#34;labeling-variables&#34;&gt;labeling variables&lt;/h3&gt;
+&lt;hr&gt;
+&lt;p&gt;We often deal with variable names that do not make any sense at all. For
+example, &lt;code&gt;test1&lt;/code&gt; and &lt;code&gt;test2&lt;/code&gt; have no meaning in &lt;code&gt;pt&lt;/code&gt; dataset unless they
+relate to &lt;code&gt;Interleukin-6&lt;/code&gt; (&lt;code&gt;IL6&lt;/code&gt;) and &lt;code&gt;C-Reactive Protein&lt;/code&gt; (&lt;code&gt;CRP&lt;/code&gt;)
+respectively.&lt;/p&gt;
+&lt;p&gt;The &lt;code&gt;codebook&lt;/code&gt; function shows labels up to 22 characters and truncates
+the rest of the label. However, other functions can show the full length
+of the labels. Labels also depend on the data storage format. While
+&lt;code&gt;dta&lt;/code&gt; file can store labels for both variables and the dataset, &lt;code&gt;CSV&lt;/code&gt;
+and &lt;code&gt;excel&lt;/code&gt; files can’t be used to store such data.&lt;/p&gt;
+&lt;p&gt;The &lt;code&gt;labelVar&lt;/code&gt; function needs at least two inputs: &lt;code&gt;dataset&lt;/code&gt;, and
+&lt;code&gt;variable name&lt;/code&gt; = &lt;code&gt;label&lt;/code&gt;. You can add as many variables as you want if
+they are valid names.&lt;/p&gt;
+&lt;p&gt;Let’s label &lt;code&gt;test1&lt;/code&gt; as &lt;code&gt;Interleukin-6&lt;/code&gt; and &lt;code&gt;test2&lt;/code&gt; as
+&lt;code&gt;C-Reactive Protein&lt;/code&gt;.&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;## label variables test1 and test2 
+pt &amp;lt;- label(pt, test1=&amp;quot;Interleukin-6&amp;quot;, test2=&amp;quot;C-Reactive Protein&amp;quot;)
+#&amp;gt;   (`test1` labeled as `Interleukin-6`)
+#&amp;gt;   (`test2` labeled as `C-Reactive Protein`)
+
+## Check the changes
+codebook(pt)
+#&amp;gt;        Codebook
+#&amp;gt;    Dataset&#39;s Name : `pt`
+#&amp;gt;   Dataset&#39;s Label : 
+#&amp;gt;       Vars : 25
+#&amp;gt;        Obs : 120
+#&amp;gt;  + -- ------------ + ------------ --------- --- -- ----- +
+#&amp;gt;  | No     Variable |        Label      Type Obs NA NA(%) |
+#&amp;gt;  + -- ------------ + ------------ --------- --- -- ----- +
+#&amp;gt;  |  1     hospital |              character 120  0   0.0 |
+#&amp;gt;  |  2       hospid |          HID   numeric 120  0   0.0 |
+#&amp;gt;  |  3        docid |              character 120  0   0.0 |
+#&amp;gt;  |  4     dis_date |                   Date 120  0   0.0 |
+#&amp;gt;  |  5    tumorsize |                numeric 120  0   0.0 |
+#&amp;gt;  |  6          co2 |                numeric 120  0   0.0 |
+#&amp;gt;  |  7         pain |                numeric 120  0   0.0 |
+#&amp;gt;  |  8        wound |                numeric 120  0   0.0 |
+#&amp;gt;  |  9     mobility |                numeric 120  0   0.0 |
+#&amp;gt;  | 10      ntumors |                numeric 120  0   0.0 |
+#&amp;gt;  | 11    nmorphine |                numeric 120  0   0.0 |
+#&amp;gt;  | 12    remission |                numeric 120  0   0.0 |
+#&amp;gt;  | 13 lungcapacity |                numeric 120  0   0.0 |
+#&amp;gt;  | 14          age |          Age   numeric 120  0   0.0 |
+#&amp;gt;  | 15      married |      Married   numeric 120  0   0.0 |
+#&amp;gt;  | 16     familyhx |     FamilyHx character 120  0   0.0 |
+#&amp;gt;  | 17    smokinghx |    SmokingHx character 120  0   0.0 |
+#&amp;gt;  | 18          sex |          Sex character 120  0   0.0 |
+#&amp;gt;  | 19  cancerstage |  CancerStage character 120  0   0.0 |
+#&amp;gt;  | 20 lengthofstay | LengthofStay   numeric 120  0   0.0 |
+#&amp;gt;  | 21          wbc |          WBC character 120  0   0.0 |
+#&amp;gt;  | 22          rbc |          RBC   numeric 120  0   0.0 |
+#&amp;gt;  | 23          bmi |          BMI   numeric 120  0   0.0 |
+#&amp;gt;  | 24        test1 |          IL6   numeric 120  0   0.0 |
+#&amp;gt;  | 25        test2 |          CRP   numeric 120  0   0.0 |
+#&amp;gt;  + -- ------------ + ------------ --------- --- -- ----- +
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h3 id=&#34;labeling-dataset&#34;&gt;labeling dataset&lt;/h3&gt;
+&lt;hr&gt;
+&lt;p&gt;The &lt;code&gt;labelData&lt;/code&gt; function is used to label the dataset. The &lt;code&gt;codebook&lt;/code&gt;
+prints the full length of this label. Since this is applied to the whole
+dataset, the function needs a dataset and its label as inputs.&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;## Labelling pt dataset
+pt &amp;lt;- label(pt, &amp;quot;Fake Cancer Patient Data&amp;quot;)
+#&amp;gt;   (`pt` labeled as `Fake Cancer Patient Data`)
+
+## Check the change
+codebook(pt)
+#&amp;gt;        Codebook
+#&amp;gt;    Dataset&#39;s Name : `pt`
+#&amp;gt;   Dataset&#39;s Label : Fake Cancer Patient Data
+#&amp;gt;       Vars : 25
+#&amp;gt;        Obs : 120
+#&amp;gt;  + -- ------------ + ------------ --------- --- -- ----- +
+#&amp;gt;  | No     Variable |        Label      Type Obs NA NA(%) |
+#&amp;gt;  + -- ------------ + ------------ --------- --- -- ----- +
+#&amp;gt;  |  1     hospital |              character 120  0   0.0 |
+#&amp;gt;  |  2       hospid |          HID   numeric 120  0   0.0 |
+#&amp;gt;  |  3        docid |              character 120  0   0.0 |
+#&amp;gt;  |  4     dis_date |                   Date 120  0   0.0 |
+#&amp;gt;  |  5    tumorsize |                numeric 120  0   0.0 |
+#&amp;gt;  |  6          co2 |                numeric 120  0   0.0 |
+#&amp;gt;  |  7         pain |                numeric 120  0   0.0 |
+#&amp;gt;  |  8        wound |                numeric 120  0   0.0 |
+#&amp;gt;  |  9     mobility |                numeric 120  0   0.0 |
+#&amp;gt;  | 10      ntumors |                numeric 120  0   0.0 |
+#&amp;gt;  | 11    nmorphine |                numeric 120  0   0.0 |
+#&amp;gt;  | 12    remission |                numeric 120  0   0.0 |
+#&amp;gt;  | 13 lungcapacity |                numeric 120  0   0.0 |
+#&amp;gt;  | 14          age |          Age   numeric 120  0   0.0 |
+#&amp;gt;  | 15      married |      Married   numeric 120  0   0.0 |
+#&amp;gt;  | 16     familyhx |     FamilyHx character 120  0   0.0 |
+#&amp;gt;  | 17    smokinghx |    SmokingHx character 120  0   0.0 |
+#&amp;gt;  | 18          sex |          Sex character 120  0   0.0 |
+#&amp;gt;  | 19  cancerstage |  CancerStage character 120  0   0.0 |
+#&amp;gt;  | 20 lengthofstay | LengthofStay   numeric 120  0   0.0 |
+#&amp;gt;  | 21          wbc |          WBC character 120  0   0.0 |
+#&amp;gt;  | 22          rbc |          RBC   numeric 120  0   0.0 |
+#&amp;gt;  | 23          bmi |          BMI   numeric 120  0   0.0 |
+#&amp;gt;  | 24        test1 |          IL6   numeric 120  0   0.0 |
+#&amp;gt;  | 25        test2 |          CRP   numeric 120  0   0.0 |
+#&amp;gt;  + -- ------------ + ------------ --------- --- -- ----- +
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;[1] Starting from this point, the book loosely follows on the &lt;a href=&#34;https://stats.idre.ucla.edu/stata/seminars/stata-data-management/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;STATA
+tutorial from
+UCLA&lt;/a&gt;.&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Data Management - Advanced</title>
+      <link>https://mmoo.netlify.app/r/mstats/datamanagementadv/</link>
+      <pubDate>Sun, 13 Jun 2021 00:00:00 +0000</pubDate>
+      <guid>https://mmoo.netlify.app/r/mstats/datamanagementadv/</guid>
+      <description>&lt;p&gt;to add more&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
       <title>Example Talk</title>
       <link>https://mmoo.netlify.app/talk/example-talk/</link>
       <pubDate>Sat, 01 Jun 2030 13:00:00 +0000</pubDate>
@@ -821,7 +1194,7 @@ data.head()
 &lt;p&gt;Demo:&lt;/p&gt;
 
 
-&lt;div id=&#34;chart-567392148&#34; class=&#34;chart&#34;&gt;&lt;/div&gt;
+&lt;div id=&#34;chart-156249738&#34; class=&#34;chart&#34;&gt;&lt;/div&gt;
 &lt;script&gt;
   (function() {
     let a = setInterval( function() {
@@ -831,7 +1204,7 @@ data.head()
       clearInterval( a );
 
       Plotly.d3.json(&#34;./line-chart.json&#34;, function(chart) {
-        Plotly.plot(&#39;chart-567392148&#39;, chart.data, chart.layout, {responsive: true});
+        Plotly.plot(&#39;chart-156249738&#39;, chart.data, chart.layout, {responsive: true});
       });
     }, 500 );
   })();
