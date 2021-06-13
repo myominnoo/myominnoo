@@ -16,7 +16,7 @@ These functions are in turn supported by another set of helper functions
 which allows statistical calculation, displaying well-formatted output
 and transferring final outputs to process further.
 
-# History
+# How did it all start? 
 
 ------------------------------------------------------------------------
 
@@ -44,7 +44,7 @@ progress, I hope this package will at least provide some contributions
 in some people. Any constructive criticism, suggestions, or comments are
 most welcome.
 
-# Basic princples
+# Core princples
 
 ------------------------------------------------------------------------
 
