@@ -8,9 +8,6 @@
     <loc>https://mmoo.netlify.app/courses/example/python/</loc>
     <lastmod>2021-01-01T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://mmoo.netlify.app/r/mstats/datamanagement/</loc>
-    <lastmod>2021-06-13T00:00:00+00:00</lastmod>
-  </url><url>
     <loc>https://mmoo.netlify.app/r/mstats/rbasics/</loc>
     <lastmod>2021-06-13T00:00:00+00:00</lastmod>
   </url><url>
@@ -19,6 +16,12 @@
   </url><url>
     <loc>https://mmoo.netlify.app/courses/example/stats/</loc>
     <lastmod>2021-01-01T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://mmoo.netlify.app/r/mstats/datamanagement/</loc>
+    <lastmod>2021-06-13T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://mmoo.netlify.app/r/mstats/datamanagementadv/</loc>
+    <lastmod>2021-06-13T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://mmoo.netlify.app/talk/example-talk/</loc>
     <lastmod>2030-06-01T13:00:00+00:00</lastmod>

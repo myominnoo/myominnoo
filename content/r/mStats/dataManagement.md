@@ -1,7 +1,7 @@
 ---
 date: "2021-06-13"
 highlight: true
-title: Data Management
+title: Data Management - Basic
 type: book
 weight: 50
 ---
@@ -313,13 +313,126 @@ this much is still very helpful for further data management.
 
     2. Dates can be treated as numbers, meaning that we can do arithmetic calculations on them.
 
-## Labeling variables and data
+## Labels
 
 ------------------------------------------------------------------------
 
 Labels can be used to provide additional information about variables or
 dataset to the users. Value labels are not important in R though it can
 be done using certain packages such as `forcats`.
+
+### labeling variables
+
+------------------------------------------------------------------------
+
+We often deal with variable names that do not make any sense at all. For
+example, `test1` and `test2` have no meaning in `pt` dataset unless they
+relate to `Interleukin-6` (`IL6`) and `C-Reactive Protein` (`CRP`)
+respectively.
+
+The `codebook` function shows labels up to 22 characters and truncates
+the rest of the label. However, other functions can show the full length
+of the labels. Labels also depend on the data storage format. While
+`dta` file can store labels for both variables and the dataset, `CSV`
+and `excel` files can’t be used to store such data.
+
+The `labelVar` function needs at least two inputs: `dataset`, and
+`variable name` = `label`. You can add as many variables as you want if
+they are valid names.
+
+Let’s label `test1` as `Interleukin-6` and `test2` as
+`C-Reactive Protein`.
+
+    ## label variables test1 and test2 
+    pt <- label(pt, test1="Interleukin-6", test2="C-Reactive Protein")
+    #>   (`test1` labeled as `Interleukin-6`)
+    #>   (`test2` labeled as `C-Reactive Protein`)
+
+    ## Check the changes
+    codebook(pt)
+    #>        Codebook
+    #>    Dataset's Name : `pt`
+    #>   Dataset's Label : 
+    #>       Vars : 25
+    #>        Obs : 120
+    #>  + -- ------------ + ------------ --------- --- -- ----- +
+    #>  | No     Variable |        Label      Type Obs NA NA(%) |
+    #>  + -- ------------ + ------------ --------- --- -- ----- +
+    #>  |  1     hospital |              character 120  0   0.0 |
+    #>  |  2       hospid |          HID   numeric 120  0   0.0 |
+    #>  |  3        docid |              character 120  0   0.0 |
+    #>  |  4     dis_date |                   Date 120  0   0.0 |
+    #>  |  5    tumorsize |                numeric 120  0   0.0 |
+    #>  |  6          co2 |                numeric 120  0   0.0 |
+    #>  |  7         pain |                numeric 120  0   0.0 |
+    #>  |  8        wound |                numeric 120  0   0.0 |
+    #>  |  9     mobility |                numeric 120  0   0.0 |
+    #>  | 10      ntumors |                numeric 120  0   0.0 |
+    #>  | 11    nmorphine |                numeric 120  0   0.0 |
+    #>  | 12    remission |                numeric 120  0   0.0 |
+    #>  | 13 lungcapacity |                numeric 120  0   0.0 |
+    #>  | 14          age |          Age   numeric 120  0   0.0 |
+    #>  | 15      married |      Married   numeric 120  0   0.0 |
+    #>  | 16     familyhx |     FamilyHx character 120  0   0.0 |
+    #>  | 17    smokinghx |    SmokingHx character 120  0   0.0 |
+    #>  | 18          sex |          Sex character 120  0   0.0 |
+    #>  | 19  cancerstage |  CancerStage character 120  0   0.0 |
+    #>  | 20 lengthofstay | LengthofStay   numeric 120  0   0.0 |
+    #>  | 21          wbc |          WBC character 120  0   0.0 |
+    #>  | 22          rbc |          RBC   numeric 120  0   0.0 |
+    #>  | 23          bmi |          BMI   numeric 120  0   0.0 |
+    #>  | 24        test1 |          IL6   numeric 120  0   0.0 |
+    #>  | 25        test2 |          CRP   numeric 120  0   0.0 |
+    #>  + -- ------------ + ------------ --------- --- -- ----- +
+
+### labeling dataset
+
+------------------------------------------------------------------------
+
+The `labelData` function is used to label the dataset. The `codebook`
+prints the full length of this label. Since this is applied to the whole
+dataset, the function needs a dataset and its label as inputs.
+
+    ## Labelling pt dataset
+    pt <- label(pt, "Fake Cancer Patient Data")
+    #>   (`pt` labeled as `Fake Cancer Patient Data`)
+
+    ## Check the change
+    codebook(pt)
+    #>        Codebook
+    #>    Dataset's Name : `pt`
+    #>   Dataset's Label : Fake Cancer Patient Data
+    #>       Vars : 25
+    #>        Obs : 120
+    #>  + -- ------------ + ------------ --------- --- -- ----- +
+    #>  | No     Variable |        Label      Type Obs NA NA(%) |
+    #>  + -- ------------ + ------------ --------- --- -- ----- +
+    #>  |  1     hospital |              character 120  0   0.0 |
+    #>  |  2       hospid |          HID   numeric 120  0   0.0 |
+    #>  |  3        docid |              character 120  0   0.0 |
+    #>  |  4     dis_date |                   Date 120  0   0.0 |
+    #>  |  5    tumorsize |                numeric 120  0   0.0 |
+    #>  |  6          co2 |                numeric 120  0   0.0 |
+    #>  |  7         pain |                numeric 120  0   0.0 |
+    #>  |  8        wound |                numeric 120  0   0.0 |
+    #>  |  9     mobility |                numeric 120  0   0.0 |
+    #>  | 10      ntumors |                numeric 120  0   0.0 |
+    #>  | 11    nmorphine |                numeric 120  0   0.0 |
+    #>  | 12    remission |                numeric 120  0   0.0 |
+    #>  | 13 lungcapacity |                numeric 120  0   0.0 |
+    #>  | 14          age |          Age   numeric 120  0   0.0 |
+    #>  | 15      married |      Married   numeric 120  0   0.0 |
+    #>  | 16     familyhx |     FamilyHx character 120  0   0.0 |
+    #>  | 17    smokinghx |    SmokingHx character 120  0   0.0 |
+    #>  | 18          sex |          Sex character 120  0   0.0 |
+    #>  | 19  cancerstage |  CancerStage character 120  0   0.0 |
+    #>  | 20 lengthofstay | LengthofStay   numeric 120  0   0.0 |
+    #>  | 21          wbc |          WBC character 120  0   0.0 |
+    #>  | 22          rbc |          RBC   numeric 120  0   0.0 |
+    #>  | 23          bmi |          BMI   numeric 120  0   0.0 |
+    #>  | 24        test1 |          IL6   numeric 120  0   0.0 |
+    #>  | 25        test2 |          CRP   numeric 120  0   0.0 |
+    #>  + -- ------------ + ------------ --------- --- -- ----- +
 
 [1] Starting from this point, the book loosely follows on the [STATA
 tutorial from
