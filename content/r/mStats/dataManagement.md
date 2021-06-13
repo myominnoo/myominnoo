@@ -3,7 +3,7 @@ date: "2021-06-13"
 highlight: true
 title: Data Management
 type: book
-weight: 30
+weight: 40
 ---
 
 Learn how to visualize data with Plotly.
