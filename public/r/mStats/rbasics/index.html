@@ -1,0 +1,1581 @@
+<!DOCTYPE html><html lang="en-us" >
+
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  
+  
+  
+    <meta name="generator" content="Wowchemy 5.2.0 for Hugo" />
+  
+
+  
+
+  
+  
+  
+  
+  
+    
+    
+    
+  
+  
+
+  <meta name="author" content="Myo Minn Oo" />
+
+  
+  
+  
+    
+  
+  <meta name="description" content="Introduction  This chapter introduces you to R, RStudio, packages and other things to get you started in R.
+R R is a free software for statistics and graphics. It is widely used among statisticians and data scientists for developing statistical software and data analysis." />
+
+  
+  <link rel="alternate" hreflang="en-us" href="https://mmoo.netlify.app/r/mstats/rbasics/" />
+
+  
+
+
+
+
+
+
+
+  
+
+
+
+
+  
+  
+
+  
+  
+  
+    <meta name="theme-color" content="#1565c0" />
+  
+
+  
+  
+
+  
+  
+  
+  
+    
+    
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/academicons/1.9.0/css/academicons.min.css" integrity="sha512-W4yqoT1+8NLkinBLBZko+dFB2ZbHsYLDdr50VElllRcNt2Q4/GSs6u71UHKxB7S6JEMCp5Ve4xjh3eGQl/HRvg==" crossorigin="anonymous">
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css" integrity="sha256-FMvZuGapsJLjouA6k7Eo2lusoAX9i0ShlWFG6qt7SLc=" crossorigin="anonymous">
+
+    
+    
+    
+    
+      
+      
+    
+    
+    
+
+    
+    
+    
+      
+    
+    
+      
+      
+        
+          <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.2.0/styles/github.min.css" crossorigin="anonymous" title="hl-light" media="print" onload="this.media='all'">
+          <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.2.0/styles/dracula.min.css" crossorigin="anonymous" title="hl-dark" media="print" onload="this.media='all'" disabled>
+        
+      
+    
+
+    
+    
+    
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.7.1/leaflet.min.css" integrity="sha512-1xoFisiGdy9nvho8EgXuXvnpR5GAMSjFwp40gSRE3NwdUdIMIKuPa7bqoUhLD0O/5tPNhteAsE5XyyMi5reQVA==" crossorigin="anonymous" media="print" onload="this.media='all'">
+    
+
+    
+
+    
+    
+      
+      
+
+      
+      
+
+      
+    
+      
+      
+
+      
+      
+
+      
+    
+      
+      
+
+      
+      
+
+      
+    
+      
+      
+
+      
+      
+
+      
+    
+      
+      
+
+      
+      
+
+      
+    
+      
+      
+
+      
+      
+
+      
+    
+      
+      
+
+      
+      
+
+      
+    
+      
+      
+
+      
+      
+
+      
+    
+      
+      
+
+      
+      
+
+      
+    
+      
+      
+
+      
+      
+
+      
+    
+      
+      
+
+      
+      
+
+      
+    
+      
+      
+
+      
+      
+
+      
+    
+      
+      
+
+      
+      
+
+      
+    
+      
+      
+
+      
+      
+        
+      
+
+      
+    
+      
+      
+
+      
+      
+
+      
+    
+      
+      
+
+      
+      
+
+      
+    
+  
+
+  
+  
+  
+
+  
+  
+  
+  
+  
+  <link rel="stylesheet" href="/css/wowchemy.9f8da5b22512cb7f1a8507beefc69112.css" />
+
+  
+
+
+
+
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-145822099-1"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+
+  function gtag() {
+      dataLayer.push(arguments);
+  }
+
+  function trackOutboundLink(url, target) {
+    gtag('event', 'click', {
+         'event_category': 'outbound',
+         'event_label': url,
+         'transport_type': 'beacon',
+         'event_callback': function () {
+           if (target !== '_blank') {
+             document.location = url;
+           }
+         }
+    });
+    console.debug("Outbound link clicked: " + url);
+  }
+
+  function onClickCallback(event) {
+    if ((event.target.tagName !== 'A') || (event.target.host === window.location.host)) {
+      return;
+    }
+    trackOutboundLink(event.target, event.target.getAttribute('target'));  
+  }
+
+  gtag('js', new Date());
+  gtag('config', 'UA-145822099-1', {});
+  gtag('set', {'cookie_flags': 'SameSite=None;Secure'});
+
+  
+  document.addEventListener('click', onClickCallback, false);
+</script>
+
+
+  
+
+  
+
+  
+
+
+
+
+  
+  
+  
+
+  
+
+  
+    <link rel="manifest" href="/index.webmanifest" />
+  
+
+  <link rel="icon" type="image/png" href="/media/icon_hua2ec155b4296a9c9791d015323e16eb5_11927_32x32_fill_lanczos_center_2.png" />
+  <link rel="apple-touch-icon" type="image/png" href="/media/icon_hua2ec155b4296a9c9791d015323e16eb5_11927_180x180_fill_lanczos_center_2.png" />
+
+  <link rel="canonical" href="https://mmoo.netlify.app/r/mstats/rbasics/" />
+
+  
+  
+  
+  
+  
+  
+  
+  
+    
+    
+  
+  
+  <meta property="twitter:card" content="summary" />
+  
+    <meta property="twitter:site" content="@drmyominnoo" />
+    <meta property="twitter:creator" content="@drmyominnoo" />
+  
+  <meta property="og:site_name" content="Myo Minn Oo" />
+  <meta property="og:url" content="https://mmoo.netlify.app/r/mstats/rbasics/" />
+  <meta property="og:title" content="R Basics | Myo Minn Oo" />
+  <meta property="og:description" content="Introduction  This chapter introduces you to R, RStudio, packages and other things to get you started in R.
+R R is a free software for statistics and graphics. It is widely used among statisticians and data scientists for developing statistical software and data analysis." /><meta property="og:image" content="https://mmoo.netlify.app/media/icon_hua2ec155b4296a9c9791d015323e16eb5_11927_512x512_fill_lanczos_center_2.png" />
+    <meta property="twitter:image" content="https://mmoo.netlify.app/media/icon_hua2ec155b4296a9c9791d015323e16eb5_11927_512x512_fill_lanczos_center_2.png" /><meta property="og:locale" content="en-us" />
+  
+    
+      <meta
+        property="article:published_time"
+        content="2021-06-13T00:00:00&#43;00:00"
+      />
+    
+    <meta property="article:modified_time" content="2021-06-13T00:00:00&#43;00:00">
+  
+
+  
+
+
+
+  
+
+  
+
+  
+
+
+
+
+
+  <title>R Basics | Myo Minn Oo</title>
+</head>
+
+
+<body id="top" data-spy="scroll" data-offset="70" data-target="#TableOfContents" class="page-wrapper   " data-wc-page-id="c08d9ef725ff677c013e4a4b92274722" >
+
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  <script src="/js/wowchemy-init.min.b8153d4570dcbb34350a2a846dba8c03.js"></script>
+
+  
+
+
+<aside class="search-modal" id="search">
+  <div class="container">
+    <section class="search-header">
+
+      <div class="row no-gutters justify-content-between mb-3">
+        <div class="col-6">
+          <h1>Search</h1>
+        </div>
+        <div class="col-6 col-search-close">
+          <a class="js-search" href="#" aria-label="Close"><i class="fas fa-times-circle text-muted" aria-hidden="true"></i></a>
+        </div>
+      </div>
+
+      <div id="search-box">
+        
+        <input name="q" id="search-query" placeholder="Search..." autocapitalize="off"
+        autocomplete="off" autocorrect="off" spellcheck="false" type="search" class="form-control"
+        aria-label="Search...">
+        
+      </div>
+
+      
+      
+
+      
+
+    </section>
+    <section class="section-search-results">
+
+      <div id="search-hits">
+        
+      </div>
+
+    </section>
+  </div>
+</aside>
+
+
+
+  <div class="page-header">
+    
+
+
+
+
+
+
+
+
+
+
+
+
+<nav class="navbar navbar-expand-lg navbar-light compensate-for-scrollbar" id="navbar-main">
+  <div class="container-xl">
+
+    
+    <div class="d-none d-lg-inline-flex">
+      <a class="navbar-brand" href="/">Myo Minn Oo</a>
+    </div>
+    
+
+    
+    <button type="button" class="navbar-toggler" data-toggle="collapse"
+            data-target="#navbar-content" aria-controls="navbar-content" aria-expanded="false" aria-label="Toggle navigation">
+    <span><i class="fas fa-bars"></i></span>
+    </button>
+    
+
+    
+    <div class="navbar-brand-mobile-wrapper d-inline-flex d-lg-none">
+      <a class="navbar-brand" href="/">Myo Minn Oo</a>
+    </div>
+    
+
+    
+    
+    <div class="navbar-collapse main-menu-item collapse justify-content-start" id="navbar-content">
+
+      
+      <ul class="navbar-nav d-md-inline-flex">
+        
+
+        
+
+        
+        
+        
+          
+        
+
+        
+
+        
+        
+        
+        
+
+        
+          
+            
+            
+          
+          
+        
+
+        <li class="nav-item">
+          <a class="nav-link " href="/publication/"><span>Publications</span></a>
+        </li>
+
+        
+        
+
+        
+
+        
+        
+        
+
+        
+
+        
+        
+        
+        
+
+        
+          
+            
+            
+          
+          
+        
+
+        <li class="nav-item">
+          <a class="nav-link  active" href="/r/"><span>R</span></a>
+        </li>
+
+        
+        
+
+        
+
+        
+        
+        
+          
+        
+
+        
+
+        
+        
+        
+        
+
+        
+          
+            
+            
+          
+          
+        
+
+        <li class="nav-item">
+          <a class="nav-link " href="/epiData/"><span>epiData</span></a>
+        </li>
+
+        
+        
+
+        
+
+        
+        
+        
+          
+        
+
+        
+
+        
+        
+        
+        
+
+        
+          
+            
+            
+          
+          
+        
+
+        <li class="nav-item">
+          <a class="nav-link " href="/post/"><span>Posts</span></a>
+        </li>
+
+        
+        
+
+        
+
+        
+        
+        
+          
+        
+
+        
+
+        
+        
+        
+        
+
+        
+          
+            
+            
+          
+          
+            
+            
+            
+              
+            
+            
+          
+        
+
+        <li class="nav-item">
+          <a class="nav-link " href="/#projects"><span>Projects</span></a>
+        </li>
+
+        
+        
+
+        
+
+        
+        
+        
+          
+        
+
+        
+
+        
+        
+        
+        
+
+        
+          
+            
+            
+          
+          
+        
+
+        <li class="nav-item">
+          <a class="nav-link " href="/courses/"><span>Courses</span></a>
+        </li>
+
+        
+        
+
+        
+
+        
+        
+        
+          
+        
+
+        
+
+        
+        
+        
+        
+
+        
+          
+            
+            
+          
+          
+            
+            
+            
+              
+            
+            
+          
+        
+
+        <li class="nav-item">
+          <a class="nav-link " href="/#contact"><span>Contact</span></a>
+        </li>
+
+        
+        
+
+      
+
+        
+      </ul>
+    </div>
+
+    <ul class="nav-icons navbar-nav flex-row ml-auto d-flex pl-md-2">
+
+      
+      
+        
+          
+          <li class="nav-item d-none d-lg-inline-flex">
+            <a class="nav-link" href="/"  aria-label="">
+              <i class="fas fa-" aria-hidden="true"></i>
+            </a>
+          </li>
+        
+      
+
+      
+      
+      <li class="nav-item">
+        <a class="nav-link js-search" href="#" aria-label="Search"><i class="fas fa-search" aria-hidden="true"></i></a>
+      </li>
+      
+
+      
+      
+      <li class="nav-item dropdown theme-dropdown">
+        <a href="#" class="nav-link" data-toggle="dropdown" aria-haspopup="true" aria-label="Display preferences">
+          <i class="fas fa-moon" aria-hidden="true"></i>
+        </a>
+        <div class="dropdown-menu">
+          <a href="#" class="dropdown-item js-set-theme-light">
+            <span>Light</span>
+          </a>
+          <a href="#" class="dropdown-item js-set-theme-dark">
+            <span>Dark</span>
+          </a>
+          <a href="#" class="dropdown-item js-set-theme-auto">
+            <span>Automatic</span>
+          </a>
+        </div>
+      </li>
+      
+
+      
+      
+
+    </ul>
+
+  </div>
+</nav>
+
+
+  </div>
+
+  <div class="page-body">
+    
+
+
+
+
+
+<div class="container-fluid docs">
+  <div class="row flex-xl-nowrap">
+    <div class="col-12 col-md-3 col-xl-2 docs-sidebar">
+      <form class="docs-search d-flex align-items-center">
+  <button class="btn docs-toggle d-md-none p-0 mr-md-3 w-100" type="button" data-toggle="collapse" data-target="#docs-nav" aria-controls="docs-nav" aria-expanded="false" aria-label="Toggle section navigation">
+    <div class="d-flex">
+      <span class="d-md-none pl-1 flex-grow-1 text-left overflow-hidden">
+        
+          mStats
+        
+      </span>
+      <span><i class="fas fa-chevron-down"></i></span>
+    </div>
+  </button>
+
+  
+  <button class="form-control sidebar-search js-search d-none d-md-flex">
+    <i class="fas fa-search pr-2"></i>
+    <span class="sidebar-search-text">Search...</span>
+    <span class="sidebar-search-shortcut">/</span>
+  </button>
+  
+</form>
+
+<nav class="collapse docs-links" id="docs-nav">
+  
+  
+  
+  
+  
+  
+
+  
+  
+    
+
+    
+      
+
+      <ul class="nav docs-sidenav">
+        <li><a href="/r/"><i class="fas fa-arrow-left pr-1"></i>R Packages</a></li>
+      </ul>
+
+      
+      
+        
+          
+        
+      
+
+
+  
+    
+    
+    
+    
+      
+    
+    
+
+    
+      <div class="docs-toc-item">
+        <a class="docs-toc-link " href="/r/mstats/">mStats</a>
+    
+      
+        <ul class="nav docs-sidenav">
+      
+
+
+  <li class=""><a href="/r/mstats/gettingstarted/">Getting Started</a></li>
+
+
+
+  <li class=""><a href="/r/mstats/datamanagement/">Data Management</a></li>
+
+
+
+  <li class="active"><a href="/r/mstats/rbasics/">R Basics</a></li>
+
+      
+        </ul>
+      
+    
+
+    
+      </div>
+    
+
+    
+  
+</nav>
+
+    </div>
+
+    
+    
+    <div class="d-none d-xl-block col-xl-2 docs-toc">
+      
+
+      <ul class="nav toc-top">
+        <li><a href="#" id="back_to_top" class="docs-toc-title">Contents</a></li>
+      </ul>
+
+      <nav id="TableOfContents">
+  <ul>
+    <li><a href="#r">R</a></li>
+    <li><a href="#rstudio">RStudio</a>
+      <ul>
+        <li><a href="#rstudios-interface">RStudio’s Interface</a></li>
+      </ul>
+    </li>
+    <li><a href="#packages-in-r">Packages in R</a></li>
+    <li><a href="#functions-in-r">Functions in R</a></li>
+    <li><a href="#masking">Masking</a></li>
+    <li><a href="#piping-">Piping <code>%&gt;%</code></a></li>
+    <li><a href="#versions-used-in-this-book">Versions used in this book</a></li>
+    <li><a href="#getting-help">Getting help</a></li>
+    <li><a href="#intention-of-the-book">Intention of the book</a></li>
+    <li><a href="#references">References</a></li>
+  </ul>
+</nav>
+
+      
+    </div>
+    
+
+    <main class="col-12 col-md-9 col-xl-8 py-md-3 pl-md-5 docs-content" role="main">
+
+      <article class="article">
+
+        <div class="docs-article-container">
+          
+            
+  <nav class="d-none d-md-flex" aria-label="breadcrumb">
+    <ol class="breadcrumb">
+      
+  
+  
+  
+
+  <li class="breadcrumb-item">
+    <a href="/">
+      
+        Home
+      
+    </a>
+  </li>
+
+
+  <li class="breadcrumb-item">
+    <a href="/r/">
+      
+        R Packages
+      
+    </a>
+  </li>
+
+
+  <li class="breadcrumb-item">
+    <a href="/r/mstats/">
+      
+        mStats
+      
+    </a>
+  </li>
+
+
+      <li class="breadcrumb-item active" aria-current="page">
+        R Basics
+      </li>
+    </ol>
+  </nav>
+
+
+          
+
+          <h1>R Basics</h1>
+
+          <div class="article-style">
+            <h1 id="introduction">Introduction</h1>
+<hr>
+<p>This chapter introduces you to R, RStudio, packages and other things to
+get you started in R.</p>
+<h2 id="r">R</h2>
+<p><code>R</code> is a <strong>free</strong> software for statistics and graphics. It is widely
+used among statisticians and data scientists for developing statistical
+software and data analysis. It is also increasingly popular among
+medical and public health researchers and analysts. <code>R</code> is primarily
+developed in three programming languages: C, Fortran, and R itself.
+Although It can be used by its default command-line interface, there are
+several third-party integrated development environments (IDE) with a
+friendly graphical user interface, including RStudio and Jupyter
+Notebook.</p>
+<p><code>R</code> comes from <code>S programming language</code>. <code>S</code> was created by <a href="https://en.wikipedia.org/wiki/John_Chambers_%28programmer%29" target="_blank" rel="noopener">John
+Chambers</a> in
+1976 at Bell Labs. Later two statisticians, Ross Ihaka and Robert
+Gentleman developed R that is currently developed by the R Development
+Core Team. <code>R</code> is named partly after them and partly as a play on the
+name of <code>S</code>.</p>
+<p>R has a steep learning curve, especially for people working in the
+health sector, including medical doctors and public health
+professionals. They just want to get on with data analysis, rather than
+spending months or even years to master the basics of programming
+aspects of R. Although these may be the core advantages of R that may
+come into use later, it seems a very daunting process to them. With that
+in mind, the <code>mStats</code> package is developed to speed up the process of
+learning data analysis in R without the need of detailed knowledge of
+the basics of R. There are several such well-known packages for
+epidemiological calculations such as <code>epicalc</code>, <code>epiR</code>, <code>epitools</code> and
+<code>epistats</code>. There are advantages of using the <code>mStats</code>. First, all
+functions are developed from the user perspectives to be easy to recall
+their names. Second, they only perform a task with fewer options than a
+conventional function in R. This simplifies the thinking and
+implementation process. Third, the first input into the function is
+<code>data</code>. This has two benefits. It saves the nuisance of writing
+subsetting commands and these functions can handle the pipe operation
+using the function, <code>%&gt;%</code> of the package <code>magrittr</code>.</p>
+<p>R can be downloaded from <a href="http://cran.r-project.org/">http://cran.r-project.org/</a>.</p>
+<h2 id="rstudio">RStudio</h2>
+<hr>
+<p><code>RStudio</code> is an integrated development environment for R. It meansIt
+comes in two versions: Desktop version is a desktop application and
+server version runs on a web browser. Regular <code>RStudio</code> for personal
+usage is free for both desktop and server version.</p>
+<blockquote>
+<p>If R is a car engine, then RStudio is every other thing that makes
+driving car fun.</p>
+</blockquote>
+<p><code>RStudio</code> can be downloaded from
+<a href="https://rstudio.com/products/rstudio/download">https://rstudio.com/products/rstudio/download</a>.</p>
+<h3 id="rstudios-interface">RStudio’s Interface</h3>
+<hr>
+<p>The interface has four windows. Each window may have several tabs or
+sub-windows. By default, Source is on the top-left corner, console on
+bottom-left, environment on top-right, and files on bottom-right.</p>
+<ol>
+<li><code>Source</code> is a text editor that will be referred to as R Script later
+on. You can write commands and save them, which is the main point of
+reproducibility. Anyone who has this R Script can review and edit it
+in the future.</li>
+<li><code>Console</code> is the place you write your line-by-line command. It means
+you can only write a single command or a long paragraph of commands.
+After you close the RStudio, the commands will not be saved unless
+you specified to do so. However, it is the best way to saving R
+Script to store the commands you desire.
+<ul>
+<li>Symbol “&gt;” called prompt</li>
+<li>Type <code>3 + 4</code>, and press <code>Enter</code>.</li>
+</ul>
+</li>
+<li><code>Environment</code> has several sub-windows. For data management and
+beginner, you only have to know <code>Environment</code> and <code>History</code>.
+<ul>
+<li><code>Environment</code> is where R works.</li>
+<li><code>Global Environment</code> is the place where your data will be after
+importing data.</li>
+<li><code>History</code> saves the commands you run in R console.</li>
+<li><code>Connections</code> is where you connect to external databases.</li>
+</ul>
+</li>
+<li><code>Files</code> also has several sub-windows.
+<ul>
+<li><code>Files</code> is like a folder manager on your phone. You can manage
+files and folders as well as set the working directory.</li>
+<li><code>Plots</code> is where your plots will appear.</li>
+<li><code>Packages</code> is where you manage your R packages. You can install
+it from CRAN or other repositories. You can also install locally
+stored R packages.</li>
+<li><code>Help</code> is where R stores documentations. You can open the help
+or introduction page of the respective packages as well as
+individual functions.</li>
+</ul>
+</li>
+</ol>
+<p><img src="../man/rstudio_interface.png" alt="RStudio’s Interface"></p>
+<h2 id="packages-in-r">Packages in R</h2>
+<hr>
+<p><code>Base R</code> is what you get after installing R. R is powerful because of
+its tens of thousands of packages. The number is still growing. This
+also creates the problem of confusion. Even no single user can check or
+use all packages within his field. A solution is to stick to certain
+packages that work well for you.</p>
+<p>There are tons of recommendations out there, listing all popular
+packages in R. The strategy is to try out a few packages and remember
+the ones that work well. If a function you want to use does not exist
+and it is still possible, you can write the package yourself and
+contribute to the R community. Here is a list of R packages I find
+useful for my work though it may not be a comprehensive list:</p>
+<ul>
+<li>Data import
+<ul>
+<li><code>readr</code> for reading and writing text data like comma-separated
+value <code>CSV</code> file</li>
+<li><code>readxl</code> for reading excel files (both <code>xls</code> and <code>xlsx</code>)</li>
+<li><code>haven</code> for <code>STATA</code>, <code>SPSS</code> and <code>SAS</code> format</li>
+<li><code>foreign</code> for EpiData <code>.rec</code> file</li>
+</ul>
+</li>
+<li>Data management
+<ul>
+<li>tidyverse</li>
+<li>mStats</li>
+</ul>
+</li>
+<li>Epidemiological calculation
+<ul>
+<li><code>epicalc</code></li>
+<li><code>mStats</code></li>
+<li><code>epiR</code></li>
+<li><code>epitools</code></li>
+</ul>
+</li>
+<li>Statistical data analysis
+<ul>
+<li><code>gee</code> and <code>geepack</code> for hierarchical data modeling</li>
+<li><code>survminer</code> for survival analysis</li>
+</ul>
+</li>
+</ul>
+<p>To install a package, you can use the following command if it is
+published on <code>CRAN</code>. <code>CRAN</code> is the <code>comprehensive R Archive Network</code>,
+web servers that store R packages.</p>
+<p>For packages published on GitHub, use the following command. Note that
+each package usually provides different instructions for installation.</p>
+<p>The package on Github is usually up-to-date and often free from previous
+issues and bugs.</p>
+<p>Let us install the packages used in this book.</p>
+<pre><code>## install tidyverse will automatically include magrittr 
+install.packages(&quot;tidyverse&quot;, dependencies = TRUE)
+
+## install other packages:
+install.packages(c(&quot;readr&quot;, &quot;readxl&quot;, &quot;haven&quot;))
+</code></pre>
+<p>Below we install <code>mStats</code> package. Choose only one method. Method 1 can
+be a bit daunting for beginners should it needs installations of
+dependencies including <code>Rtools</code>.</p>
+<p>Method 3 is the easiest one.</p>
+<pre><code>## Method 1: install latest version of mStats
+install.packages(&quot;devtools&quot;, dependencies = TRUE)
+library(devtools)
+install_github(&quot;myominnoo/mStats&quot;) 
+
+## Method 2: install mStats version from CRAN
+install.packages(&quot;mStats&quot;)
+
+## Method 3: direct installation from my webpage.
+install.packages(&quot;https://myominnoo.github.io/pages/r/mStats_3.3.1.tar.gz&quot;, repos = NULL, type = &quot;source&quot;)
+</code></pre>
+<p>Check detail on previous versions on my webpage.
+<a href="https://myominnoo.github.io/pages/r_archives.html">https://myominnoo.github.io/pages/r_archives.html</a></p>
+<h2 id="functions-in-r">Functions in R</h2>
+<hr>
+<p>In R, everything is called an object and <code>function</code> is also a type of
+object. Functions are used to perform certain actions or tasks and if a
+result is returned, it can be stored as another object for further use.</p>
+<p>A function needs arguments or simply inputs. Inputs can be either
+<code>must-have</code> or <code>optional</code>. For example, the function <code>tab</code> is used to
+create frequency tabulation. The arguments can be checked using <code>str</code>
+function. <code>str</code> shows the structure of the R object.</p>
+<pre><code>library(mStats)
+str(codebook)
+#&gt; function (data)  
+#&gt;  - attr(*, &quot;srcref&quot;)= 'srcref' int [1:8] 23 13 53 1 13 1 25 55
+#&gt;   ..- attr(*, &quot;srcfile&quot;)=Classes 'srcfilealias', 'srcfile' &lt;environment: 0x0000000013e154a8&gt;
+</code></pre>
+<p>It has six inputs. But it only needs the first one <code>data</code> to work. Three
+dots <code>...</code> means that you can put as many variables as you want for
+tabulation. For the rest, they are set to some default values. For <code>by</code>,
+the default value is set to <code>NULL</code>, which means it performs frequency
+tabulation. If a categorical variable is specified, it generates a
+contingency table and reports p-values from association tests
+(Chi-squared and Fisher’s Exact).</p>
+<p>The input for <code>row.pct</code> can be <code>TRUE</code>, <code>FALSE</code> or <code>NULL</code>. If <code>TRUE</code>, it
+reports <code>row</code> percentages. If <code>FALSE</code>, <code>column</code> percentages, and if
+<code>NULL</code>, <code>no</code> percentages. You can remove missing levels in the table by
+specifying <code>na.rm</code> to <code>FALSE</code>. You can set your desired level of decimal
+with <code>rnd</code> input.</p>
+<p>The outputs from functions in R can be stored as an object. However,
+what you see in the console may not be the exact format or content that
+the function returns. It means that you do not always get what you see.
+(What you see is what you get - <code>WYSIWYG</code>)</p>
+<h2 id="masking">Masking</h2>
+<hr>
+<p>The <code>mStats</code>package contains two functions (<code>append</code>, <code>replace</code>) that
+have the same names (doing different operation) with base R packages
+(<code>stats</code> and <code>base</code>). Loading the <code>mStats</code> masks the functions from base
+R. It means that when you use <code>append</code> function, you are using the
+function from <code>mStats</code>. To avoid this:</p>
+<ul>
+<li>use the syntax <code>package::function()</code>, for example <code>base::append()</code>
+or <code>mStats::append()</code>.</li>
+<li>remove <code>mStats</code> from the session using <code>detach(package:mStats)</code>.</li>
+</ul>
+<p>Here is an example of using <code>read_dta</code> function from <code>haven</code> package.</p>
+<pre><code>## directly using read_dta function from haven package
+## without loading it
+haven::read_dta(&quot;file.dta&quot;) 
+</code></pre>
+<p>This is often handy when you only need to use a function of the package
+one or two times.</p>
+<h2 id="piping-">Piping <code>%&gt;%</code></h2>
+<hr>
+<p>Data management usually involves multiple steps to produce the final
+polished dataset. These are usually sequential operations done on the
+same dataset. The pipe operator <code>%&gt;%</code> from the package <code>magrittr</code>
+streamlines such operations into comprehensible steps or structures so
+that R codes become more readable to the users.</p>
+<p>The pipe operator <code>%&gt;%</code> essentially hands over the left-hand side values
+(dataset in this case) into the function that appears on the right-hand
+side. This is frequently written in two lines that the right-hand side
+appears on the next line below. This process is called piping, like
+joing pipes to continue the water flow.</p>
+<p>Check the example below. A series of tasks are performed to get the
+desired output in a continuous workflow, starting from importing data
+into R to summarizing variables.</p>
+<p>By piping <code>%&gt;%</code>, the raw dataset is being handed over to the right-hand
+side. The dataset being handed behind the scene is stored as an object
+named <code>.</code>.</p>
+<p>This is then put into the function, <code>replace</code> where the variables
+<code>test1</code> and <code>test2</code> are checked whether they are equal to <code>-99</code>. If
+equal, these values are replaced with <code>NA</code>, the missing value in R. Of
+course, these two tasks are done one after another.</p>
+<p>After that, the now-updated dataset <code>.</code> is put into <code>generate</code> function.
+The function again takes <code>test1</code> and <code>test2</code> and creates a new variable
+called <code>average</code> based on the formula specified.</p>
+<p>Finally, the dataset, still named <code>.</code>, is now being used in <code>summ</code>
+function to generate summary statistics of <code>test1</code>, <code>test2</code> and
+<code>average</code>.</p>
+<p>When the pipe operator <code>%&gt;%</code> is used, the input <code>data</code> does not need to
+be specified. This is because the dot <code>.</code> that represents the modified
+dataset along the piping process is automatically passed into that
+<code>data</code> input. Check the two examples below that produces the same
+output.</p>
+<pre><code>## Here is a series of operations:
+## 1) Import STATA's dta format from online 
+## 2) Replace test1 and test2 if they are -99, meaning missing value 
+## 3) Generate a new variable name &quot;average&quot; by taking average of the two tests
+## 4) Summarize all three variables
+haven::read_dta(&quot;https://stats.idre.ucla.edu/stat/data/patient_pt1_stata_dm.dta&quot;) %&gt;% 
+    replace(test1, NA, test1 == -99) %&gt;% 
+    replace(test2, NA, test2 == -99) %&gt;% 
+    generate(average, (test1 + test2) / 2 ) %&gt;% 
+    summ(test1, test2, average)
+</code></pre>
+<p>As you can see from the output in the console, notification of what have
+been done is a great way to track whether the functions are doing what
+they are supposed to do. There are 7 values changed to <code>NA</code> in both
+<code>test1</code> and <code>test2</code>, and 11 <code>NA</code> values when <code>average</code> is created. These
+are consistent with numbers reported the column <code>NA.</code> of the <code>Summary</code>
+output.</p>
+<p>Being able to run these codes in your RStudio means that you just used R
+for data management and analysis. Well done! I hope this gets you
+inspired to continue reading the book.</p>
+<h2 id="versions-used-in-this-book">Versions used in this book</h2>
+<hr>
+<p>Versions are important to make references in case you run into errors.</p>
+<pre><code>## R version
+version
+#&gt;                _                           
+#&gt; platform       x86_64-w64-mingw32          
+#&gt; arch           x86_64                      
+#&gt; os             mingw32                     
+#&gt; system         x86_64, mingw32             
+#&gt; status                                     
+#&gt; major          4                           
+#&gt; minor          1.0                         
+#&gt; year           2021                        
+#&gt; month          05                          
+#&gt; day            18                          
+#&gt; svn rev        80317                       
+#&gt; language       R                           
+#&gt; version.string R version 4.1.0 (2021-05-18)
+#&gt; nickname       Camp Pontanezen
+
+## mStats version 
+packageVersion(&quot;mStats&quot;)
+#&gt; [1] '3.5.0'
+packageVersion(&quot;tidyverse&quot;)
+#&gt; [1] '1.3.1'
+packageVersion(&quot;readr&quot;)
+#&gt; [1] '1.4.0'
+packageVersion(&quot;readxl&quot;)
+#&gt; [1] '1.3.1'
+packageVersion(&quot;haven&quot;)
+#&gt; [1] '2.4.1'
+</code></pre>
+<p>If you do not have R or this version of R, download and install it from
+the official website. <a href="https://www.r-project.org/">https://www.r-project.org/</a>.</p>
+<p>If you don’t have <code>mStats</code> installed, see the section
+above,<code>Packages in R</code>.</p>
+<h2 id="getting-help">Getting help</h2>
+<hr>
+<p>If you encounter an error or the function does not work, please file an
+issue with a minimal reproducible example on
+<a href="https://github.com/myominnoo/mStats/issues" target="_blank" rel="noopener">GitHub</a>.</p>
+<p>For questions and other discussion, please email me view
+<a href="mailto::dr.myominnoo@gmail.com">dr.myominnoo@gmail.com</a>.</p>
+<p>Please note that this project is looking for contributors. By
+participating in this project, you agree to abide by its terms with
+<a href="https://www.contributor-covenant.org/version/1/0/0/code-of-conduct/" target="_blank" rel="noopener">Contributor Code of
+Conduct</a>,
+version 1.0.0, available at
+<a href="https://www.contributor-covenant.org/version/1/0/0/code-of-conduct/">https://www.contributor-covenant.org/version/1/0/0/code-of-conduct/</a>.</p>
+<h2 id="intention-of-the-book">Intention of the book</h2>
+<hr>
+<p>This book is intended to guide new R users to quickly get on with data
+management and analysis. The package is also largely inspired by <code>STATA</code>
+software, hence <code>STATA</code> users may benefit largely from this book.</p>
+<h2 id="references">References</h2>
+<hr>
+<ol>
+<li>STATA DATA MANAGEMENT. UCLA: Statistical Consulting Group. from
+<a href="https://stats.idre.ucla.edu/stata/seminars/stata-data-management/">https://stats.idre.ucla.edu/stata/seminars/stata-data-management/</a>
+(accessed March 23, 2020).</li>
+<li>SUBSETTING DATA | STATA LEARNING MODULES. UCLA: Statistical
+Consulting Group. from
+<a href="https://stats.idre.ucla.edu/stata/modules/ubsetting-data/">https://stats.idre.ucla.edu/stata/modules/ubsetting-data/</a>
+(accessed March 23, 2020).</li>
+<li>LABELING DATA | STATA LEARNING MODULES. UCLA: Statistical Consulting
+Group. from
+<a href="https://stats.idre.ucla.edu/stata/modules/labeling-data/">https://stats.idre.ucla.edu/stata/modules/labeling-data/</a> (accessed
+March 23, 2020).</li>
+<li>LOGISTIC REGRESSION | STATA DATA ANALYSIS EXAMPLES. UCLA:
+Statistical Consulting Group. from
+<a href="https://stats.idre.ucla.edu/stata/dae/logistic-regression/">https://stats.idre.ucla.edu/stata/dae/logistic-regression/</a>
+(accessed March 23, 2020).</li>
+<li>REGRESSION ANALYSIS | STATA ANNOTATED OUTPUT. UCLA: Statistical
+Consulting Group. from
+<a href="https://stats.idre.ucla.edu/stata/output/regression-analysis/">https://stats.idre.ucla.edu/stata/output/regression-analysis/</a>
+(accessed March 23, 2020).</li>
+<li>Betty R. Kirkwood, Jonathan A.C. Sterne (2006, <a href="ISBN:978">ISBN:978</a> 0 86542
+871 3)</li>
+<li>Burt B. Gerstman (2013, <a href="ISBN:978">ISBN:978</a> 1 4443 3608 5)</li>
+<li>Douglas G. Altman (2005, <a href="ISBN:0">ISBN:0</a> 7279 1375 1)</li>
+<li>R Fundamentals, R Core Development Team, 2006</li>
+<li>R for Data Science, Hadley Wickham &amp; Garrett Grolemund, 2017</li>
+<li>Advanced R, Hadley Wickham</li>
+<li>Exploratory Data Analysis with R, Roger D. Peng</li>
+<li>R Programming by Robin Evans:
+<a href="http://www.stats.ox.ac.uk/~evans/teaching.htm">http://www.stats.ox.ac.uk/~evans/teaching.htm</a></li>
+<li>All books and websites that I forget to mention</li>
+</ol>
+
+          </div>
+
+          
+
+
+
+          
+          
+          <div class="article-widget">
+            
+<div class="post-nav">
+  
+  
+  
+  <div class="post-nav-item">
+    <div class="meta-nav">Previous</div>
+    <a href="/r/mstats/datamanagement/" rel="next">Data Management</a>
+  </div>
+  
+  
+</div>
+
+          </div>
+          
+        </div>
+
+        <div class="body-footer">
+          <p>Last updated on Jun 13, 2021</p>
+
+          
+
+
+
+
+
+          
+
+
+
+
+          
+
+
+  
+  
+
+
+
+        </div>
+
+      </article>
+
+      <footer class="site-footer">
+
+  
+
+  
+  <p class="powered-by">
+    
+      <a href="/privacy/">Privacy Policy</a>
+    
+    
+       &middot; 
+      <a href="/terms/">Terms</a>
+    
+  </p>
+  
+
+  
+  <p class="powered-by">
+    © {2021} Myo Minn Oo
+  </p>
+  
+
+  
+  
+
+
+
+
+
+  
+  
+  
+  
+
+  
+  
+    
+  
+  
+    
+  
+
+  
+
+  
+  <p class="powered-by copyright-license-text">
+    This work is licensed under <a href="https://creativecommons.org/licenses/by-nc-nd/4.0" rel="noopener noreferrer" target="_blank">CC BY NC ND 4.0</a>
+  </p>
+  
+
+  <p class="powered-by footer-license-icons">
+    <a href="https://creativecommons.org/licenses/by-nc-nd/4.0" rel="noopener noreferrer" target="_blank" aria-label="Creative Commons">
+      <i class="fab fa-creative-commons fa-2x" aria-hidden="true"></i>
+      <i class="fab fa-creative-commons-by fa-2x" aria-hidden="true"></i>
+      
+        <i class="fab fa-creative-commons-nc fa-2x" aria-hidden="true"></i>
+      
+      
+        <i class="fab fa-creative-commons-nd fa-2x" aria-hidden="true"></i>
+      
+    </a>
+  </p>
+
+
+
+
+  <p class="powered-by">
+    
+    
+    
+      
+      
+      
+      
+      
+      
+      Published with <a href="https://wowchemy.com/?utm_campaign=poweredby" target="_blank" rel="noopener">Wowchemy</a> — the free, <a href="https://github.com/wowchemy/wowchemy-hugo-modules" target="_blank" rel="noopener">open source</a> website builder that empowers creators.
+    
+  </p>
+</footer>
+
+
+    </main>
+  </div>
+</div>
+
+  </div>
+
+  <div class="page-footer">
+    
+    
+  </div>
+
+  
+<div id="modal" class="modal fade" role="dialog">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title">Cite</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <pre><code class="tex hljs"></code></pre>
+      </div>
+      <div class="modal-footer">
+        <a class="btn btn-outline-primary my-1 js-copy-cite" href="#" target="_blank">
+          <i class="fas fa-copy"></i> Copy
+        </a>
+        <a class="btn btn-outline-primary my-1 js-download-cite" href="#" target="_blank">
+          <i class="fas fa-download"></i> Download
+        </a>
+        <div id="modal-error"></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+      
+
+    
+    
+    
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js" integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0=" crossorigin="anonymous"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/instant.page/5.1.0/instantpage.min.js" integrity="sha512-1+qUtKoh9XZW7j+6LhRMAyOrgSQKenQ4mluTR+cvxXjP1Z54RxZuzstR/H9kgPXQsVB8IW7DMDFUJpzLjvhGSQ==" crossorigin="anonymous"></script>
+
+      
+      
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.imagesloaded/4.1.4/imagesloaded.pkgd.min.js" integrity="sha256-lqvxZrPLtfffUl2G/e7szqSvPBILGbwmsGE1MKlOi0Q=" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.isotope/3.0.6/isotope.pkgd.min.js" integrity="sha256-CBrpuqrMhXwcLLUd5tvQ4euBHCdh7wGlDfNz8vbu/iI=" crossorigin="anonymous"></script>
+      
+
+      
+      
+
+      
+
+      
+        
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.2.0/highlight.min.js" integrity="sha512-TDKKr+IvoqZnPzc3l35hdjpHD0m+b2EC2SrLEgKDRWpxf2rFCxemkgvJ5kfU48ip+Y+m2XVKyOCD85ybtlZDmw==" crossorigin="anonymous"></script>
+        
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.2.0/languages/r.min.js"></script>
+        
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.2.0/languages/python.min.js"></script>
+        
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.2.0/languages/latex.min.js"></script>
+        
+      
+
+    
+
+    
+    
+    
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.7.1/leaflet.min.js" integrity="sha512-SeiQaaDh73yrb56sTW/RgVdi/mMqNeM2oBwubFHagc5BkixSpP1fvqF47mKzPGWYSSy4RwbBunrJBQ4Co8fRWA==" crossorigin="anonymous"></script>
+    
+
+    
+    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/anchor-js/4.2.2/anchor.min.js" integrity="sha512-I7w3ZdSFzw5j3jU3ZkNikBNeIrl3i+hEuEdwNmqUJvwNcaBUNcijnP2gd9DtGlgVYDplfjGoD8vTNsID+lCjqg==" crossorigin="anonymous"></script>
+    <script>
+      anchors.add();
+    </script>
+    
+
+    
+    
+    
+      
+      <script id="search-hit-fuse-template" type="text/x-template">
+        <div class="search-hit" id="summary-{{key}}">
+          <div class="search-hit-content">
+            <div class="search-hit-name">
+              <a href="{{relpermalink}}">{{title}}</a>
+              <div class="article-metadata search-hit-type">{{type}}</div>
+              <p class="search-hit-description">{{snippet}}</p>
+            </div>
+          </div>
+        </div>
+      </script>
+      
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/fuse.js/3.2.1/fuse.min.js" integrity="sha256-VzgmKYmhsGNNN4Ph1kMW+BjoYJM2jV5i4IlFoeZA9XI=" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/mark.js/8.11.1/jquery.mark.min.js" integrity="sha256-4HLtjeVgH0eIB3aZ9mLYF6E8oU5chNdjU6p6rrXpl9U=" crossorigin="anonymous"></script>
+      
+    
+
+    
+    
+
+    
+    
+    
+    
+
+    
+    <script src="/js/bootstrap.bundle.min.6aed84840afc03ab4d5750157f69c120.js"></script>
+
+    
+    
+      
+      
+      
+      
+      
+      
+      
+    
+
+    
+    
+    
+    
+    
+    
+    
+    
+      
+      
+    
+    
+    <script src="/en/js/wowchemy.min.4bba0826db6409c865d2e7b99039d6d0.js"></script>
+
+    
+  <script async defer src="https://buttons.github.io/buttons.js"></script>
+
+
+
+
+</body>
+</html>

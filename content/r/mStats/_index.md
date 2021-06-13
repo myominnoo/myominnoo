@@ -29,9 +29,12 @@ In a nutshell, mStats is designed to make data analysis quick and easy
 to create the final report for health research project. You can see it
 in action to [Get Started](https://myominnoo.github.io/mStats/).
 
-------------------------------------------------------------------------
+
 
 ## Installation
+
+
+------------------------------------------------------------------------
 
 You can install the released version of mStats from
 [CRAN](https://CRAN.R-project.org) with:
@@ -50,16 +53,17 @@ package}(<https://remotes.r-lib.org/>):
 remotes::install_github("myominnoo/mStats")
 ```
 
-------------------------------------------------------------------------
 
 ## Cheat Sheet
+
+------------------------------------------------------------------------
 
 to add later
 
 
-------------------------------------------------------------------------
-
 ## Masking
+
+------------------------------------------------------------------------
 
 The `mStats`package contains two functions (`append`, `replace`) that
 have the same names (doing different operation) with base R packages
@@ -71,9 +75,10 @@ function from `mStats`. To avoid this:
     or `mStats::append()`.
 -   remove `mStats` from the session using `detach(package:mStats)`.
 
-------------------------------------------------------------------------
 
 ## Usage
+
+------------------------------------------------------------------------
 
 The easiest way to get started with mStats is to follow the guide
 [here](https://myominnoo.github.io/mStats/). Below is a quick
@@ -128,9 +133,9 @@ codebook(iris)
 ```
 
 
-------------------------------------------------------------------------
-
 ## Getting help
+
+------------------------------------------------------------------------
 
 If you encounter a clear bug, please file an issue with a minimal
 reproducible example on

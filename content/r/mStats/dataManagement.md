@@ -1,7 +1,7 @@
 ---
-date: "2021-01-01"
+date: "2021-06-13"
 highlight: true
-title: Visualization
+title: Data Management
 type: book
 weight: 30
 ---

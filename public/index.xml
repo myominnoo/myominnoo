@@ -13,6 +13,99 @@
     </image>
     
     <item>
+      <title>Getting Started</title>
+      <link>https://mmoo.netlify.app/r/mstats/gettingstarted/</link>
+      <pubDate>Sun, 13 Jun 2021 00:00:00 +0000</pubDate>
+      <guid>https://mmoo.netlify.app/r/mstats/gettingstarted/</guid>
+      <description>&lt;p&gt;mStats is a open-source R package to facilitate data analysis with R in
+health research. It comprises of three major sets of functions:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;data management&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;statistical analysis&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;calculation of epidemiological measures&lt;/code&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;These functions are in turn supported by another set of helper functions
+which allows statistical calculation, displaying well-formatted output
+and transferring final outputs to process further.&lt;/p&gt;
+&lt;h1 id=&#34;how-did-it-all-start&#34;&gt;How did it all start?&lt;/h1&gt;
+&lt;hr&gt;
+&lt;p&gt;The package came into life when I started my doctoral study in 2018. I
+was inspired a couple of R packages for data manipulation and analysis
+including &lt;code&gt;tidyverse&lt;/code&gt; and &lt;code&gt;epicalc&lt;/code&gt;, to create something different and
+make my life easier. The first version was released on GitHub in late
+2018. Initially, it was intended for fun and I wanted to know how much I
+could make use of what I have learned R so far.&lt;/p&gt;
+&lt;p&gt;In the first version of &lt;code&gt;mStats&lt;/code&gt;, I created some functions to make plots
+based on &lt;code&gt;ggplot2&lt;/code&gt;. I updated several small patch versions adding a few
+more functions that were interesting to me at that time. In mid-2019, I
+started another package called &lt;code&gt;stats2&lt;/code&gt; where I tried to simplify the
+concept that one function should do a task without too many options. For
+example, the &lt;code&gt;tab&lt;/code&gt; function should perform the task of tabulation with a
+few options to tweak its outputs. That’s the whole idea of the package.
+I felt that beginners do not mind having only a few options to do so.
+They do not use as much as advanced users do.&lt;/p&gt;
+&lt;p&gt;I continued developing the package with feedback from teachers, friends,
+and colleagues. In early 2020, the package seems to become stable.
+Hence, on March 31, 2020 I submitted version 3.2.2 to &lt;code&gt;CRAN&lt;/code&gt;. As times
+progress, I hope this package will at least provide some contributions
+in some people. Any constructive criticism, suggestions, or comments are
+most welcome.&lt;/p&gt;
+&lt;h1 id=&#34;core-princples&#34;&gt;Core princples&lt;/h1&gt;
+&lt;hr&gt;
+&lt;p&gt;The package is developed with the following basic principles kept in
+mind.&lt;/p&gt;
+&lt;h3 id=&#34;1-data-as-its-first-input&#34;&gt;1) &lt;code&gt;data&lt;/code&gt; as its first input:&lt;/h3&gt;
+&lt;p&gt;It is very common in data analysis to use datasets, either imported or
+otherwise. R functions are usually very generic and created for basic
+data structures of R. Hence, to use variables from a dataset, there are
+two general ways: 1) use the &lt;code&gt;attach&lt;/code&gt; function and use the names of
+variables directly, and 2) to subset data using dollar sign &lt;code&gt;$&lt;/code&gt; or
+square brackets &lt;code&gt;[]&lt;/code&gt; to provide integer positions of desired variables.
+It is best to avoid these usages. Hence, mStats requires data as its
+first input / argument. This will help to avoid confusion by using
+attach and make the workflow easier. After all, writing words are much
+easier than typing complex symbols.&lt;/p&gt;
+&lt;h3 id=&#34;2-keep-functions-short-and-simple&#34;&gt;2) Keep &lt;code&gt;functions&lt;/code&gt; short and simple:&lt;/h3&gt;
+&lt;p&gt;Arguments in &lt;code&gt;mStats&lt;/code&gt; are limited and attempted to keep a balance
+between having too many things that can be tweaked and having no options
+at all.&lt;/p&gt;
+&lt;h3 id=&#34;3-labels&#34;&gt;3) Labels:&lt;/h3&gt;
+&lt;p&gt;When the dataset contains hundreds or thousands of variables, it can get
+pretty confusing of what is what. It is better to label those essential
+for your data analysis. Hence, mStats keeps up with the concept of
+labeling variables and dataset. However, labeling at value level is
+deemed as unnecessary in R, and labelling can be implemented at dataset
+and variable levels.&lt;/p&gt;
+&lt;h3 id=&#34;4-well-formatted-output&#34;&gt;4) Well-formatted output:&lt;/h3&gt;
+&lt;p&gt;Outputs from each function are tools to communicate with the users, and
+they should help users comprehend the outputs with less time and effort.&lt;/p&gt;
+&lt;h3 id=&#34;5-output-notification&#34;&gt;5) Output notification:&lt;/h3&gt;
+&lt;p&gt;Notification is also important to communicate about what has been done
+to the dataset. This helps the users check whether the work is properly
+implemented.&lt;/p&gt;
+&lt;hr&gt;
+&lt;h1 id=&#34;version-used&#34;&gt;Version used&lt;/h1&gt;
+&lt;pre&gt;&lt;code&gt;version
+#&amp;gt;                _                           
+#&amp;gt; platform       x86_64-w64-mingw32          
+#&amp;gt; arch           x86_64                      
+#&amp;gt; os             mingw32                     
+#&amp;gt; system         x86_64, mingw32             
+#&amp;gt; status                                     
+#&amp;gt; major          4                           
+#&amp;gt; minor          1.0                         
+#&amp;gt; year           2021                        
+#&amp;gt; month          05                          
+#&amp;gt; day            18                          
+#&amp;gt; svn rev        80317                       
+#&amp;gt; language       R                           
+#&amp;gt; version.string R version 4.1.0 (2021-05-18)
+#&amp;gt; nickname       Camp Pontanezen
+&lt;/code&gt;&lt;/pre&gt;
+</description>
+    </item>
+    
+    <item>
       <title>Python basics</title>
       <link>https://mmoo.netlify.app/courses/example/python/</link>
       <pubDate>Fri, 01 Jan 2021 00:00:00 +0000</pubDate>
@@ -47,6 +140,407 @@
   &lt;summary&gt;Is Python case-sensitive?&lt;/summary&gt;
   &lt;p&gt;Yes&lt;/p&gt;
 &lt;/details&gt;</description>
+    </item>
+    
+    <item>
+      <title>Data Management</title>
+      <link>https://mmoo.netlify.app/r/mstats/datamanagement/</link>
+      <pubDate>Sun, 13 Jun 2021 00:00:00 +0000</pubDate>
+      <guid>https://mmoo.netlify.app/r/mstats/datamanagement/</guid>
+      <description>&lt;p&gt;Learn how to visualize data with Plotly.&lt;/p&gt;
+&lt;p&gt;
+  &lt;i class=&#34;fas fa-clock  pr-1 fa-fw&#34;&gt;&lt;/i&gt; 1-2 hours per week, for 8 weeks&lt;/p&gt;
+&lt;h2 id=&#34;learn&#34;&gt;Learn&lt;/h2&gt;
+
+&lt;div style=&#34;position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;&#34;&gt;
+  &lt;iframe src=&#34;https://www.youtube.com/embed/hSPmj7mK6ng&#34; style=&#34;position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;&#34; allowfullscreen title=&#34;YouTube Video&#34;&gt;&lt;/iframe&gt;
+&lt;/div&gt;
+
+&lt;h2 id=&#34;quiz&#34;&gt;Quiz&lt;/h2&gt;
+&lt;details class=&#34;spoiler &#34;  id=&#34;spoiler-2&#34;&gt;
+  &lt;summary&gt;When is a heatmap useful?&lt;/summary&gt;
+  &lt;p&gt;Lorem ipsum dolor sit amet, consectetur adipiscing elit.&lt;/p&gt;
+&lt;/details&gt;
+&lt;details class=&#34;spoiler &#34;  id=&#34;spoiler-3&#34;&gt;
+  &lt;summary&gt;Write Plotly code to render a bar chart&lt;/summary&gt;
+  &lt;p&gt;&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;import plotly.express as px
+data_canada = px.data.gapminder().query(&amp;quot;country == &#39;Canada&#39;&amp;quot;)
+fig = px.bar(data_canada, x=&#39;year&#39;, y=&#39;pop&#39;)
+fig.show()
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/p&gt;
+&lt;/details&gt;</description>
+    </item>
+    
+    <item>
+      <title>R Basics</title>
+      <link>https://mmoo.netlify.app/r/mstats/rbasics/</link>
+      <pubDate>Sun, 13 Jun 2021 00:00:00 +0000</pubDate>
+      <guid>https://mmoo.netlify.app/r/mstats/rbasics/</guid>
+      <description>&lt;h1 id=&#34;introduction&#34;&gt;Introduction&lt;/h1&gt;
+&lt;hr&gt;
+&lt;p&gt;This chapter introduces you to R, RStudio, packages and other things to
+get you started in R.&lt;/p&gt;
+&lt;h2 id=&#34;r&#34;&gt;R&lt;/h2&gt;
+&lt;p&gt;&lt;code&gt;R&lt;/code&gt; is a &lt;strong&gt;free&lt;/strong&gt; software for statistics and graphics. It is widely
+used among statisticians and data scientists for developing statistical
+software and data analysis. It is also increasingly popular among
+medical and public health researchers and analysts. &lt;code&gt;R&lt;/code&gt; is primarily
+developed in three programming languages: C, Fortran, and R itself.
+Although It can be used by its default command-line interface, there are
+several third-party integrated development environments (IDE) with a
+friendly graphical user interface, including RStudio and Jupyter
+Notebook.&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;R&lt;/code&gt; comes from &lt;code&gt;S programming language&lt;/code&gt;. &lt;code&gt;S&lt;/code&gt; was created by &lt;a href=&#34;https://en.wikipedia.org/wiki/John_Chambers_%28programmer%29&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;John
+Chambers&lt;/a&gt; in
+1976 at Bell Labs. Later two statisticians, Ross Ihaka and Robert
+Gentleman developed R that is currently developed by the R Development
+Core Team. &lt;code&gt;R&lt;/code&gt; is named partly after them and partly as a play on the
+name of &lt;code&gt;S&lt;/code&gt;.&lt;/p&gt;
+&lt;p&gt;R has a steep learning curve, especially for people working in the
+health sector, including medical doctors and public health
+professionals. They just want to get on with data analysis, rather than
+spending months or even years to master the basics of programming
+aspects of R. Although these may be the core advantages of R that may
+come into use later, it seems a very daunting process to them. With that
+in mind, the &lt;code&gt;mStats&lt;/code&gt; package is developed to speed up the process of
+learning data analysis in R without the need of detailed knowledge of
+the basics of R. There are several such well-known packages for
+epidemiological calculations such as &lt;code&gt;epicalc&lt;/code&gt;, &lt;code&gt;epiR&lt;/code&gt;, &lt;code&gt;epitools&lt;/code&gt; and
+&lt;code&gt;epistats&lt;/code&gt;. There are advantages of using the &lt;code&gt;mStats&lt;/code&gt;. First, all
+functions are developed from the user perspectives to be easy to recall
+their names. Second, they only perform a task with fewer options than a
+conventional function in R. This simplifies the thinking and
+implementation process. Third, the first input into the function is
+&lt;code&gt;data&lt;/code&gt;. This has two benefits. It saves the nuisance of writing
+subsetting commands and these functions can handle the pipe operation
+using the function, &lt;code&gt;%&amp;gt;%&lt;/code&gt; of the package &lt;code&gt;magrittr&lt;/code&gt;.&lt;/p&gt;
+&lt;p&gt;R can be downloaded from &lt;a href=&#34;http://cran.r-project.org/&#34;&gt;http://cran.r-project.org/&lt;/a&gt;.&lt;/p&gt;
+&lt;h2 id=&#34;rstudio&#34;&gt;RStudio&lt;/h2&gt;
+&lt;hr&gt;
+&lt;p&gt;&lt;code&gt;RStudio&lt;/code&gt; is an integrated development environment for R. It meansIt
+comes in two versions: Desktop version is a desktop application and
+server version runs on a web browser. Regular &lt;code&gt;RStudio&lt;/code&gt; for personal
+usage is free for both desktop and server version.&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;If R is a car engine, then RStudio is every other thing that makes
+driving car fun.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;&lt;code&gt;RStudio&lt;/code&gt; can be downloaded from
+&lt;a href=&#34;https://rstudio.com/products/rstudio/download&#34;&gt;https://rstudio.com/products/rstudio/download&lt;/a&gt;.&lt;/p&gt;
+&lt;h3 id=&#34;rstudios-interface&#34;&gt;RStudio’s Interface&lt;/h3&gt;
+&lt;hr&gt;
+&lt;p&gt;The interface has four windows. Each window may have several tabs or
+sub-windows. By default, Source is on the top-left corner, console on
+bottom-left, environment on top-right, and files on bottom-right.&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;&lt;code&gt;Source&lt;/code&gt; is a text editor that will be referred to as R Script later
+on. You can write commands and save them, which is the main point of
+reproducibility. Anyone who has this R Script can review and edit it
+in the future.&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;Console&lt;/code&gt; is the place you write your line-by-line command. It means
+you can only write a single command or a long paragraph of commands.
+After you close the RStudio, the commands will not be saved unless
+you specified to do so. However, it is the best way to saving R
+Script to store the commands you desire.
+&lt;ul&gt;
+&lt;li&gt;Symbol “&amp;gt;” called prompt&lt;/li&gt;
+&lt;li&gt;Type &lt;code&gt;3 + 4&lt;/code&gt;, and press &lt;code&gt;Enter&lt;/code&gt;.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;Environment&lt;/code&gt; has several sub-windows. For data management and
+beginner, you only have to know &lt;code&gt;Environment&lt;/code&gt; and &lt;code&gt;History&lt;/code&gt;.
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;Environment&lt;/code&gt; is where R works.&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;Global Environment&lt;/code&gt; is the place where your data will be after
+importing data.&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;History&lt;/code&gt; saves the commands you run in R console.&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;Connections&lt;/code&gt; is where you connect to external databases.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;Files&lt;/code&gt; also has several sub-windows.
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;Files&lt;/code&gt; is like a folder manager on your phone. You can manage
+files and folders as well as set the working directory.&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;Plots&lt;/code&gt; is where your plots will appear.&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;Packages&lt;/code&gt; is where you manage your R packages. You can install
+it from CRAN or other repositories. You can also install locally
+stored R packages.&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;Help&lt;/code&gt; is where R stores documentations. You can open the help
+or introduction page of the respective packages as well as
+individual functions.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;&lt;img src=&#34;../man/rstudio_interface.png&#34; alt=&#34;RStudio’s Interface&#34;&gt;&lt;/p&gt;
+&lt;h2 id=&#34;packages-in-r&#34;&gt;Packages in R&lt;/h2&gt;
+&lt;hr&gt;
+&lt;p&gt;&lt;code&gt;Base R&lt;/code&gt; is what you get after installing R. R is powerful because of
+its tens of thousands of packages. The number is still growing. This
+also creates the problem of confusion. Even no single user can check or
+use all packages within his field. A solution is to stick to certain
+packages that work well for you.&lt;/p&gt;
+&lt;p&gt;There are tons of recommendations out there, listing all popular
+packages in R. The strategy is to try out a few packages and remember
+the ones that work well. If a function you want to use does not exist
+and it is still possible, you can write the package yourself and
+contribute to the R community. Here is a list of R packages I find
+useful for my work though it may not be a comprehensive list:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Data import
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;readr&lt;/code&gt; for reading and writing text data like comma-separated
+value &lt;code&gt;CSV&lt;/code&gt; file&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;readxl&lt;/code&gt; for reading excel files (both &lt;code&gt;xls&lt;/code&gt; and &lt;code&gt;xlsx&lt;/code&gt;)&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;haven&lt;/code&gt; for &lt;code&gt;STATA&lt;/code&gt;, &lt;code&gt;SPSS&lt;/code&gt; and &lt;code&gt;SAS&lt;/code&gt; format&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;foreign&lt;/code&gt; for EpiData &lt;code&gt;.rec&lt;/code&gt; file&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;Data management
+&lt;ul&gt;
+&lt;li&gt;tidyverse&lt;/li&gt;
+&lt;li&gt;mStats&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;Epidemiological calculation
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;epicalc&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;mStats&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;epiR&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;epitools&lt;/code&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;Statistical data analysis
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;gee&lt;/code&gt; and &lt;code&gt;geepack&lt;/code&gt; for hierarchical data modeling&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;survminer&lt;/code&gt; for survival analysis&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;To install a package, you can use the following command if it is
+published on &lt;code&gt;CRAN&lt;/code&gt;. &lt;code&gt;CRAN&lt;/code&gt; is the &lt;code&gt;comprehensive R Archive Network&lt;/code&gt;,
+web servers that store R packages.&lt;/p&gt;
+&lt;p&gt;For packages published on GitHub, use the following command. Note that
+each package usually provides different instructions for installation.&lt;/p&gt;
+&lt;p&gt;The package on Github is usually up-to-date and often free from previous
+issues and bugs.&lt;/p&gt;
+&lt;p&gt;Let us install the packages used in this book.&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;## install tidyverse will automatically include magrittr 
+install.packages(&amp;quot;tidyverse&amp;quot;, dependencies = TRUE)
+
+## install other packages:
+install.packages(c(&amp;quot;readr&amp;quot;, &amp;quot;readxl&amp;quot;, &amp;quot;haven&amp;quot;))
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;Below we install &lt;code&gt;mStats&lt;/code&gt; package. Choose only one method. Method 1 can
+be a bit daunting for beginners should it needs installations of
+dependencies including &lt;code&gt;Rtools&lt;/code&gt;.&lt;/p&gt;
+&lt;p&gt;Method 3 is the easiest one.&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;## Method 1: install latest version of mStats
+install.packages(&amp;quot;devtools&amp;quot;, dependencies = TRUE)
+library(devtools)
+install_github(&amp;quot;myominnoo/mStats&amp;quot;) 
+
+## Method 2: install mStats version from CRAN
+install.packages(&amp;quot;mStats&amp;quot;)
+
+## Method 3: direct installation from my webpage.
+install.packages(&amp;quot;https://myominnoo.github.io/pages/r/mStats_3.3.1.tar.gz&amp;quot;, repos = NULL, type = &amp;quot;source&amp;quot;)
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;Check detail on previous versions on my webpage.
+&lt;a href=&#34;https://myominnoo.github.io/pages/r_archives.html&#34;&gt;https://myominnoo.github.io/pages/r_archives.html&lt;/a&gt;&lt;/p&gt;
+&lt;h2 id=&#34;functions-in-r&#34;&gt;Functions in R&lt;/h2&gt;
+&lt;hr&gt;
+&lt;p&gt;In R, everything is called an object and &lt;code&gt;function&lt;/code&gt; is also a type of
+object. Functions are used to perform certain actions or tasks and if a
+result is returned, it can be stored as another object for further use.&lt;/p&gt;
+&lt;p&gt;A function needs arguments or simply inputs. Inputs can be either
+&lt;code&gt;must-have&lt;/code&gt; or &lt;code&gt;optional&lt;/code&gt;. For example, the function &lt;code&gt;tab&lt;/code&gt; is used to
+create frequency tabulation. The arguments can be checked using &lt;code&gt;str&lt;/code&gt;
+function. &lt;code&gt;str&lt;/code&gt; shows the structure of the R object.&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;library(mStats)
+str(codebook)
+#&amp;gt; function (data)  
+#&amp;gt;  - attr(*, &amp;quot;srcref&amp;quot;)= &#39;srcref&#39; int [1:8] 23 13 53 1 13 1 25 55
+#&amp;gt;   ..- attr(*, &amp;quot;srcfile&amp;quot;)=Classes &#39;srcfilealias&#39;, &#39;srcfile&#39; &amp;lt;environment: 0x0000000013e154a8&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;It has six inputs. But it only needs the first one &lt;code&gt;data&lt;/code&gt; to work. Three
+dots &lt;code&gt;...&lt;/code&gt; means that you can put as many variables as you want for
+tabulation. For the rest, they are set to some default values. For &lt;code&gt;by&lt;/code&gt;,
+the default value is set to &lt;code&gt;NULL&lt;/code&gt;, which means it performs frequency
+tabulation. If a categorical variable is specified, it generates a
+contingency table and reports p-values from association tests
+(Chi-squared and Fisher’s Exact).&lt;/p&gt;
+&lt;p&gt;The input for &lt;code&gt;row.pct&lt;/code&gt; can be &lt;code&gt;TRUE&lt;/code&gt;, &lt;code&gt;FALSE&lt;/code&gt; or &lt;code&gt;NULL&lt;/code&gt;. If &lt;code&gt;TRUE&lt;/code&gt;, it
+reports &lt;code&gt;row&lt;/code&gt; percentages. If &lt;code&gt;FALSE&lt;/code&gt;, &lt;code&gt;column&lt;/code&gt; percentages, and if
+&lt;code&gt;NULL&lt;/code&gt;, &lt;code&gt;no&lt;/code&gt; percentages. You can remove missing levels in the table by
+specifying &lt;code&gt;na.rm&lt;/code&gt; to &lt;code&gt;FALSE&lt;/code&gt;. You can set your desired level of decimal
+with &lt;code&gt;rnd&lt;/code&gt; input.&lt;/p&gt;
+&lt;p&gt;The outputs from functions in R can be stored as an object. However,
+what you see in the console may not be the exact format or content that
+the function returns. It means that you do not always get what you see.
+(What you see is what you get - &lt;code&gt;WYSIWYG&lt;/code&gt;)&lt;/p&gt;
+&lt;h2 id=&#34;masking&#34;&gt;Masking&lt;/h2&gt;
+&lt;hr&gt;
+&lt;p&gt;The &lt;code&gt;mStats&lt;/code&gt;package contains two functions (&lt;code&gt;append&lt;/code&gt;, &lt;code&gt;replace&lt;/code&gt;) that
+have the same names (doing different operation) with base R packages
+(&lt;code&gt;stats&lt;/code&gt; and &lt;code&gt;base&lt;/code&gt;). Loading the &lt;code&gt;mStats&lt;/code&gt; masks the functions from base
+R. It means that when you use &lt;code&gt;append&lt;/code&gt; function, you are using the
+function from &lt;code&gt;mStats&lt;/code&gt;. To avoid this:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;use the syntax &lt;code&gt;package::function()&lt;/code&gt;, for example &lt;code&gt;base::append()&lt;/code&gt;
+or &lt;code&gt;mStats::append()&lt;/code&gt;.&lt;/li&gt;
+&lt;li&gt;remove &lt;code&gt;mStats&lt;/code&gt; from the session using &lt;code&gt;detach(package:mStats)&lt;/code&gt;.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Here is an example of using &lt;code&gt;read_dta&lt;/code&gt; function from &lt;code&gt;haven&lt;/code&gt; package.&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;## directly using read_dta function from haven package
+## without loading it
+haven::read_dta(&amp;quot;file.dta&amp;quot;) 
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;This is often handy when you only need to use a function of the package
+one or two times.&lt;/p&gt;
+&lt;h2 id=&#34;piping-&#34;&gt;Piping &lt;code&gt;%&amp;gt;%&lt;/code&gt;&lt;/h2&gt;
+&lt;hr&gt;
+&lt;p&gt;Data management usually involves multiple steps to produce the final
+polished dataset. These are usually sequential operations done on the
+same dataset. The pipe operator &lt;code&gt;%&amp;gt;%&lt;/code&gt; from the package &lt;code&gt;magrittr&lt;/code&gt;
+streamlines such operations into comprehensible steps or structures so
+that R codes become more readable to the users.&lt;/p&gt;
+&lt;p&gt;The pipe operator &lt;code&gt;%&amp;gt;%&lt;/code&gt; essentially hands over the left-hand side values
+(dataset in this case) into the function that appears on the right-hand
+side. This is frequently written in two lines that the right-hand side
+appears on the next line below. This process is called piping, like
+joing pipes to continue the water flow.&lt;/p&gt;
+&lt;p&gt;Check the example below. A series of tasks are performed to get the
+desired output in a continuous workflow, starting from importing data
+into R to summarizing variables.&lt;/p&gt;
+&lt;p&gt;By piping &lt;code&gt;%&amp;gt;%&lt;/code&gt;, the raw dataset is being handed over to the right-hand
+side. The dataset being handed behind the scene is stored as an object
+named &lt;code&gt;.&lt;/code&gt;.&lt;/p&gt;
+&lt;p&gt;This is then put into the function, &lt;code&gt;replace&lt;/code&gt; where the variables
+&lt;code&gt;test1&lt;/code&gt; and &lt;code&gt;test2&lt;/code&gt; are checked whether they are equal to &lt;code&gt;-99&lt;/code&gt;. If
+equal, these values are replaced with &lt;code&gt;NA&lt;/code&gt;, the missing value in R. Of
+course, these two tasks are done one after another.&lt;/p&gt;
+&lt;p&gt;After that, the now-updated dataset &lt;code&gt;.&lt;/code&gt; is put into &lt;code&gt;generate&lt;/code&gt; function.
+The function again takes &lt;code&gt;test1&lt;/code&gt; and &lt;code&gt;test2&lt;/code&gt; and creates a new variable
+called &lt;code&gt;average&lt;/code&gt; based on the formula specified.&lt;/p&gt;
+&lt;p&gt;Finally, the dataset, still named &lt;code&gt;.&lt;/code&gt;, is now being used in &lt;code&gt;summ&lt;/code&gt;
+function to generate summary statistics of &lt;code&gt;test1&lt;/code&gt;, &lt;code&gt;test2&lt;/code&gt; and
+&lt;code&gt;average&lt;/code&gt;.&lt;/p&gt;
+&lt;p&gt;When the pipe operator &lt;code&gt;%&amp;gt;%&lt;/code&gt; is used, the input &lt;code&gt;data&lt;/code&gt; does not need to
+be specified. This is because the dot &lt;code&gt;.&lt;/code&gt; that represents the modified
+dataset along the piping process is automatically passed into that
+&lt;code&gt;data&lt;/code&gt; input. Check the two examples below that produces the same
+output.&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;## Here is a series of operations:
+## 1) Import STATA&#39;s dta format from online 
+## 2) Replace test1 and test2 if they are -99, meaning missing value 
+## 3) Generate a new variable name &amp;quot;average&amp;quot; by taking average of the two tests
+## 4) Summarize all three variables
+haven::read_dta(&amp;quot;https://stats.idre.ucla.edu/stat/data/patient_pt1_stata_dm.dta&amp;quot;) %&amp;gt;% 
+    replace(test1, NA, test1 == -99) %&amp;gt;% 
+    replace(test2, NA, test2 == -99) %&amp;gt;% 
+    generate(average, (test1 + test2) / 2 ) %&amp;gt;% 
+    summ(test1, test2, average)
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;As you can see from the output in the console, notification of what have
+been done is a great way to track whether the functions are doing what
+they are supposed to do. There are 7 values changed to &lt;code&gt;NA&lt;/code&gt; in both
+&lt;code&gt;test1&lt;/code&gt; and &lt;code&gt;test2&lt;/code&gt;, and 11 &lt;code&gt;NA&lt;/code&gt; values when &lt;code&gt;average&lt;/code&gt; is created. These
+are consistent with numbers reported the column &lt;code&gt;NA.&lt;/code&gt; of the &lt;code&gt;Summary&lt;/code&gt;
+output.&lt;/p&gt;
+&lt;p&gt;Being able to run these codes in your RStudio means that you just used R
+for data management and analysis. Well done! I hope this gets you
+inspired to continue reading the book.&lt;/p&gt;
+&lt;h2 id=&#34;versions-used-in-this-book&#34;&gt;Versions used in this book&lt;/h2&gt;
+&lt;hr&gt;
+&lt;p&gt;Versions are important to make references in case you run into errors.&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;## R version
+version
+#&amp;gt;                _                           
+#&amp;gt; platform       x86_64-w64-mingw32          
+#&amp;gt; arch           x86_64                      
+#&amp;gt; os             mingw32                     
+#&amp;gt; system         x86_64, mingw32             
+#&amp;gt; status                                     
+#&amp;gt; major          4                           
+#&amp;gt; minor          1.0                         
+#&amp;gt; year           2021                        
+#&amp;gt; month          05                          
+#&amp;gt; day            18                          
+#&amp;gt; svn rev        80317                       
+#&amp;gt; language       R                           
+#&amp;gt; version.string R version 4.1.0 (2021-05-18)
+#&amp;gt; nickname       Camp Pontanezen
+
+## mStats version 
+packageVersion(&amp;quot;mStats&amp;quot;)
+#&amp;gt; [1] &#39;3.5.0&#39;
+packageVersion(&amp;quot;tidyverse&amp;quot;)
+#&amp;gt; [1] &#39;1.3.1&#39;
+packageVersion(&amp;quot;readr&amp;quot;)
+#&amp;gt; [1] &#39;1.4.0&#39;
+packageVersion(&amp;quot;readxl&amp;quot;)
+#&amp;gt; [1] &#39;1.3.1&#39;
+packageVersion(&amp;quot;haven&amp;quot;)
+#&amp;gt; [1] &#39;2.4.1&#39;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;If you do not have R or this version of R, download and install it from
+the official website. &lt;a href=&#34;https://www.r-project.org/&#34;&gt;https://www.r-project.org/&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;If you don’t have &lt;code&gt;mStats&lt;/code&gt; installed, see the section
+above,&lt;code&gt;Packages in R&lt;/code&gt;.&lt;/p&gt;
+&lt;h2 id=&#34;getting-help&#34;&gt;Getting help&lt;/h2&gt;
+&lt;hr&gt;
+&lt;p&gt;If you encounter an error or the function does not work, please file an
+issue with a minimal reproducible example on
+&lt;a href=&#34;https://github.com/myominnoo/mStats/issues&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;GitHub&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;For questions and other discussion, please email me view
+&lt;a href=&#34;mailto::dr.myominnoo@gmail.com&#34;&gt;dr.myominnoo@gmail.com&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;Please note that this project is looking for contributors. By
+participating in this project, you agree to abide by its terms with
+&lt;a href=&#34;https://www.contributor-covenant.org/version/1/0/0/code-of-conduct/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Contributor Code of
+Conduct&lt;/a&gt;,
+version 1.0.0, available at
+&lt;a href=&#34;https://www.contributor-covenant.org/version/1/0/0/code-of-conduct/&#34;&gt;https://www.contributor-covenant.org/version/1/0/0/code-of-conduct/&lt;/a&gt;.&lt;/p&gt;
+&lt;h2 id=&#34;intention-of-the-book&#34;&gt;Intention of the book&lt;/h2&gt;
+&lt;hr&gt;
+&lt;p&gt;This book is intended to guide new R users to quickly get on with data
+management and analysis. The package is also largely inspired by &lt;code&gt;STATA&lt;/code&gt;
+software, hence &lt;code&gt;STATA&lt;/code&gt; users may benefit largely from this book.&lt;/p&gt;
+&lt;h2 id=&#34;references&#34;&gt;References&lt;/h2&gt;
+&lt;hr&gt;
+&lt;ol&gt;
+&lt;li&gt;STATA DATA MANAGEMENT. UCLA: Statistical Consulting Group. from
+&lt;a href=&#34;https://stats.idre.ucla.edu/stata/seminars/stata-data-management/&#34;&gt;https://stats.idre.ucla.edu/stata/seminars/stata-data-management/&lt;/a&gt;
+(accessed March 23, 2020).&lt;/li&gt;
+&lt;li&gt;SUBSETTING DATA | STATA LEARNING MODULES. UCLA: Statistical
+Consulting Group. from
+&lt;a href=&#34;https://stats.idre.ucla.edu/stata/modules/ubsetting-data/&#34;&gt;https://stats.idre.ucla.edu/stata/modules/ubsetting-data/&lt;/a&gt;
+(accessed March 23, 2020).&lt;/li&gt;
+&lt;li&gt;LABELING DATA | STATA LEARNING MODULES. UCLA: Statistical Consulting
+Group. from
+&lt;a href=&#34;https://stats.idre.ucla.edu/stata/modules/labeling-data/&#34;&gt;https://stats.idre.ucla.edu/stata/modules/labeling-data/&lt;/a&gt; (accessed
+March 23, 2020).&lt;/li&gt;
+&lt;li&gt;LOGISTIC REGRESSION | STATA DATA ANALYSIS EXAMPLES. UCLA:
+Statistical Consulting Group. from
+&lt;a href=&#34;https://stats.idre.ucla.edu/stata/dae/logistic-regression/&#34;&gt;https://stats.idre.ucla.edu/stata/dae/logistic-regression/&lt;/a&gt;
+(accessed March 23, 2020).&lt;/li&gt;
+&lt;li&gt;REGRESSION ANALYSIS | STATA ANNOTATED OUTPUT. UCLA: Statistical
+Consulting Group. from
+&lt;a href=&#34;https://stats.idre.ucla.edu/stata/output/regression-analysis/&#34;&gt;https://stats.idre.ucla.edu/stata/output/regression-analysis/&lt;/a&gt;
+(accessed March 23, 2020).&lt;/li&gt;
+&lt;li&gt;Betty R. Kirkwood, Jonathan A.C. Sterne (2006, &lt;a href=&#34;ISBN:978&#34;&gt;ISBN:978&lt;/a&gt; 0 86542
+871 3)&lt;/li&gt;
+&lt;li&gt;Burt B. Gerstman (2013, &lt;a href=&#34;ISBN:978&#34;&gt;ISBN:978&lt;/a&gt; 1 4443 3608 5)&lt;/li&gt;
+&lt;li&gt;Douglas G. Altman (2005, &lt;a href=&#34;ISBN:0&#34;&gt;ISBN:0&lt;/a&gt; 7279 1375 1)&lt;/li&gt;
+&lt;li&gt;R Fundamentals, R Core Development Team, 2006&lt;/li&gt;
+&lt;li&gt;R for Data Science, Hadley Wickham &amp;amp; Garrett Grolemund, 2017&lt;/li&gt;
+&lt;li&gt;Advanced R, Hadley Wickham&lt;/li&gt;
+&lt;li&gt;Exploratory Data Analysis with R, Roger D. Peng&lt;/li&gt;
+&lt;li&gt;R Programming by Robin Evans:
+&lt;a href=&#34;http://www.stats.ox.ac.uk/~evans/teaching.htm&#34;&gt;http://www.stats.ox.ac.uk/~evans/teaching.htm&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;All books and websites that I forget to mention&lt;/li&gt;
+&lt;/ol&gt;
+</description>
     </item>
     
     <item>
@@ -327,7 +821,7 @@ data.head()
 &lt;p&gt;Demo:&lt;/p&gt;
 
 
-&lt;div id=&#34;chart-485621739&#34; class=&#34;chart&#34;&gt;&lt;/div&gt;
+&lt;div id=&#34;chart-567392148&#34; class=&#34;chart&#34;&gt;&lt;/div&gt;
 &lt;script&gt;
   (function() {
     let a = setInterval( function() {
@@ -337,7 +831,7 @@ data.head()
       clearInterval( a );
 
       Plotly.d3.json(&#34;./line-chart.json&#34;, function(chart) {
-        Plotly.plot(&#39;chart-485621739&#39;, chart.data, chart.layout, {responsive: true});
+        Plotly.plot(&#39;chart-567392148&#39;, chart.data, chart.layout, {responsive: true});
       });
     }, 500 );
   })();
