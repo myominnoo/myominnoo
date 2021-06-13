@@ -29,6 +29,8 @@ In a nutshell, mStats is designed to make data analysis quick and easy
 to create the final report for health research project. You can see it
 in action to [Get Started](https://myominnoo.github.io/mStats/).
 
+------------------------------------------------------------------------
+
 ## Installation
 
 You can install the released version of mStats from
@@ -48,9 +50,14 @@ package}(<https://remotes.r-lib.org/>):
 remotes::install_github("myominnoo/mStats")
 ```
 
+------------------------------------------------------------------------
+
 ## Cheat Sheet
 
 to add later
+
+
+------------------------------------------------------------------------
 
 ## Masking
 
@@ -63,6 +70,8 @@ function from `mStats`. To avoid this:
 -   use the syntax `package::function()`, for example `base::append()`
     or `mStats::append()`.
 -   remove `mStats` from the session using `detach(package:mStats)`.
+
+------------------------------------------------------------------------
 
 ## Usage
 
@@ -117,6 +126,9 @@ codebook(iris)
 #>  |  5      Species | Type of species  factor 150  0   0.0 |
 #>  + -- ------------ + --------------- ------- --- -- ----- +
 ```
+
+
+------------------------------------------------------------------------
 
 ## Getting help
 
