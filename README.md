@@ -1,5 +1,7 @@
 ### Hi there 👋
 
+![Myo's visitor count badge](https://visitor-badge.laobi.icu/badge?page_id=myominnoo.myominnoo) [![Myo's GitHub follower count badge](https://img.shields.io/github/followers/myominnoo?label=Follow&style=social)](https://github.com/myominnoo)
+
 <!--
 **myominnoo/myominnoo** is a ✨ _special_ ✨ repository because its `README.md` (this file) appears on your GitHub profile.
 
