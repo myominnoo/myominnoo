@@ -1,18 +1,20 @@
 ### Hi there 👋
 
+<!-- README adapted from https://github.com/z3tt/Z3tt/blob/master/README.md?plain=1 -->
+
 ![Myo's visitor count badge](https://visitor-badge.laobi.icu/badge?page_id=myominnoo.myominnoo) [![Myo's GitHub follower count badge](https://img.shields.io/github/followers/myominnoo?label=Follow&style=social)](https://github.com/myominnoo)
 
-I am an epidemiologist working in public health sciences for a Canadian health economic consulting firm.
+I am an epidemiologist working in health sciences for a Canadian health economic consulting firm.
 
-I have had a long journey in academia and implementation through the world of public health, with a medial degree and a doctorate in Epidemiology. 
+I have had a long journey in academia and implementation through the world of public health, with a medial degree and a doctorate in epidemiology.
 
-To learn more, check out my personal website or connect with me: 
+To learn more, check out my personal website or connect with me:
   
-[![myominnoo.com](https://img.shields.io/badge/myominnoo.com-%230b7366.svg?style=for-the-badge&logoColor=white)](https://jadeyryan.com) [![CV](https://img.shields.io/badge/CV-%236a2d0a.svg?style=for-the-badge&logoColor=white)](https://jadeyryan.com/cv) [![LinkedIn](https://img.shields.io/badge/linkedin-%230077B5.svg?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/jadeynryan/) [![Mastodon](https://img.shields.io/badge/-MASTODON-%23563ACC?style=for-the-badge&logo=mastodon&logoColor=white)](https://fosstodon.org/@jadeynryan) 
+[![myominnoo.com](https://img.shields.io/badge/myominnoo.com-%230b7366.svg?style=for-the-badge&logoColor=white)](https://myominnoo.com) [![CV](https://img.shields.io/badge/CV-%236a2d0a.svg?style=for-the-badge&logoColor=white)](https://myominnoo.com/cv) [![LinkedIn](https://img.shields.io/badge/linkedin-%230077B5.svg?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/myominnoo/)
 
 <!-- coffee button adapted from https://github.com/z3tt/Z3tt/blob/master/README.md?plain=1 -->
 
-If you feel so inclined and would like to show appreciation for my work, you could support me with a cup of coffee. ☕️♥️
+If you feel inclined and would like to show appreciation for my work, you could support me with a cup of coffee. ☕️♥️
 
 https://www.buymeacoffee.com/myominnoo
 
