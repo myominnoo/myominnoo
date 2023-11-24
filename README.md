@@ -28,4 +28,4 @@ https://www.buymeacoffee.com/myominnoo
 ![Myo's Top Langs](https://github-readme-stats.vercel.app/api/top-langs/?username=myominnoo&layout=compact&theme=vue-dark&hide=javascript,html,typescript)
 
 
-Credits to ![Jadey Ryan](https://jadeyryan.com/) for her amazing works on GitHub Profile README, Quarto website, and more.
+Credits to [Jadey Ryan](https://jadeyryan.com/) for her amazing works on GitHub Profile README, Quarto website, and more.
