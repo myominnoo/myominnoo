@@ -4,7 +4,7 @@
 
 ![Myo's visitor count badge](https://visitor-badge.laobi.icu/badge?page_id=myominnoo.myominnoo) [![Myo's GitHub follower count badge](https://img.shields.io/github/followers/myominnoo?label=Follow&style=social)](https://github.com/myominnoo)
 
-I am an epidemiologist working in health sciences for a Canadian health economic consulting firm.
+I am an epidemiologist working in health sciences for a health economic consulting firm based in Canada.
 
 I have had a long journey in academia and implementation through the world of public health, with a medial degree and a doctorate in epidemiology.
 
