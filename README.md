@@ -6,7 +6,7 @@
 
 I am an epidemiologist working in health sciences for a health economic consulting firm based in Canada.
 
-I have had a long journey in academia and implementation through the world of public health, with a medial degree and a doctorate in epidemiology.
+ With a medial degree and a doctorate in epidemiology, I have had a long journey of academic health research as well as implementation experiences in the field of global health.
 
 To learn more, check out my personal website or connect with me:
   
