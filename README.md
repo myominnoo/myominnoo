@@ -4,9 +4,9 @@
 
 ![Myo's visitor count badge](https://visitor-badge.laobi.icu/badge?page_id=myominnoo.myominnoo) [![Myo's GitHub follower count badge](https://img.shields.io/github/followers/myominnoo?label=Follow&style=social)](https://github.com/myominnoo)
 
-I am an epidemiologist working in health sciences for a health economic consulting firm based in Canada.
+I am an epidemiologist, research director, and data consultant based in Canada.
 
- With a medial degree and a doctorate in epidemiology, I have had a long journey of academic health research as well as implementation experiences in the field of global health.
+ With a medial degree, a doctorate in epidemiology, two postdoc fellowships, and senior research experiences, I have had a fruitful journey of epidemiology, data science and implementation rsearch in both academic and industry settings.
 
 To learn more, check out my personal website or connect with me:
   
