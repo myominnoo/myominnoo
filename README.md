@@ -10,7 +10,7 @@ I am an epidemiologist working in health sciences for a health economic consulti
 
 To learn more, check out my personal website or connect with me:
   
-[![myominnoo.com](https://img.shields.io/badge/myominnoo.com-%230b7366.svg?style=for-the-badge&logoColor=white)](https://myominnoo.com) [![CV](https://img.shields.io/badge/CV-%236a2d0a.svg?style=for-the-badge&logoColor=white)](https://myominnoo.github.io/cv) [![LinkedIn](https://img.shields.io/badge/linkedin-%230077B5.svg?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/myominnoo/)
+[![myominnoo.github.io](https://img.shields.io/badge/myominnoo.github.io-%230b7366.svg?style=for-the-badge&logoColor=white)](https://myominnoo.github.io) [![CV](https://img.shields.io/badge/CV-%236a2d0a.svg?style=for-the-badge&logoColor=white)](https://myominnoo.github.io/cv) [![LinkedIn](https://img.shields.io/badge/linkedin-%230077B5.svg?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/myominnoo/)
 
 <!-- coffee button adapted from https://github.com/z3tt/Z3tt/blob/master/README.md?plain=1 -->
 
